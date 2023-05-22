@@ -1,0 +1,425 @@
+/**
+* 모든 페이지에서 사용될 공통적인 내용들을 정의하기 위한 파일
+*/
+
+/*-------------------------------------------------
+ * 공통
+ *-------------------------------------------------*/
+
+ *{
+    font-family: "Noto Sans KR", sans-serif;
+   box-sizing: border-box;
+ }
+
+ a{
+    text-decoration: none;
+    color: inherit;
+ }
+
+ 
+/*-------------------------------------------------
+ * 상단영역
+ *-------------------------------------------------*/
+
+.advertise{
+   background-color: black;
+   color: white;
+   height: 22px;
+}
+
+.advertise a h1{
+   text-align: center;
+   padding-top: 4px;
+   font-size: 12px;
+}
+
+.header {
+   height: 82px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   position: sticky;
+   z-index: 10000;
+}
+
+.header .header-container{
+   display: flex;
+   width: 100%;
+   height: 70px;
+   justify-content: space-between;
+   background-color: white;
+}
+
+.header .header-container .menu-item1{
+   display: flex;
+   margin-top: 30px;
+}
+
+.header .header-container .menu-item1 img{
+   padding-left: 15px;
+}
+
+.header .header-container .menu-item2 {
+   display: flex;
+   width: 100%;
+   margin-left: auto;
+   justify-content: center;
+
+   align-items: center;
+   position: relative;
+}
+
+.header .header-container .menu-item2 ul{
+   margin: auto;
+   display: block;
+   display: flex;
+   text-align: center;
+   font-size: 16px;
+   font-weight: 600;
+   background-color: white;
+}
+
+.header .header-container .menu-item2 ul.menu-item2-line{
+   margin: auto;
+   padding-top: 10px;
+}
+
+.header .header-container .menu-item2 ul li{
+   display: block;
+   margin: 10px 0;
+   width: 130px;
+   position: relative;
+}
+.header .header-container .menu-item2 ul li a{
+   display: block;
+}
+
+.header .header-container .menu-item2 ul li ul.item-in-item{
+   display: flex;
+   padding-top: 21px;
+   display: none;
+   flex-direction: column;
+   position: absolute;
+}
+
+.header .header-container .menu-item2 ul li ul.item-in-item li{
+   display: block;
+   margin: 0;
+}
+
+.header .header-container .menu-item2 ul li:hover ul{
+   display: block;
+}
+
+.header .header-container .menu-item2 ul li:hover ul li:hover{
+   display: block;
+   color: #FFD732;
+   text-decoration: underline;
+}
+.header .header-container .menu-item2 ul li ul li{
+   display: block;
+   padding: 15px 0;
+}
+
+.header .header-container .menu-item2 ul li ul li.in-item-first{
+   border-top: 1px solid grey;
+}
+
+.header .header-container .menu-item3 {
+   display: flex;
+   align-items: center;
+   margin-top: 16px;
+   width: 200px;
+   justify-content: space-between;
+}
+
+.header .header-container .menu-item3  a{
+   display: block;
+}
+
+.header .header-container .menu-item3  div.main-search-menu form.main-search{
+   position: absolute;
+   display: block;
+   border: 1px solid black;
+   padding: 50px 150px;
+   right: 150px;
+   background-color: white;
+   display: none;
+}
+
+.header .header-container .menu-item3  div.main-search-menu img{
+   cursor: pointer;
+}
+
+.header .header-container .menu-item3  div.main-search-menu form.main-search span.search-close{
+   display: block;
+   position: absolute;
+   right: 15px;
+   top: 8px;
+   cursor: pointer;
+}
+
+.header .header-container .menu-item3  div.main-search-menu form.main-search div.search-text{
+   margin-bottom: 25px;
+   text-align: center;
+   font-size: 30px;
+   font-weight: 600;
+}
+
+.header .header-container .menu-item3  div.main-search-menu form.main-search div.search-button input.main-search{
+   font-size: 22px;
+   border: none;
+   border-bottom: 1px solid grey;
+   margin-right: 20px;
+}
+
+.header .header-container .menu-item3  div.main-search-menu form.main-search div.search-button input.main-search-button{
+   background-color: white;
+   padding: 5px 20px;
+   border: 1px solid black;
+   vertical-align: top;
+   cursor: pointer;
+}
+
+
+.header .header-container .menu-item3 img{
+   height: 20px;
+   width: 20px;
+   margin-right: 25px;
+}
+
+.header .header-container .menu-item3 .entire-menu {
+   cursor: pointer;
+}
+
+.header .header-container .menu-item3 .entire-menu .entire-menu-list{
+   display: none;
+}
+
+.header .header-container .menu-item3 .entire-menu .menu-item3-line{
+   width: 1500px;
+   height: 800px;
+   display: flex;
+   justify-content: space-around;
+   position: absolute;
+   left: 190px;
+   top: 10px;
+   background-color: white;
+}
+
+.header .header-container .menu-item3 .entire-menu .menu-item3-line li.x h1{
+   display: block;
+   margin-top: 17px;
+   cursor: pointer;
+}
+
+.header .header-container .menu-item3 .entire-menu .entire-menu-list ul li ul.item-in-item li{
+   display: block;
+   margin: 0;
+}
+
+.header .header-container .menu-item3 .entire-menu .entire-menu-list ul ul li:hover{
+   display: block;
+   color: #FFD732;
+   text-decoration: underline;
+}
+
+.header .header-container .menu-item3 .entire-menu .entire-menu-list .menu-item3-line li.mtitle {
+   padding: 15px 0;
+   font-size: 18px;
+   font-weight: 700;
+}
+
+.header .header-container .menu-item3 .entire-menu .entire-menu-list .menu-item3-line li.mtitle a:hover {
+   display: block;
+   text-decoration: underline;
+}
+
+.header .header-container .menu-item3 .entire-menu .entire-menu-list ul li ul{
+   margin-top: 10px;
+}
+
+.header .header-container .menu-item3 .entire-menu .entire-menu-list ul li ul li{
+   padding: 15px 0;
+   font-weight: 500;
+   font-size: 15px;
+}
+
+
+
+/*-------------------------------------------------
+* 하단영역 (로고, 브랜드 스토리 부분)
+*-------------------------------------------------*/
+.footer{
+   background-color: #F6F5F4;
+   height: 420px;
+   display: flex;
+   border-top: 1px solid grey;
+}
+
+.footer .item-left{
+   margin-left: 50px ;
+   margin-right: 20px;
+}
+
+.footer .item-left .top-item{
+   margin-top: 50px;
+}
+
+.footer .item-left .top-item .top-item1{
+   display: flex;
+}
+
+.footer .item-left .top-item .top-item1 p{
+   display: block;
+   padding-left: 11px;
+   font-size: 11px;
+}
+
+.footer .item-left .top-item .top-item1 a img{
+   width: 130px;
+   height: 16.99px;
+}
+
+.footer .item-left .top-item .top-item2{
+   margin: 30px 0;
+   color: grey;
+   font-size: 13px;
+}
+
+.footer .item-left .top-item .top-item2 ul{
+   display: flex;
+}
+
+.footer .item-left .top-item .top-item2 li{
+   border-left: 1px solid grey;
+}
+
+.footer .item-left .top-item .top-item2 li div a{
+   text-align: center;
+   margin: 0 10px;
+   font-size: 11px;
+}
+
+.footer .item-left .top-item .top-item2 li.no-border{
+   border-left: 0px;
+}
+
+.footer .item-left .top-item .top-item2 li.no-border div a{
+   margin-left: 0;
+}
+
+.footer .item-left .top-item .top-item2 li.bold a{
+   font-weight: 600;
+}
+/*-------------------------------------------------
+* 하단영역 (사업자명~강교혁)
+*-------------------------------------------------*/
+.footer .item-left .middle-item {
+   margin-bottom: 30px;
+}
+
+.footer .item-left .middle-item span {
+   display: block;
+   font-size: 11px;
+   padding-top: 10px;
+   color: grey;
+}
+
+.footer .item-left .middle-item span.middle-first {
+   padding-top: 0;
+}
+
+.footer .item-left .bottom-item span {
+   display: block;
+   font-size: 11px;
+   color: grey;
+}
+
+.footer .item-left .bottom-item span.bottom-first {
+   padding-bottom: 10px;
+}
+
+/*-------------------------------------------------
+* 하단영역 (오른쪽)
+*-------------------------------------------------*/
+
+.footer .item-right{
+   display: flex;
+   margin-left: auto;
+   margin-right: 50px;
+   padding-top: 50px;
+}
+
+.footer .item-right .right-item-first{
+   display: flex;
+   flex-direction: column;
+   width: 150px;
+   height: 150px;
+}
+
+.footer .item-right .right-item-first span{
+   display: block;
+   padding-bottom: 10px;
+   font-size: 11px;
+   color: grey;
+}
+
+.footer .item-right .right-item-first span.tel-number{
+   font-size: 21px;
+   color: black;
+   font-weight: 400;
+   padding-bottom: 20px;
+
+}
+
+.footer .item-right .right-item-second{
+   display: flex;
+   flex-direction: column;
+   width: 230px;
+}
+
+.footer .item-right .right-item-second span{
+   display: block;
+   padding-bottom: 10px;
+   font-size: 11px;
+   color: grey;
+}
+
+.footer .item-right .right-item-second span.subject{
+   display: block;
+   padding-bottom: 10px;
+   font-size: 14px;
+   font-weight: 600;
+   color: black;
+}
+
+.footer .item-right .right-item-third{
+   display: flex;
+   flex-direction: column;
+   margin-left: 30px;
+}
+
+.footer .item-right .right-item-third span{
+   display: block;
+   padding-bottom: 10px;
+   font-size: 11px;
+   color: grey;
+}
+
+.footer .item-right .right-item-third span.subject{
+   display: block;
+   padding-bottom: 10px;
+   font-size: 14px;
+   font-weight: 600;
+   color: black;
+}
+
+/*-------------------------------------------------
+* 각 영역 안에서 넓이를 제한하기 위한 공통 컨테이너
+*-------------------------------------------------*/
+
+.content-container{
+   max-width: 1200px;
+   margin: auto;
+}

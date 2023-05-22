@@ -1,0 +1,783 @@
+/*-------------------------------------------------
+* 내용영역
+*-------------------------------------------------*/
+.main {
+    max-width: 1200px;
+    height: auto;
+    margin: auto; 
+    padding-bottom: 100px; 
+ }
+
+ .main .detail-top{
+    display: flex;
+ }
+
+ .main .detail-top .detail-top-img{
+    display: flex;
+    margin: 20px 0;
+    margin-left: 20px;
+    flex-direction: column;
+    width: 650px;
+    height: 600px;
+ }
+
+ .main .detail-top .detail-top-img .pull-left{
+   float: left;
+ }
+.clearfix::after{
+   display: block;
+   content: '';
+   clear: both;
+   float: none;
+ }
+
+ .main .detail-top .detail-top-img .preview{
+   width: 100%;
+   margin-bottom: 20px;
+ }
+ 
+ .main .detail-top .detail-top-img ul li.item{
+   width: 110px;
+   height: 110px;
+   margin-left: 10px;
+ }
+ 
+ .main .detail-top .detail-top-img ul li.item:first-child{
+   margin-left: 0;
+ }
+
+ .main .detail-top .detail-top-img ul li .thumbnail{
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
+ }
+ 
+ .main .detail-top .detail-top-text{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 750px;
+    padding-right: 15px;
+    margin-left: 20px;
+    padding: 10px;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-first{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-first .detail-product-name{
+    font-weight: 400;
+    font-size: 27px;
+    padding-bottom: 20px;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-first .detail-product-code{
+    font-weight: 300;
+    font-size: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid black;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second{
+    margin-top: 20px;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num1{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num1 .detail-top-text-second-right{
+    display: flex;
+    margin-left: auto;
+    font-size: 15px;
+    line-height: normal;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num1 .detail-top-text-second-right .price1{
+    display: block;
+    font-size: 16px;
+    color: grey;
+    text-decoration: line-through;
+    margin-right: 10px;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num1 .detail-top-text-second-right .price2{
+    display: block;
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num2{
+    display: flex;
+    margin: 15px 0;
+    padding: 10px 0;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num2 .detail-top-text-second-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num2 .detail-top-text-second-right .right-first{
+    position: relative;
+ }
+ 
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num2 .detail-top-text-second-right .right-first:hover .membership{
+    display: block;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num2 .detail-top-text-second-right .right-first .membership{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 5px 0;
+    position: absolute;
+    right: -3px;
+    top: -12px;
+    display: none;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num2 .detail-top-text-second-right .right-first .membership li{
+    display: flex;
+    padding: 5px 0;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    padding: 7px 7px;
+    background-color: white;
+    
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num2 .detail-top-text-second-right .right-first .membership li.right-li-last{
+    border-bottom: 1px solid grey;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num2 .detail-top-text-second-right .right-first .membership li p.m-price{
+    display: block;
+    margin-left: auto;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num3{
+    display: flex;
+    margin: 15px 0;
+    padding: 10px 0;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num3 .detail-top-text-second-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num4{
+    display: flex;
+    margin: 15px 0;
+    padding: 10px 0;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num4 .detail-top-text-second-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num4 .detail-top-text-second-right select{
+    width: 150px;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num5{
+    display: flex;
+    margin: 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid black;
+    padding-top: 10px;
+    padding-bottom: 40px;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num5 .detail-top-text-second-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-second .detail-top-text-second-num5 .detail-top-text-second-right select{
+    width: 150px;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-third{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1.5px solid black;
+    align-items: center;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-third .t-price{
+    display: flex;
+    margin-left: auto;
+    line-height: normal;
+    align-items: center;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-third .t-price p{
+    font-size: 30px;
+    font-weight: 700;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-fourth{
+    display: flex;
+    padding: 40px 0;
+    border-bottom: 1.5px solid black;
+    align-items: center;
+    text-align: center;
+ }
+
+ .main .detail-top .detail-top-text .detail-top-text-fourth .shopping-cart{
+    border: 1.5px solid black;
+    width: 49%;
+    padding: 20px 0;
+ }
+ 
+ .main .detail-top .detail-top-text .detail-top-text-fourth .buying{
+    margin-left: auto;
+    border: 1.5px solid black;
+    width: 49%;
+    padding: 20px 0;
+    background-color: black;
+    color: white;
+ }
+
+ .main .with-item-text{
+   margin-top: 130px;
+   width: 100%;
+   padding: 10px;
+   font-weight: 600;
+   font-size: 17px;
+   border-bottom: 0.5px solid grey;
+}
+
+ .main .detail-top-with-items{
+   display: flex;
+   margin-top: 30px;
+   margin-bottom: 40px;
+   margin-left: 50px;
+   margin-right: 50px;
+   width: auto;
+   justify-content: space-between;
+}
+
+.main .detail-top-with-items img{
+   width: 252px;
+   height: 377px;
+   object-fit: cover;
+}
+
+.main .detail-top-with-items .detail-top-with-items-text{
+   margin-top: 10px;
+}
+
+.main .detail-top-with-items .detail-top-with-items-text span.detail-top-with-items-name p {
+   display: block;
+   margin-bottom: 10px;
+}
+
+.main .detail-top-with-items .detail-top-with-items-text span.detail-top-with-items-price {
+   display: block;
+   display: flex;
+}
+
+.main .detail-top-with-items .detail-top-with-items-text span.detail-top-with-items-price .sale{
+   display: block;
+   color: #803232;
+   padding-right: 13px;
+   font-weight: 600;
+}
+
+.main .detail-top-with-items .detail-top-with-items-text span.detail-top-with-items-price .s-price{
+   display: block;
+   color: black;
+   padding-right: 9px;
+   font-weight: 600;
+}
+
+.main .detail-top-with-items .detail-top-with-items-text span.detail-top-with-items-price .r-price{
+   display: block;
+   color: grey;
+   text-decoration: line-through;
+   font-size: 15px;
+   font-weight: 600;
+   margin-top: 2px;
+}
+
+.main .detail-middle .detail-middle-menu ul{
+   display: flex;
+   margin-top: 15px;
+   margin-bottom: 15px;
+   border-top: 0.5px solid grey;
+   border-bottom: 0.5px solid grey;
+}
+
+.main .detail-middle .detail-middle-menu ul li{
+   padding: 15px 60px;
+   text-align: center;
+   font-size: 14px;
+}
+
+.main .detail-middle .detail-middle-menu ul li:hover{
+   border-bottom:4px solid black;
+}
+
+.main .detail-middle .detail-middle-review span.middle-review-title{
+   display: flex;
+   margin-left: 40px;
+   margin-right: 40px;
+   margin-top: 30px;
+   padding-bottom: 30px;
+   border-bottom: 2px solid black;
+}
+
+.main .detail-middle .detail-middle-review span.middle-review-title p.review{
+   font-size: 25px;
+   font-weight: 600;
+}
+
+.main .detail-middle .detail-middle-review span.middle-review-title p.review-count{
+   display: block;
+   margin-left: 10px;
+   line-height: normal;
+   font-size: 17px;
+   color: grey;
+   font-weight: 600;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top{
+   display: flex;
+   padding-bottom: 35px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top .star-emo{
+   width: 600px;
+   padding-left: 40px;
+   text-align: center;
+   padding-top: 90px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top .star-emo .star-emo-top{
+   font-size: 40px;
+   padding-bottom: 30px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top .star-emo .star-emo-bottom{
+   text-align: center;
+   font-weight: 600;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top .star-score{
+   display: flex;
+   flex-direction: column;
+   padding-top: 60px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top .star-score .sscore{
+   display: flex;
+   margin-bottom: 15px;
+}
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top .star-score .sscore span.score-text{
+   display: block;
+   width: 90px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top .star-score .sscore .sscore-bar{
+   width: 400px;
+   border-radius: 20px;
+   background-color: #d5d5d5;
+   margin-right: 10px;
+   position: relative;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top .star-score .sscore .sscore-bar .sscore-bar-i{
+   height: 16px;
+   background-color: black;
+   border-radius: 20px;
+   position: absolute;
+   width: 90%;  /** 백엔드에서 가져온수치로 % 조절*/
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-top .star-score .very-good{
+   font-weight: 700;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle {
+   margin-top: 10px;
+   margin-left: 40px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle1{
+   display: flex;
+   border-top: 1px solid #d5d5d5;
+   width: 1140px;
+   border-bottom: 1px solid #d5d5d5;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle1 button{
+   display: flex;
+   margin-left: 20px;
+   margin-right: 15px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border: none;
+   background-color: white;
+   color: #d5d5d5;
+   cursor: pointer;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle1 button:hover{
+   color: grey;
+   font-weight: 600;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle2 table{
+   width: 1100px;
+   margin-left: 20px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle2 table tbody tr, td{
+   margin: 15px 0;
+   border-bottom: 1px solid #d5d5d5;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle2 table tbody td.td1{
+   padding: 10px 0;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle2 table tbody td.td1 div.td1-1{
+   margin-left: 20px;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 16px;
+   display: block;
+   display: flex;
+   margin-bottom: 20px;
+   margin-top: 20px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle2 table tbody td.td1 div.td1-1 .star-text{
+   margin-left: 20px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle2 table tbody td.td1 input{
+   display: none;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle2 table tbody td.td1 .read-text{
+   margin-left: 20px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle2 table tbody td.td1 .read-text span{
+   width: 800px;
+   display: block;
+   word-wrap: break-word;
+   height: 150px;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle2 table tbody td.td2{
+   text-align: center;
+   font-size: 11px;
+   color: grey;
+}
+
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-bottom button{
+   width: 1000px;
+   margin: 40px auto;
+   margin-left: 100px;
+   padding: 18px 0;
+   font-size: 17px;
+   background-color: white;
+   border: 1px solid black;
+   cursor: pointer;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+.main .detail-middle .detail-middle-text{
+   margin: 0 40px;
+}
+
+.main .detail-middle .detail-middle-text span.detail-inform{
+   display: block;
+   padding-top: 30px;
+   padding-bottom: 20px;
+   border-top: 10px solid #dcdcdc;
+}
+
+.main .detail-middle .detail-middle-text h4{
+   display: block;
+   padding: 0  ;
+   font-size: 22px;
+}
+
+.main .detail-middle .detail-middle-text div{
+   text-align: center;
+}
+
+.main .detail-middle .detail-middle-text div.detail-middle-inform1{
+   background-color: black;
+   color: white;
+   text-align: center;
+   width: 800px;
+   padding: 100px 50px;
+   margin-left: 160px;
+   height: 430px;
+   margin-bottom: 200px;
+}
+
+.main .detail-middle .detail-middle-text div.detail-middle-inform1 .detail_img11_text1{ 
+   font-size: 30px;
+   text-align: left;
+   margin-bottom: 50px;
+}
+
+.main .detail-middle .detail-middle-text div.detail-middle-inform1 .detail_img11_text2{ 
+   font-size: 40px;
+   font-weight: 800;
+   text-align: left;
+}
+
+.main .detail-middle .detail-middle-text  div div hr{ 
+   width: 30px;
+   margin-left: 0;
+   border: 1.5px solid white;
+}
+
+.main .detail-middle .detail-middle-text .dtimg{ 
+   position: relative;
+   margin-top: 200px;
+}
+
+.main .detail-middle .detail-middle-text .dtimg .dminform{ 
+   position: absolute;
+   bottom: 60px;
+   left: 200px;
+}
+
+.main .detail-middle .detail-middle-text .dtimg .dminform div{ 
+   text-align: left;
+   color: white;
+}
+
+.main .detail-middle .detail-middle-text .dtimg .dminform div.ditext1{ 
+   font-size: 40px;
+   font-weight: 700;
+   margin-bottom: 30px;
+   line-height: 50px;
+}
+
+.main .detail-middle .detail-middle-text .dtimg .dminform div.ditext2{ 
+   font-size: 23px;
+   margin-bottom: 40px;
+   line-height: 35px;
+}
+
+.main .detail-middle .detail-middle-text .dtimg .dminform div.ditext3{ 
+   font-size: 25px;
+   font-weight: 700;
+   margin-top: 15px;
+}
+
+.main .detail-middle .detail-middle-text .fabric{ 
+   display: block;
+   margin-top: 300px;
+   margin-left: 200px;
+   margin-bottom: 20px;
+   font-size: 30px;
+}
+
+.main .detail-middle .detail-middle-text .fabric .fabric-hr{ 
+   border: 2px solid black;
+   margin-left: 0;
+   width: 190px;
+}
+
+.main .detail-middle .detail-middle-text .fabric-info{ 
+   display: flex;
+   margin-left: auto;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   padding: 50px 150px;
+   width: 100%;
+}
+
+.main .detail-middle .detail-middle-text .fabric-info div{ 
+   width: 50%;
+   height: 50%;
+}
+
+.main .detail-middle .detail-middle-text .fabric-info div div.fabric_info_text1{ 
+   margin: 50px 0;
+   font-size: 30px;
+   font-weight: 600;
+   width: 100%;
+}
+
+.main .detail-middle .detail-middle-text .fabric-info div div.fabric_info_text2{ 
+   width: 100%;
+   margin-bottom: 50px;
+   font-size: 22px;
+   line-height: 37px;
+}
+
+.main .detail-middle .detail-middle-text .design{ 
+   display: block;
+   margin-top: 300px;
+   margin-left: 200px;
+   margin-bottom: 20px;
+   font-size: 30px;
+}
+
+.main .detail-middle .detail-middle-text .design .design-hr{ 
+   border: 2px solid black;
+   margin-left: 0;
+   width: 190px;
+}
+
+.main .detail-middle .detail-middle-text div img.detail-text-design-point{  
+   margin-top: 80px;
+   margin-bottom: 60px;
+   width: 800px;
+}
+
+.main .detail-middle .detail-middle-text div div.design_point_text1{  
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 55px;
+   text-align: left;
+   margin-left: 200px;
+   margin-bottom: 50px;
+   margin-top: 10px;
+   letter-spacing: -1.5px;
+}
+
+.main .detail-middle .detail-middle-text div div.design_point_text2{  
+   font-size: 24px;
+   letter-spacing: -1.5px;
+   font-weight: 400;
+   line-height: 35px;
+   text-align: left;
+   margin-left: 200px;
+   margin-bottom: 100px;
+}
+
+.main .detail-bottom div.washing{  
+   text-align: center;
+   margin-bottom: 400px;
+}
+
+.main .detail-bottom div.washing img{  
+   width: 900px;
+}
+
+.main .detail-bottom div.size-info{  
+   margin-left: 30px;
+   margin-bottom: 130px;
+   padding: 30px 10px;
+   width: 1140px;
+}
+
+.main .detail-bottom span.size-recomend{  
+   display: block;
+   font-size: 23px;
+   padding-top: 60px;
+   margin-top: 50px;
+   margin-bottom: 20px;
+   margin-left: 30px;
+   font-weight: 600;
+   width: 93%;
+   border-top: 10px solid #dcdcdc;
+}
+
+.main .detail-bottom div.size-info .pants-info{  
+   display: flex;
+}
+.main .detail-bottom div.size-info .pants-info .pants-info-text{  
+   margin-right: 30px;
+}
+
+.main .detail-bottom div.size-info .pants-info .pants-info-text span.size-info{  
+   display: block;
+   margin-bottom: 20px;
+   font-size: 18px;
+   font-weight: 600;
+}
+
+.main .detail-bottom div.size-info .pants-info .pants-info-text span.size-info-announce{  
+   display: block;
+   margin-top: 20px;
+   font-size: 15px;
+   font-weight: 600;
+   color: grey;
+}
+
+.main .detail-bottom div.size-info .pants-info .pants-info-table span.size-cm{  
+   display: block;
+   font-weight: 600;
+   margin-top: 60px;
+   margin-bottom: 20px;
+}
+
+.main .detail-bottom div.size-info .pants-info .pants-info-table table{  
+   border: 1px solid gray;
+}
+
+.main .detail-bottom div.size-info .pants-info .pants-info-table table tr th{  
+   vertical-align: middle;
+   width: 90px;
+   height: 50px;
+   font-size: 15px;
+   border: 1px solid gray;
+   vertical-align: center;
+   background-color: #d5d5d5;
+}
+
+.main .detail-bottom div.size-info .pants-info .pants-info-table table tr td{  
+   vertical-align: middle;
+   width: 90px;
+   height: 50px;
+   font-size: 15px;
+   border: 1px solid gray;
+   vertical-align: center;
+}
+
+.main .detail-bottom div.size-info .pants-info .pants-info-table span.unit-cm{  
+   display: block;
+   font-weight: 600;
+   margin-top: 20px;
+}
+
+.main .detail-bottom div.delivery{  
+   padding: 25px;
+}
+
+.main .detail-bottom div.delivery div.delivery-block{  
+   margin-bottom: 80px;
+}
+
+.main .detail-bottom div.delivery span.delivery-subject{  
+   display: block;
+   font-size: 24px;
+   padding: 20px 0;
+   margin-bottom: 10px;
+}
+
+.main .detail-bottom div.delivery span.delivery-content{  
+   font-size: 16px;
+   line-height: 28px;
+   color: grey;
+}

@@ -1,0 +1,134 @@
+/*-------------------------------------------------
+* 내용영역
+*-------------------------------------------------*/
+.main {
+    max-width: 1500px;
+    margin: auto;
+ }
+
+ .main .content-container h1{
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    padding: 50px 0;
+    background-color: white;
+ }
+
+
+ .main .content-container ul{
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    margin-bottom: 40px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+ }
+
+  .main .content-container ul li a{
+    display: block;
+    padding-right: 60px;
+    border-right: 1px solid grey;
+ }
+
+ .main .content-container ul li a.content-last {
+    border-right: none;
+    padding-left: 20px;
+ }
+
+ .main .content-container ul li a.content-first {
+    padding-left: 20px;
+ }
+
+ .main .content-container .search-form .board-search-subject {
+    display: flex;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    border-bottom: 2px solid black;
+ }
+
+ .main .content-container .board-search-subject h2 {
+    font-size: 30px;
+ }
+
+ .main .content-container .board-search-subject .board-search{
+    display: block;
+    display: flex;
+    margin-left: auto;
+ }
+
+ .main .content-container .board-search-subject .board-search .board-search-radio{
+    display: block;
+    display: flex;
+    margin-right: 15px;
+    align-items: center;
+ }
+
+ .main .content-container .board-search-subject .board-search .board-search-text {
+    display: block;
+    display: flex;
+ }
+
+ .main .content-container .notice-board{
+    display: block;
+ }
+
+ .main .content-container .notice-board table{
+    width: 100%;
+    border-spacing: 25px;
+ }
+
+ .main .content-container .notice-board table td, th{
+    border-bottom: 1px solid grey;
+    padding: 20px 0;
+    word-break: break-all;
+ }
+
+ .write {
+   display: block;
+   width: 135px;
+   text-align: center;
+   margin-left: 1200px;
+   margin-top: 30px;
+   padding: 15px 10px;
+   border: 2px solid black;
+}
+
+ /*-------------------------------------------------
+  * 페이지 번호 영역
+  *-------------------------------------------------*/
+ 
+  .paging{
+    margin-top: 60px;
+    padding-bottom: 140px;
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .paging li{
+    margin: 0 10px;
+    width: 32px;
+    height: 32px;
+ }
+ 
+ .paging li a{
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 32px;
+ }
+ 
+ .paging li a:hover{
+    background-color: #000000;
+    color: #ffffff;
+ }
+ 
+ .paging li.active{
+    background-color: #000000;
+ }
+ 
+ .paging li.active a{
+    color: #ffffff;
+ }
+

@@ -1,0 +1,148 @@
+/*-------------------------------------------------
+* 내용영역
+*-------------------------------------------------*/
+.main {
+    max-width: 1500px;
+    margin: auto;
+ }
+
+ .main .content-container h1{
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    padding: 50px 0;
+    background-color: white;
+ }
+
+ .main .content-container ul{
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    margin-bottom: 40px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+ }
+
+  .main .content-container ul li a{
+    display: block;
+    padding-right: 60px;
+    border-right: 1px solid grey;
+ }
+
+ .main .content-container ul li a.content-last {
+    border-right: none;
+    padding-left: 20px;
+ }
+
+ .main .content-container ul li a.content-first {
+    padding-left: 20px;
+}
+
+.main .content-container .content-a{
+    margin: 0 auto;
+    width: 1000px;
+    border-top: 1px solid grey;
+    color: grey;
+}
+
+.main .content-container .content0{
+    display: flex;
+    font-size: 14px;
+    padding: 15px 0;
+}
+
+.main .content-container .content0 span{
+    display: block;
+    margin: 0 20px;
+}
+
+.main .content-container .content0 span p{
+    padding-top: 5px;
+}
+
+.main .content-container .content0 input{
+    width: 600px;
+}
+
+.main .content-container .content1{
+    display: flex;
+    font-size: 14px;
+}
+
+.main .content-container .content1 .content1-name{
+    display: flex;
+    margin: 15px 0;
+    margin-right: 30px;
+}
+
+.main .content-container .content1 span{
+    display: block;
+    margin-right: 10px;
+}
+
+.main .content-container .content1 .content1-name span{
+    display: block;
+    margin: 0 20px;
+}
+
+.main .content-container .content1 span p{
+    padding-top: 5px;
+}
+
+.main .content-container .content1 .content1-pw{
+    display: flex;
+    margin: 15px 0;
+}
+
+.main .content-container .content2{
+    display: flex;
+    font-size: 14px;
+}
+
+.main .content-container .content2 span{
+    display: block;
+    margin: 0 11px;
+    padding-top:170px;
+}
+
+.main .content-container .content2 textarea{
+    margin: 30px;
+    width: 850px;
+    height: 300px;
+}
+
+.main .content-container .content3{
+    display: flex;
+    font-size: 14px;
+}
+
+.main .content-container .content3 span{
+    margin: 20px 11px;
+    margin-right: 30px;
+}
+
+.main .content-container .content3 input{
+    margin: 18px 0;
+}
+
+.main .content-container .content4{
+    padding: 20px 0;
+}
+
+.main .content-container .content4 div{
+    margin-left: 780px;
+    margin-bottom: 30px;
+}
+
+.main .content-container .content4 div input{
+    background-color: white;
+    border: 1px solid black;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.main .content-container .content4 div input.content4-reset{
+    margin-right: 10px;
+}

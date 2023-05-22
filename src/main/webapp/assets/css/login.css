@@ -1,0 +1,62 @@
+/*-------------------------------------------------
+* 내용영역
+*-------------------------------------------------*/
+.main {
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+ }
+
+ .main .login{
+    margin: 0 459px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+ }
+
+ .main .login .login-text{
+    margin: 0 459px;
+    padding-top: 110px;
+    padding-bottom: 30px;
+    text-align: center;
+ }
+
+ .main .login hr.login-hr-first{
+   margin: 35px 0;
+}
+
+.main .login .input-item .user_id{
+   margin-bottom: 10px;
+   width: 250px;
+   height: 30px;
+}
+
+.main .login .input-item .user_pw{
+   margin-bottom: 10px;
+   width: 250px;
+   height: 30px;
+}
+
+.main .login button{
+   margin-bottom: 10px;
+   width: 250px;
+}
+
+.main .login hr.login-hr-second{
+   margin: 35px 0;
+}
+
+.main .login .login-inform ul{
+   display: flex;
+   justify-content: space-around;
+   font-size: 13px;
+   margin-bottom: 50px;
+}
+
+.main .login .login-inform ul li a.f-grey{
+   color: grey;
+}
+
+.main .login .login-inform ul li a.sign-in{
+   font-weight: 500;
+}

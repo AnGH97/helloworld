@@ -1,0 +1,213 @@
+/*-------------------------------------------------
+* 내용영역
+*-------------------------------------------------*/
+.main {
+    max-width: 1500px;
+    margin: auto;
+    flex-wrap: wrap;
+ }
+
+ .main .search-answer{
+   width: 800px;
+   height: 300px;
+   margin: 20px auto;
+   text-align: center;
+ }
+
+ .main .search-answer .search-answer-text{
+   display: block;
+   margin: 50px 0;
+   padding-top: 70px;
+   font-size: 25px;
+   font-weight: 500;
+ }
+
+ .main .search-answer .search-answer-form{
+   border-bottom: 1px solid grey;
+   width: 400px;
+   margin: 0 auto;
+   margin-top: 60px;
+ }
+
+ .main .search-answer input.re-search{
+   width: 300px;
+   font-size: 20px;
+   margin-right: 55px;
+   border: none;
+ }
+
+ .main .search-answer button.re-search-button{
+   border: none;
+   background-color: white;
+   cursor: pointer;
+ }
+ 
+ .main .main-category-img .sort-list{
+    display: flex;
+ }
+ 
+ .main .main-category-img .sort-list span{
+    color: grey;
+    font-size: 14px;
+    font-weight: 500;
+ } 
+ 
+ .main .main-category-img .sort-list ul{
+    display: block;
+    margin-left: auto;
+    color: grey;
+    font-size: 14px;
+    font-weight: 500;
+ }
+ 
+ .main .main-category-img .sort-list ul:hover li{
+    display: block;
+ }
+ 
+ .main .main-category-img .sort-list ul li{
+    display: none;
+    padding-bottom: 15px;
+    margin-right: 20px;
+ }
+ 
+ .main .main-category-img .sort-list ul li.first-sort-list{
+    display: block;
+ }
+ 
+ .main .main-category-img .sort-list ul li:hover{
+    color: black;
+    text-decoration: underline;
+ }
+ 
+ .sort-img ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+ }
+ 
+ .sort-img ul li{
+   width: 25%;
+   padding: 20px 10px;
+ }
+ 
+ .sort-img ul li a{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+ .sort-img ul li a .combine-img{
+    overflow: hidden;
+    text-align: center;
+ }
+ 
+ .sort-img ul li a .combine-img img{
+    width: 355px;
+    height: 522px;
+    margin: auto;
+    object-fit: cover;
+    
+ }
+ 
+ .sort-img ul li a .combine-img div.img-first{
+    display: block;
+    position: absolute;
+ }
+ 
+ .sort-img ul li a .combine-img div.img-second{
+    display: none;
+    width: 302px;
+    position: absolute;
+ }
+ 
+ .sort-img ul li a .combine-img:hover div.img-second{
+    display: block;
+    width: 302px;
+    position: absolute;
+ }
+ 
+ .sort-img ul li a .combine-img-tag{
+   margin-top: 555px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.sort-img ul li a .combine-img-tag span.review{
+   display: block;
+   color: #803232;
+   font-weight: 600;
+   margin-bottom: 15px;
+}
+
+.sort-img ul li a .combine-img-tag span.product-name{
+   display: block;
+   margin-bottom: 15px;
+}
+
+.sort-img ul li span.money{
+   display: block;
+   display: flex;
+}
+
+.sort-img ul li span.money p.sale{
+   display: block;
+   color: #803232;
+   padding-right: 13px;
+   font-weight: 600;
+}
+
+.sort-img ul li span.money p.sale-price{
+   display: block;
+   color: black;
+   padding-right: 9px;
+   font-weight: 600;
+}
+
+.sort-img ul li span.money p.just-price{
+   display: block;
+   color: grey;
+   text-decoration: line-through;
+   font-size: 15px;
+   font-weight: 600;
+   margin-top: 2px;
+}
+
+ 
+ 
+ /*-------------------------------------------------
+  * 페이지 번호 영역
+  *-------------------------------------------------*/
+ 
+  .paging{
+    margin-top: 160px;
+    padding-bottom: 140px;
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .paging li{
+    margin: 0 10px;
+    width: 32px;
+    height: 32px;
+ }
+ 
+ .paging li a{
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 32px;
+ }
+ 
+ .paging li a:hover{
+    background-color: #000000;
+    color: #ffffff;
+ }
+ 
+ .paging li.active{
+    background-color: #000000;
+ }
+ 
+ .paging li.active a{
+    color: #ffffff;
+ }
