@@ -20,7 +20,7 @@
                     <li><a href="${contextPath}/shoppingmall/community_write" class="content-last">전국 매장 안내</a></li>
                 </ul>
 
-                <form class="search-form" name="search-form" id="search-form">
+                <form method="get" action="${contextPath}/shoppingmall/community1_index.do" class="search-form" name="search-form" id="search-form">
                     <div class="board-search-subject">
                         <h2>공지사항</h2>
                         <div class="board-search">
@@ -143,7 +143,7 @@
                 </div>
             </div>
 
-            <a class="write" href="#">글쓰기</a>
+            <a class="write" href="${contextPath}/shoppingmall/community_write">글쓰기</a>
             
             <div class="pagenation">
                 <!--페이지 번호-->

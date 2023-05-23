@@ -95,6 +95,26 @@
     margin: 15px 0;
 }
 
+.main .content-container .content1 .content1-star{
+    display: flex;
+}
+
+.main .content-container .content1 .content1-star span{
+    display: block;
+    margin: 0 20px;
+}
+
+.main .content-container .content1 .content1-star p{
+    margin-top: 15px;
+}
+
+.main .content-container .content1 .content1-star select{
+    margin-top: 15px;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+}
+
 .main .content-container .content2{
     display: flex;
     font-size: 14px;

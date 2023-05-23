@@ -67,6 +67,11 @@ public class ShopController {
         return new ModelAndView("shoppingmall/review_community_write");
     }
 
+    @PostMapping("/shoppingmall/review_community_write.do")
+    public ModelAndView review_community_write_ok(Model model){
+        return webHelper.redirect("/shoppingmall/community1_index", "리뷰 작성이 완료되었습니다.");
+    }    
+
     @GetMapping("/shoppingmall/search_index")
     public ModelAndView search_index(Model model){
         return new ModelAndView("shoppingmall/search_index");

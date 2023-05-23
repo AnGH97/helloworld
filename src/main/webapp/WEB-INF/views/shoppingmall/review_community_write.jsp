@@ -19,10 +19,10 @@
                 <li><a href="${contextPath}/shoppingmall/community_write">교환 문의</a></li>
                 <li><a href="${contextPath}/shoppingmall/community_write" class="content-last">전국 매장 안내</a></li>
             </ul>
-            <form class="form-horizontal" name="join_form" id="join_form">
+            <form method="post" action="${contextPath}/shoppingmall/review_community_write.do" class="form-horizontal" name="join_form" id="join_form">
                 <div class="content-a content0">
                     <span><p>TITLE</p></span>
-                    <input class="text_title" type="text" name="text_title" id="text_title" maxlength="30" />
+                    <input class="text_title" type="text" name="text_title" id="text_title" maxlength="50" />
                 </div>
                 <div class="content-a content1">
                     <div class="content1-name">
@@ -32,6 +32,17 @@
                     <div class="content1-pw">
                         <span><p>PASSWORD</p></span>
                         <input class="user_pw" type="password" name="user_pw" id="user_pw" maxlength="30" />
+                    </div>
+                    <div class="content1-star">
+                        <span><p>REVIEW</p></span>
+                        <select name="review-star" id="review-star">
+                            <option value="">---만족도---</option>
+                            <option value="5" class="s5">5점</option>
+                            <option value="4" class="s4">4점</option>
+                            <option value="3" class="s3">3점</option>
+                            <option value="2" class="s2">2점</option>
+                            <option value="1" class="s1">1점</option>
+                        </select>
                     </div>
                 </div>
                 <div class="content-a content2">
