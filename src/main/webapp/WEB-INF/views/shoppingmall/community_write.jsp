@@ -39,10 +39,6 @@
                 <textarea class="content-title" name="content-title" id="content-title" maxlength="1000" placeholder="내용을 입력하세요."
                     onfocus="this.placeholder=''" onblur="this.placeholder='내용을 입력하세요.'"></textarea>
             </div>
-            <div class="content-a content3">
-                <span><p>FILE</p></span>
-                <input class="content3-file" type="file" name="content3-file" id="content3-file" />
-            </div>
             <div class="content-a content4">
                 <div>
                     <input class="content4-reset" type="reset" value="다시 쓰기"/>

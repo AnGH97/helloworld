@@ -334,16 +334,16 @@
 
                 <div class="inform4">
                     <label class="check_all" for="check_all">
-                        <input class="check_all" type="checkbox" id="check_all" >전체 동의
+                        <input name="check_all" class="check_all" type="checkbox" id="check_all" >전체 동의
                     </label>
                     <label class="check check_1" for="check_1">
-                        <input class="check check_1" type="checkbox" id="check_1" class="normal" >[필수]이용약관
+                        <input name="check_1" class="check check_1" type="checkbox" id="check_1" class="normal" >[필수]이용약관
                     </label>
                     <label class="check check_2" for="check_2">
-                        <input class="check check_2" type="checkbox" id="check_2" class="normal" >[필수] 개인정보 수집 및 이용 안내
+                        <input name="check_2" class="check check_2" type="checkbox" id="check_2" class="normal" >[필수] 개인정보 수집 및 이용 안내
                     </label>
                     <label class="check check_3" for="check_3">
-                        <input class="check check_3" type="checkbox" id="check_3" class="normal" >[선택]마케팅 수신 동의
+                        <input name="check_3" class="check check_3" type="checkbox" id="check_3" class="normal" >[선택]마케팅 수신 동의
                     </label>
                     <span>
                         <p>회사 또는 회사의 계열사((주)브랜드엑스헬스케어, (주)이루다마케팅, (주)브랜드엑스피트니스 등)

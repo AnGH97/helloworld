@@ -46,51 +46,46 @@
     color: grey;
 }
 
-.main .content-container .content0{
-    display: flex;
-    font-size: 14px;
-    padding: 15px 0;
-}
-
-.main .content-container .content0 span{
-    display: block;
-    margin: 0 20px;
-}
-
-.main .content-container .content0 span p{
-    padding-top: 5px;
-}
-
-.main .content-container .content0 input{
-    width: 600px;
-}
-
 .main .content-container .content1{
     display: flex;
     font-size: 14px;
 }
 
-.main .content-container .content1 .content1-name{
+.main .content-container .content1 .content1-title{
     display: flex;
     margin: 15px 0;
     margin-right: 30px;
 }
 
-.main .content-container .content1 span{
+.main .content-container .content1 span.title{
     display: block;
-    margin-right: 10px;
-}
-
-.main .content-container .content1 .content1-name span{
-    display: block;
-    margin: 0 20px;
-}
-
-.main .content-container .content1 span p{
+    margin-right: 15px;
     padding-top: 5px;
 }
 
-.main .content-container .content1 .content1-pw{
+.main .content-container .content1 span.title_text{
+    display: block;
+    border: 1.5px solid #d5d5d5;
+    width: 400px;
+    height: 25px;
+    line-height: 20px;
+}
+
+.main .content-container .content1 .content1-name span.name{
+    display: block;
+    margin-right: 15px;
+    padding-top: 5px;
+}
+
+.main .content-container .content1 span.name_text{
+    display: block;
+    border: 1.5px solid #d5d5d5;
+    width: 200px;
+    height: 25px;
+    line-height: 20px;
+}
+
+.main .content-container .content1 .content1-name{
     display: flex;
     margin: 15px 0;
 }
@@ -98,37 +93,35 @@
 .main .content-container .content2{
     display: flex;
     font-size: 14px;
+    height: 500px;
 }
 
-.main .content-container .content2 span{
+.main .content-container .content2 span.text{
     display: block;
     margin: 0 11px;
-    padding-top:170px;
+    padding-top: 240px;
 }
 
-.main .content-container .content2 textarea{
-    margin: 30px;
-    width: 850px;
-    height: 300px;
+.main .content-container .content2 span.text_txt{
+    display: block;
+    border: 1.5px solid #d5d5d5;
+    margin: 25px 0;
+    width: 900px;
 }
 
-.main .content-container .content4{
-    padding: 20px 0;
-}
-
-.main .content-container .content4 div{
-    margin-left: 780px;
-    margin-bottom: 30px;
-}
-
-.main .content-container .content4 div input{
-    background-color: white;
+.main .content-container .content4 a{
+    display: block;
     border: 1px solid black;
-    width: 100px;
-    height: 35px;
-    cursor: pointer;
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    margin: 15px 0 20px 860px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
 }
 
-.main .content-container .content4 div input.content4-reset{
-    margin-right: 10px;
+.main .content-container .content4 a p{
+    display: block;
+    padding-top: 12px;
 }

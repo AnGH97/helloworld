@@ -14,7 +14,7 @@
     <header class="header">
         <div class="header-container">
             <div class="menu menu-item1">
-                <a href="#">
+                <a href="${contextPath}/shoppingmall/index">
                     <img src="${contextPath}/assets/img/xexymix_header_logo_bk.png" />
                 </a>
             </div>
@@ -31,52 +31,52 @@
                             <li><a href="${contextPath}/shoppingmall/community1_index">전국 매장 안내</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">베스트</a>
+                    <li><a href="${contextPath}/shoppingmall/index">베스트</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="#">맨즈</a></li>
-                            <li><a href="#">우먼즈</a></li>
-                            <li><a href="#">테니스</a></li>
-                            <li><a href="#">용품</a></li>
+                            <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">맨즈</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">우먼즈</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">테니스</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">용품</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">1+1</a>
+                    <li><a href="${contextPath}/shoppingmall/index">1+1</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="#">상의</a></li>
-                            <li><a href="#">하의</a></li>
-                            <li><a href="#">용품</a></li>
+                            <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">상의</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">하의</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">용품</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">우먼즈</a>
+                    <li><a href="${contextPath}/shoppingmall/index">우먼즈</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="#">상의</a></li>
-                            <li><a href="#">하의</a></li>
-                            <li><a href="#">아우터</a></li>
-                            <li><a href="#">조거팬츠</a></li>
-                            <li><a href="#">세트</a></li>
+                            <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">상의</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">하의</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">아우터</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">조거팬츠</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">세트</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">맨즈</a>
+                    <li><a href="${contextPath}/shoppingmall/index">맨즈</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="#">상의</a></li>
-                            <li><a href="#">하의</a></li>
-                            <li><a href="#">아우터</a></li>
-                            <li><a href="#">조거팬츠</a></li>
-                            <li><a href="#">세트</a></li>
+                            <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">상의</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">하의</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">아우터</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">조거팬츠</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">세트</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">테니스</a>
+                    <li><a href="${contextPath}/shoppingmall/index">테니스</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="#">맨즈</a></li>
-                            <li><a href="#">우먼즈</a></li>
-                            <li><a href="#">용품</a></li>
+                            <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">맨즈</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">우먼즈</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">용품</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">용품</a>
+                    <li><a href="${contextPath}/shoppingmall/index">용품</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="#">양말</a></li>
-                            <li><a href="#">모자</a></li>
-                            <li><a href="#">가방</a></li>
-                            <li><a href="#">홈트용품</a></li>
+                            <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">양말</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">모자</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">가방</a></li>
+                            <li><a href="${contextPath}/shoppingmall/inner_index">홈트용품</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -123,52 +123,52 @@
                                     <li><a href="${contextPath}/shoppingmall/community1_index">전국 매장 안내</a></li>
                                 </ul>
                             </li>
-                            <li class="mtitle"><a href="#">베스트</a>
+                            <li class="mtitle"><a href="${contextPath}/shoppingmall/index">베스트</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="#">맨즈</a></li>
-                                    <li><a href="#">우먼즈</a></li>
-                                    <li><a href="#">테니스</a></li>
-                                    <li><a href="#">용품</a></li>
+                                    <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">맨즈</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">우먼즈</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">테니스</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">용품</a></li>
                                 </ul>
                             </li>
-                            <li class="mtitle"><a href="#">1+1</a>
+                            <li class="mtitle"><a href="${contextPath}/shoppingmall/index">1+1</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="#">상의</a></li>
-                                    <li><a href="#">하의</a></li>
-                                    <li><a href="#">용품</a></li>
+                                    <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">상의</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">하의</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">용품</a></li>
                                 </ul>
                             </li>
-                            <li class="mtitle"><a href="#">우먼즈</a>
+                            <li class="mtitle"><a href="${contextPath}/shoppingmall/index">우먼즈</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="#">상의</a></li>
-                                    <li><a href="#">하의</a></li>
-                                    <li><a href="#">아우터</a></li>
-                                    <li><a href="#">조거팬츠</a></li>
-                                    <li><a href="#">세트</a></li>
+                                    <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">상의</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">하의</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">아우터</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">조거팬츠</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">세트</a></li>
                                 </ul>
                             </li>
-                            <li class="mtitle"><a href="#">맨즈</a>
+                            <li class="mtitle"><a href="${contextPath}/shoppingmall/index">맨즈</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="#">상의</a></li>
-                                    <li><a href="#">하의</a></li>
-                                    <li><a href="#">아우터</a></li>
-                                    <li><a href="#">조거팬츠</a></li>
-                                    <li><a href="#">세트</a></li>
+                                    <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">상의</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">하의</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">아우터</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">조거팬츠</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">세트</a></li>
                                 </ul>
                             </li>
-                            <li class="mtitle"><a href="#">테니스</a>
+                            <li class="mtitle"><a href="${contextPath}/shoppingmall/index">테니스</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="#">맨즈</a></li>
-                                    <li><a href="#">우먼즈</a></li>
-                                    <li><a href="#">용품</a></li>
+                                    <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">맨즈</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">우먼즈</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">용품</a></li>
                                 </ul>
                             </li>
-                            <li class="mtitle"><a href="#">용품</a>
+                            <li class="mtitle"><a href="${contextPath}/shoppingmall/index">용품</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="#">양말</a></li>
-                                    <li><a href="#">모자</a></li>
-                                    <li><a href="#">가방</a></li>
-                                    <li><a href="#">홈트용품</a></li>
+                                    <li class="in-item-first"><a href="${contextPath}/shoppingmall/inner_index">양말</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">모자</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">가방</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/inner_index">홈트용품</a></li>
                                 </ul>
                             </li>
                         </ul>

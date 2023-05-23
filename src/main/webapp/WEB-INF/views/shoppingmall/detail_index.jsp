@@ -9,7 +9,7 @@
 
 <!--메인 내용 영역-->
 <section class="main">
-    <form method="post" action="${contextPath}/shoppingmall/detail_index_add.do"class="product-choice" name="product-choice" id="product-choice">
+    <form method="post" action="${contextPath}/shoppingmall/detail_index_add_ok.do"class="product-choice" name="product-choice" id="product-choice">
         <div class="detail-top">
             <div class="detail-top-img">
                 <img class="preview" id="target" src="${contextPath}/assets/img/andar-deatil-top-img1.jpg"/>
@@ -375,7 +375,7 @@
                     </div>
                 </div>
                 <div class="star-bottom">
-                    <button type="button" class="more" id="more">더보기</button>
+                    <button type="button" class="more" id="more" name="more">더보기</button>
                 </div>
             </div>
         </div>

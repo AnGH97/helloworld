@@ -12,10 +12,10 @@
         <div class="search-answer">
             <span class="search-answer-text">"레깅스"에 대한 442개의 통합 검색결과입니다.</span>
             <div class="search-answer-menu">
-                <form method="get" action="${contextPath}/shoppingmall/search_index_ok.do" class="search-answer-form" name="search-answer-form" id="search-answer-form">
+                <form method="get" action="${contextPath}/shoppingmall/search_index" class="search-answer-form" name="search-answer-form" id="search-answer-form">
                     <div class="re-search-button">
                         <label for="re-search">
-                            <input type="text" class="re-search" id="re-search" placeholder="검색어를 입력하세요."
+                            <input type="text" name="search" class="re-search" id="re-search" placeholder="검색어를 입력하세요."
                                 onfocus="this.placeholder=''" onblur="this.placeholder='검색어를 입력하세요.'" />
                             <button type="submit" class="re-search-button">
                                 <img class="re-search" id="re-search-icon" src="${contextPath}/assets/img/xexymix_menu_view.png" />

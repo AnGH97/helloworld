@@ -16,10 +16,9 @@ public class ShopController {
     /**WbeHelper 객체 */
     private final WebHelper webHelper;
     
-    /** top/bottom만 존재하는 페이지 */
-    @GetMapping("/shoppingmall/common")
-    public ModelAndView common(Model model){
-        return new ModelAndView("shoppingmall/common");
+    @GetMapping("/shoppingmall/community_view")
+    public ModelAndView community_view(Model model){
+        return new ModelAndView("shoppingmall/community_view");
     }
 
     @GetMapping("/shoppingmall/community_write")
@@ -42,7 +41,7 @@ public class ShopController {
         return new ModelAndView("shoppingmall/detail_index");
     }
 
-    @PostMapping("/shoppingmall/detail_index_add.do")
+    @PostMapping("/shoppingmall/detail_index_add_ok.do")
     public ModelAndView detail_index_ok(Model model){
         return webHelper.redirect("/shoppingmall/detail_index", "장바구니에 담겼습니다.");
     }
@@ -72,7 +71,7 @@ public class ShopController {
         return new ModelAndView("shoppingmall/review_community_write");
     }
 
-    @PostMapping("/shoppingmall/review_community_write.do")
+    @PostMapping("/shoppingmall/review_community_write_ok.do")
     public ModelAndView review_community_write_ok(Model model){
         return webHelper.redirect("/shoppingmall/detail_index#detail-middle-review", "리뷰 작성이 완료되었습니다.");
     }    
@@ -81,12 +80,6 @@ public class ShopController {
     public ModelAndView search_index(Model model){
         return new ModelAndView("shoppingmall/search_index");
     }
-
-    @GetMapping("/shoppingmall/search_index_ok.do")
-    public ModelAndView search_index_ok(Model model){
-        return webHelper.redirect("/shoppingmall/search_index", null);
-    }
-
 
     @GetMapping("/shoppingmall/shopping_cart")
     public ModelAndView shopping_cart(Model model){

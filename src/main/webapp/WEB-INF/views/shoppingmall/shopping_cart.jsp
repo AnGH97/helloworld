@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="cart-button2">
-                    <button type="button" class="go-shopping" id="go-shopping" onclick="location.href='#'">쇼핑하기</button>
+                    <button type="button" class="go-shopping" id="go-shopping" onclick="location.href='${contextPath}/shoppingmall/index'">쇼핑하기</button>
                     <button type="button" class="order" id="order" onclick="location.href='#'" >주문하기</button>
                 </div>
                 

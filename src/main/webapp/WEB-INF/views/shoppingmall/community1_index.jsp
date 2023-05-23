@@ -20,7 +20,7 @@
                     <li><a href="${contextPath}/shoppingmall/community1_index" class="content-last">전국 매장 안내</a></li>
                 </ul>
 
-                <form method="get" action="${contextPath}/shoppingmall/community1_index.do" class="search-form" name="search-form" id="search-form">
+                <form method="get" action="${contextPath}/shoppingmall/community1_index" class="search-form" name="search-form" id="search-form">
                     <div class="board-search-subject">
                         <h2>공지사항</h2>
                         <div class="board-search">
@@ -35,7 +35,7 @@
                                 </label>
                             </div>
                             <div class="board-search-text">
-                                <input type="text" name="search" id="search" />
+                                <input type="text" name="search-text" id="search" />
                                 <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </div>
                         </div>
@@ -56,84 +56,84 @@
                         <tbody>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
                             </tr>
                             <tr width="100%" align="center">
                                 <td>1</td>
-                                <td><a href="#">제목공간입니다.</a></td>
+                                <td><a href="${contextPath}/shoppingmall/community_view">제목공간입니다.</a></td>
                                 <td>작성자</td>
                                 <td>작성일</td>
                                 <td>1222222</td>
