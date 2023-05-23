@@ -5,13 +5,10 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:import url="/WEB-INF/views/inc/top.jsp" />
 <!--index stype-->
-<link rel="stylesheet" href="${contextPath}/assets/css/index.css" />
+<link rel="stylesheet" href="${contextPath}/assets/css/inner_index.css" />
 
     <!--메인 내용 영역-->
     <section class="main">
-        <div class="main_img">
-            <img src="${contextPath}/assets/img/andar_main_img.jpg" />
-        </div>
         <div class="main-category">
             <span><h1>베스트</h1></span>
             <ul>

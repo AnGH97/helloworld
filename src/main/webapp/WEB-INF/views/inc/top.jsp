@@ -20,15 +20,15 @@
             </div>
             <div class="menu menu-item2">
                 <ul class="menu-item2-line">
-                    <li><a href="#">프로모션</a></li>
-                    <li><a href="#">커뮤니티</a>
+                    <li><a href="${contextPath}/shoppingmall/community1_index">프로모션</a></li>
+                    <li><a href="${contextPath}/shoppingmall/community1_index">커뮤니티</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="#">공지사항</a></li>
-                            <li><a href="#">자주 묻는 질문</a></li>
-                            <li><a href="#">상품 문의</a></li>
-                            <li><a href="#">반품 문의</a></li>
-                            <li><a href="#">교환 문의</a></li>
-                            <li><a href="#">전국 매장 안내</a></li>
+                            <li class="in-item-first"><a href="${contextPath}/shoppingmall/community1_index">공지사항</a></li>
+                            <li><a href="${contextPath}/shoppingmall/community1_index">자주 묻는 질문</a></li>
+                            <li><a href="${contextPath}/shoppingmall/community1_index">상품 문의</a></li>
+                            <li><a href="${contextPath}/shoppingmall/community1_index">반품 문의</a></li>
+                            <li><a href="${contextPath}/shoppingmall/community1_index">교환 문의</a></li>
+                            <li><a href="${contextPath}/shoppingmall/community1_index">전국 매장 안내</a></li>
                         </ul>
                     </li>
                     <li><a href="#">베스트</a>
@@ -84,24 +84,24 @@
             <div class="menu menu-item3">
                 <div class="main-search-menu">
                     <img class="main-search" id="search-open" src="${contextPath}/assets/img/xexymix_menu_view.png" />
-                    <form class="main-search" name="main-search" id="main-search-form">
+                    <form method="get" action="${contextPath}/shoppingmall/search_index" class="main-search" name="main-search" id="main-search-form">
                         <span id="search-close" class="search-close">X</span>
                         <div class="search-text">
                             <span>검색</span>
                         </div>
                         <div class="search-button">
                             <label for="main-search">
-                                <input type="text" class="main-search" id="main-search" placeholder="검색어를 입력하세요."
+                                <input name="search" type="text" class="main-search" id="main-search" placeholder="검색어를 입력하세요."
                                     onfocus="this.placeholder=''" onblur="this.placeholder='검색어를 입력하세요.'" />
                                 <input type="submit" class="main-search-button" value="검색" />
                             </label>
                         </div>
                     </form>
                 </div>
-                <a href="#">
+                <a href="${contextPath}/shoppingmall/shopping_cart">
                     <img src="${contextPath}/assets/img/xexymix_menu_cart.png" />
                 </a>
-                <a href="#">
+                <a href="${contextPath}/shoppingmall/login">
                     <img src="${contextPath}/assets/img/xexymix_login_logo.png" />
                 </a>
                 
@@ -112,15 +112,15 @@
                             <li class="x" id="menu-close">
                                 <h1>X</h1>
                             </li>
-                            <li class="mtitle"><a href="#">프로모션</a></li>
-                            <li class="mtitle"><a href="#">커뮤니티</a>
+                            <li class="mtitle"><a href="${contextPath}/shoppingmall/community1_index">프로모션</a></li>
+                            <li class="mtitle"><a href="${contextPath}/shoppingmall/community1_index">커뮤니티</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="#">공지사항</a></li>
-                                    <li><a href="#">자주 묻는 질문</a></li>
-                                    <li><a href="#">상품 문의</a></li>
-                                    <li><a href="#">반품 문의</a></li>
-                                    <li><a href="#">교환 문의</a></li>
-                                    <li><a href="#">전국 매장 안내</a></li>
+                                    <li class="in-item-first"><a href="${contextPath}/shoppingmall/community1_index">공지사항</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/community1_index">자주 묻는 질문</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/community1_index">상품 문의</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/community1_index">반품 문의</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/community1_index">교환 문의</a></li>
+                                    <li><a href="${contextPath}/shoppingmall/community1_index">전국 매장 안내</a></li>
                                 </ul>
                             </li>
                             <li class="mtitle"><a href="#">베스트</a>

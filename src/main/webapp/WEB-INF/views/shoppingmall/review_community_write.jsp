@@ -10,28 +10,23 @@
     <!--메인 내용 영역-->
     <section class="main">
         <div class="content-container">
-            <h1>커뮤니티</h1>
-            <ul>
-                <li><a href="${contextPath}/shoppingmall/community_write" class="content-first">공지사항</a></li>
-                <li><a href="${contextPath}/shoppingmall/community_write">자주 묻는 질문</a></li>
-                <li><a href="${contextPath}/shoppingmall/community_write">상품 문의</a></li>
-                <li><a href="${contextPath}/shoppingmall/community_write">반품 문의</a></li>
-                <li><a href="${contextPath}/shoppingmall/community_write">교환 문의</a></li>
-                <li><a href="${contextPath}/shoppingmall/community_write" class="content-last">전국 매장 안내</a></li>
-            </ul>
+            <h1>리뷰작성</h1>
             <form method="post" action="${contextPath}/shoppingmall/review_community_write.do" class="form-horizontal" name="join_form" id="join_form">
                 <div class="content-a content0">
                     <span><p>TITLE</p></span>
-                    <input class="text_title" type="text" name="text_title" id="text_title" maxlength="50" />
+                    <input class="text_title" type="text" name="text_title" id="text_title" maxlength="50" placeholder="제목을 입력하세요."
+                    onfocus="this.placeholder=''" onblur="this.placeholder='제목을 입력하세요.'"/>
                 </div>
                 <div class="content-a content1">
                     <div class="content1-name">
                         <span><p>NAME</p></span>
-                        <input class="user_name" type="text" name="user_name" id="user_name" maxlength="30" />
+                        <input class="user_name" type="text" name="user_name" id="user_name" maxlength="30" placeholder="아이디를 입력하세요."
+                        onfocus="this.placeholder=''" onblur="this.placeholder='아이디를 입력하세요.'"/>
                     </div>
                     <div class="content1-pw">
                         <span><p>PASSWORD</p></span>
-                        <input class="user_pw" type="password" name="user_pw" id="user_pw" maxlength="30" />
+                        <input class="user_pw" type="password" name="user_pw" id="user_pw" maxlength="30" placeholder="비밀번호를 입력하세요."
+                        onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호를 입력하세요.'" />
                     </div>
                     <div class="content1-star">
                         <span><p>REVIEW</p></span>

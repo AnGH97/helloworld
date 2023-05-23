@@ -12,12 +12,12 @@
             <div class="content-container">
                 <h1>커뮤니티</h1>
                 <ul>
-                    <li><a href="${contextPath}/shoppingmall/community_write" class="content-first">공지사항</a></li>
-                    <li><a href="${contextPath}/shoppingmall/community_write">자주 묻는 질문</a></li>
-                    <li><a href="${contextPath}/shoppingmall/community_write">상품 문의</a></li>
-                    <li><a href="${contextPath}/shoppingmall/community_write">반품 문의</a></li>
-                    <li><a href="${contextPath}/shoppingmall/community_write">교환 문의</a></li>
-                    <li><a href="${contextPath}/shoppingmall/community_write" class="content-last">전국 매장 안내</a></li>
+                    <li><a href="${contextPath}/shoppingmall/community1_index" class="content-first">공지사항</a></li>
+                    <li><a href="${contextPath}/shoppingmall/community1_index">자주 묻는 질문</a></li>
+                    <li><a href="${contextPath}/shoppingmall/community1_index">상품 문의</a></li>
+                    <li><a href="${contextPath}/shoppingmall/community1_index">반품 문의</a></li>
+                    <li><a href="${contextPath}/shoppingmall/community1_index">교환 문의</a></li>
+                    <li><a href="${contextPath}/shoppingmall/community1_index" class="content-last">전국 매장 안내</a></li>
                 </ul>
 
                 <form method="get" action="${contextPath}/shoppingmall/community1_index.do" class="search-form" name="search-form" id="search-form">

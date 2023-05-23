@@ -6,14 +6,11 @@
     margin: auto;
     flex-wrap: wrap;
  }
- 
- .main .main_img img{
-    width: 100%;
-    margin-bottom: 45px;
- }
- 
+
  .main .main-category span h1{
-    font-size: 28px;
+   display: block;
+   padding-top: 50px;
+   font-size: 28px;
  }
  
  .main .main-category ul{

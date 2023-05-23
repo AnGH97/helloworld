@@ -149,10 +149,10 @@
     <div class="detail-middle">
         <div class="detail-middle-menu">
             <ul>
-                <li class="detail-middle-menu1"><a href="#detail-middle-text">상세정보</a></li>
-                <li class="detail-middle-menu2"><a href="#detail-middle-review">리뷰 3,620</a></li>
-                <li class="detail-middle-menu3"><a href="#size-recomend">사이즈정보</a></li>
-                <li class="detail-middle-menu4"><a href="#delivery">구매안내</a></li>
+                <li class="detail-middle-menu1 dmbt"><a href="#detail-middle-text">상세정보</a></li>
+                <li class="detail-middle-menu2 dmbt"><a href="#detail-middle-review">리뷰 3,620</a></li>
+                <li class="detail-middle-menu3 dmbt"><a href="#size-recomend">사이즈정보</a></li>
+                <li class="detail-middle-menu4 dmbt"><a href="#delivery">구매안내</a></li>
             </ul>
         </div>
         <div class="detail-middle-review" id="detail-middle-review">
@@ -206,11 +206,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="star-middle">
+                <div class="star-middle" id="star-middle">
                     <div class="star-middle1">
-                        <button type=button class="bt date-resc" id="date-resc" onclick="location.href='#'">최신순</button>
-                        <button type=button class="bt star-up" id="star-up" onclick="location.href='#'">높은 별점순</button>
-                        <button type=button class="bt star-down" id="star-down" onclick="location.href='#'">낮은 별점순</button>
+                        <button type=button class="bt date-resc" id="date-resc" onclick="location.href='#star-middle'">최신순</button>
+                        <button type=button class="bt star-up" id="star-up" onclick="location.href='#star-middle'">높은 별점순</button>
+                        <button type=button class="bt star-down" id="star-down" onclick="location.href='#star-middle'">낮은 별점순</button>
                     </div>
                     <div class="star-middle2">
                         <table align="center">
@@ -949,12 +949,29 @@
 
 <script>    
     $(".bt").on("click", (e) => {
-        const target_id = $(e.currentTarget).attr('id');
+        const target_id = $(e.currentTarget);
         console.log(target_id);
         $(target_id).css({
             "color": "grey",
             "font-weight": "600"
         });
+        $(".bt").not(e.currentTarget).css({
+            "color": "#d5d5d5",
+            "font-weight": "500"
+        })
+    });
+</script>
+
+<script>    
+    $(".dmbt").on("click", (e) => {
+        const target_id = $(e.currentTarget);
+        console.log(target_id);
+        $(target_id).css({
+            "border-bottom" : "4px solid black"
+        });
+        $(".dmbt").not(e.currentTarget).css({
+            "border-bottom" : "none"
+        })
     });
 </script>
 

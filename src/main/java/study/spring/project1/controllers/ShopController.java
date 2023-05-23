@@ -52,6 +52,11 @@ public class ShopController {
         return new ModelAndView("shoppingmall/index");
     }
 
+    @GetMapping("/shoppingmall/inner_index")
+    public ModelAndView inner_index(Model model){
+        return new ModelAndView("shoppingmall/inner_index");
+    }
+
     @GetMapping("/shoppingmall/login")
     public ModelAndView login(Model model){
         return new ModelAndView("shoppingmall/login");
@@ -69,7 +74,7 @@ public class ShopController {
 
     @PostMapping("/shoppingmall/review_community_write.do")
     public ModelAndView review_community_write_ok(Model model){
-        return webHelper.redirect("/shoppingmall/community1_index", "리뷰 작성이 완료되었습니다.");
+        return webHelper.redirect("/shoppingmall/detail_index#detail-middle-review", "리뷰 작성이 완료되었습니다.");
     }    
 
     @GetMapping("/shoppingmall/search_index")
@@ -79,7 +84,7 @@ public class ShopController {
 
     @GetMapping("/shoppingmall/search_index_ok.do")
     public ModelAndView search_index_ok(Model model){
-        return new ModelAndView("shoppingmall/search_index");
+        return webHelper.redirect("/shoppingmall/search_index", null);
     }
 
 
