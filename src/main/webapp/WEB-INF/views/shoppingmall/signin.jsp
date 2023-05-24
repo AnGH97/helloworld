@@ -62,6 +62,12 @@
                             <label><input type="radio" name="gender" id="gender2" value="F" />여자</label>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="address" class="col-md-2">주소<span class="identify">*</span></label>
+                        <div class="col-md-10">
+                            <input type="text" name="address" id="address" class="form-control" />
+                        </div>
+                    </div>
                 <div class="inform2">
                     <label>
                         <input class="age-c" type="checkbox" name="age-c" id="age-c" value="Y" /> 만 14세 이상입니다. (필수)
