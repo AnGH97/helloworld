@@ -22,7 +22,7 @@
         <form method="post" action="${contextPath}/shoppingmall/community_write_ok.do" class="form-horizontal" name="join_form" id="join_form">
             <div class="content-a content0">
                 <span><p>TITLE</p></span>
-                <input class="text_title" type="text" name="text_title" id="text_title" maxlength="30" />
+                <input class="text_title" type="text" name="text_title" id="text_title" maxlength="50" />
             </div>
             <div class="content-a content1">
                 <div class="content1-name">

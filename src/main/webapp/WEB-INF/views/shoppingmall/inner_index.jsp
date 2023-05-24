@@ -19,12 +19,12 @@
             </ul>
         </div>
         <div class="main-category-img" id="main-category-img">
-            <div class="sort-list">
+            <div class="sort-list" id="sort-list">
                 <span>442개의 상품</span>
                 <ul>
-                    <li class="first-sort-list"><a href="#main-category-img">상품정렬</a></li>
-                    <li><a href="#main-category-img">낮은가격</a></li>
-                    <li><a href="#main-category-img">높은가격</a></li>
+                    <li class="first-sort-list"><a href="#sort-list">상품정렬</a></li>
+                    <li><a href="#sort-list">낮은가격</a></li>
+                    <li><a href="#sort-list">높은가격</a></li>
                 </ul>
             </div>
             <div class="sort-img">

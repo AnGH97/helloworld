@@ -498,17 +498,32 @@
    color: grey;
 }
 
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-bottom{
+   display: flex;
+   justify-content: center;
+}
+
 .main .detail-middle .detail-middle-review .detail-middle-review-star .star-bottom button{
-   width: 1000px;
+   width: 500px;
    margin: 40px auto;
-   margin-left: 100px;
-   padding: 18px 0;
+   margin-left: 65px;
+   padding: 15px 0;
    font-size: 17px;
    background-color: white;
    border: 1px solid black;
    cursor: pointer;
 }
 
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-bottom a{
+   width: 500px;
+   margin: 40px auto;
+   padding: 15px 0;
+   font-size: 17px;
+   background-color: white;
+   border: 1px solid black;
+   text-align: center;
+   cursor: pointer;
+}
 
 /*-------------------------------------------------------------------------------------------*/
 .main .detail-middle .detail-middle-text{

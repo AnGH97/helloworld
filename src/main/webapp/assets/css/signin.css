@@ -21,41 +21,80 @@
     text-align: center;
  }
 
- .main .sign-in .inform1 ul li{
-   height: 45px;
-   padding-top: 15px;
-   margin-bottom: 10px;
- }
+ .form-horizontal{
+  border: 5px solid #d5d5d5;
+  width: 700px;
+  margin: auto;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
 
- .main .sign-in .inform1 ul li.user_brith-sex{
-   display: flex;
-   margin-top: 10px;
-   margin-bottom: 20px;
-   vertical-align: center;
- }
+.form-group{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dotted #eee;
+}
 
- .main .sign-in .inform1 ul li.user_brith-sex p{
-   display: block;
-   padding-top: 5px;
-   margin-right: 50px;
-   font-size: 16px;
-   color: grey;
- }
+.form-group:last-child{
+  border-bottom: 0;
+}
 
- .main .sign-in .inform1 ul li.user_brith-sex .user_birth{
-   margin-right: 100px;
- }
+.form-group:after{
+  content: "";
+  display: block;
+  clear: both;
+  float: none;
+}
 
- .main .sign-in .inform1 ul li input.itext{
-   width: 650px;
-   height: 40px;
-   border: 0;
-   border-bottom: 1px solid gray;
-   font-size: 15px; 
- }
+.col-md-2{
+  width: 25%;
+  display: block;
+  float: left;
+  font-size: 14px;
+  padding-top: 7px;
+  text-indent: 5px;
+}
+
+.col-md-10{
+  width: 75%;
+  display: block;
+  float: left;
+}
+
+.form-control{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 14px;
+  border: 1px solid #eee;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.identify{
+  font-size: 14px;
+  color: #f00;
+}
+
+.error{
+  color: red;
+}
+
+input.error{
+  background-color: #ffff00;
+}
+
+label.error{
+  font-size: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0;
+}
 
  .main .sign-in .inform2 {
-   margin-bottom: 70px;
+  margin-top: 30px;
+  margin-bottom: 70px;
  }
 
  .main .sign-in .inform2 label{

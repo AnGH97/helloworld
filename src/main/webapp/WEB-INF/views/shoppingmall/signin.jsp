@@ -12,44 +12,56 @@
     <section class="main">
         <div class="sign-in">
             <span class="sign-in-text"><p>회원정보 입력</p></span>
-            <form method="post" action="signin_ok.do"class="sign-form" name="sign-form" id="sign-form">
-                <div class="inform1">
-                    <ul>
-                        <li class="user_name">
-                            <input class="itext user_name" type="text" name="user_name" id="user_name" maxlength="30" placeholder="이름" 
-                            onfocus="this.placeholder=''" onblur="this.placeholder='이름'"/>
-                        </li>
-                        <li class="user_id">
-                            <input class="itext user_id" type="text" name="user_id" id="user_id" maxlength="30" placeholder="아이디" 
-                            onfocus="this.placeholder=''" onblur="this.placeholder='아이디'"/>
-                        </li>
-                        <li class="user_pw">
-                            <input class="itext user_pw" type="password" name="user_pw" id="user_pw" maxlength="30" placeholder="비밀번호 (영문 대소문자/숫자/특수문자를 혼용하여 2종류 10~16자 또는 3종류 8~16자)" 
-                            onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호 (영문 대소문자/숫자/특수문자를 혼용하여 2종류 10~16자 또는 3종류 8~16자)'"/>
-                        </li>
-                        <li class="user_pw_c">
-                            <input class="itext user_pw_c" type="password" name="user_pw_c" id="user_pw_c" maxlength="30" placeholder="비밀번호" 
-                            onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호'"/>
-                        </li>
-                        <li class="user_email">
-                            <input class="itext user_email" type="text" name="user_email" id="user_email" maxlength="30" placeholder="이메일" 
-                            onfocus="this.placeholder=''" onblur="this.placeholder='이메일'"/>
-                        </li>
-                        <li class="user_brith-sex">
-                            <p>생일/성별</p>
-                            <input class="user_birth" type="date" name="user_birth" id="user_birth" value=""/>
-                            <label>
-                                <input class="user_sex" type="radio" name="user_sex" id="sex1" value="N" checked/>선택안함
-                            </label>
-                            <label>
-                                <input class="user_sex" type="radio" name="user_sex" id="sex2" value="M" />남자
-                            </label>
-                            <label>
-                                <input class="user_sex" type="radio" name="user_sex" id="sex3" value="F" />여자
-                            </label>
-                        </li>
-                    </ul>
-                </div>
+                <form method="post" action="signin_ok.do" class="form-horizontal" name="join_form" id="join_form">
+                    <div class="form-group">
+                        <label for="user_id" class="col-md-2">아이디<span class="identify">*</span></label>
+                        <div class="col-md-10">
+                            <input type="text" name="user_id" id="user_id" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="user_pw" class="col-md-2">비밀번호<span class="identify">*</span></label>
+                        <div class="col-md-10">
+                            <input type="password" name="user_pw" id="user_pw" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="user_pw" class="col-md-2">비밀번호 확인<span class="identify">*</span></label>
+                        <div class="col-md-10">
+                            <input type="password" name="user_pw_re" id="user_pw_re" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="user_name" class="col-md-2">이름<span class="identify">*</span></label>
+                        <div class="col-md-10">
+                            <input type="text" name="user_name" id="user_name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-md-2">이메일<span class="identify">*</span></label>
+                        <div class="col-md-10">
+                            <input type="email" name="email" id="email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="col-md-2">연락처<span class="identify">*</span></label>
+                        <div class="col-md-10">
+                            <input type="tel" name="tel" id="tel" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthdate" class="col-md-2">생년월일<span class="identify">*</span></label>
+                        <div class="col-md-10">
+                            <input type="date" name="birthdate" id="birthdate" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender1" class="col-md-2">성별<span class="identify">*</span></label>
+                        <div class="col-md-10">
+                            <label><input type="radio" name="gender" id="gender1" value="M" />남자</label>
+                            <label><input type="radio" name="gender" id="gender2" value="F" />여자</label>
+                        </div>
+                    </div>
                 <div class="inform2">
                     <label>
                         <input class="age-c" type="checkbox" name="age-c" id="age-c" value="Y" /> 만 14세 이상입니다. (필수)
@@ -363,9 +375,72 @@
     </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
 <script>
     $("#check_all").on("change", (e) => {
         $(".check").prop("checked", $(e.currentTarget).prop("checked"));
     });
 </script>
+
+<script type="text/javascript">
+
+    /**(3) 플러그인의 기본 설정 옵션 추가*/
+    jQuery.validator.setDefaults({
+        onkeyup: false,
+        onclick: false,
+        onfocusout: false,
+        showErrors: function(errorMap, errorList){
+            if(this.numberOfInvalids()){
+                /**(3-1)일반 alert 메시지*/
+                alert(errorList[0].message);
+                $(errorList[0].element).focus();
+                /** (3-2) sweetalert2 alert 메시지*/
+                /**new Swal("에러", errorList[0].message, "error").then().finally(() => {
+                    setTimeout(() => {
+                        $(errorList[0].element).val("");
+                        $(errorList[0].element).focus();
+                    }, 300);
+                });*/
+            }
+        },
+    });
+    /**(1) 유효성 검사 추가 함수*/
+    $.validator.addMethod("kor", function (value, element){
+        return this.optional(element) || /^[ㄱ-ㅎ가-힣]*$/i.test(value);
+    });
+
+    $.validator.addMethod("phone", function (value, element){
+        return this.optional(element) || /^01(?:0|1|[6-9])(?:\d{3}|\d{4})\d{4}$/i.test(value) || /^\d{2,3}\d{3,4}\d{4}$/i.test(value);
+    });
+
+    /** (2)form 태그에 부여한 id 속성에 대한 유효성 검사 함수 호출*/
+    $("#join_form").validate({
+        debug: true,
+        /**입력검사 규칙*/
+        rules: {
+            user_id: {required: true, alphanumeric: true},
+            user_pw: {required: true, minlength: 4, maxlength: 20},
+            user_pw_re: {required: true, equalTo: "#user_pw"},
+            user_name: {required: true, kor: true},
+            email: {required: true, email: true},
+            tel: {required: true, phone: true},
+            birthdate: {required: true, date: true},
+            gender: "required",
+        },
+        /**규칙이 맞지 않을 경우의 메시지*/
+        messages:{
+            user_id: {required: "아이디를 입력하세요", alphanumeric: "아이디는 영어, 숫자만 입력 가능합니다."},
+            user_pw: {required: "비밀번호를 입력하세요", minlength: "비밀번호는 4글자 이상 입력하셔야 합니다.", maxlength: "비밀번호는 최대 20자까지 가능합니다."},
+            user_pw_re: {required: "비밀번호 확인값을 입력하세요.", aqualTo: "비밀번호 확인이 잘못되었습니다."},
+            user_name: {required: "이름을 입력하세요", kor: "이름은 한글만 입력 가능합니다."},
+            email: {required: "이메일을 입력하세요", email: "이메일 형식이 잘못되었습니다."},
+            tel: {required: "연락처를 입력하세요", phone: "연락처 형식이 잘못되었습니다."},
+            birthdate: {required: "생년월일을 입력하세요", date: "생년월일의 형식이 잘못되었습니다."},
+            gender: "성별을 선택해 주세요.",
+        },
+    });
+</script>
+
 <c:import url="/WEB-INF/views/inc/bottom.jsp" />
