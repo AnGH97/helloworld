@@ -125,12 +125,13 @@
     cursor: pointer;
  }
 
- .main .content-container .cart-table table tbody tr td:nth-child(4) input{
+ .main .content-container .cart-table table tbody tr td:nth-child(4) span{
     width: 25px;
     border: none;
     text-align: center;
     height: 25px;
     background-color: white;
+    font-size: 14px;
  }
 
  .main .content-container .cart-table table tbody tr td:nth-child(5) span{

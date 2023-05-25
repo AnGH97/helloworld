@@ -42,12 +42,12 @@
                             <td>
                                 <div>
                                     <button type="button" class="count_down" id="count_down">-</button>
-                                    <input type="text" name="count_number" id="count_number" value="1"/>
+                                    <span name="count_number" id="count_number">1</span>
                                     <button type="button" class="count_up"id="count_up">+</button>
                                 </div>
                             </td>
                             <td>
-                                <span>29,800원</span>
+                                <span class="price0-money" id="price0-money">29,800원</span>
                             </td>
                             <td>
                                 <span>290</span>
@@ -78,7 +78,7 @@
                     </span>
                     <span class="price2">
                         <p class="price2_text">배송료</p>
-                        <p class="price2_money">+ 0원</p>
+                        </p><p class="price2_money">+0원</p>
                     </span>
                     <span class="price3">   <!--5만원 이상 안넘으면 배송비 붙어서 존재하는거-->
                         <p class="price3_text">결제 예정금액</p>
@@ -106,5 +106,25 @@
     $("#all_check").on("change", (e) => {
         $(".check").prop("checked", $(e.currentTarget).prop("checked"));
     });
-</script>    
+</script>
+
+<script>
+    let minus = document.querySelector(".count_down");
+    let plus = document.querySelector(".count_up");
+    let result1 = document.querySelector(".price0-money");
+    $("#count_down").on("click", (e) => {
+        let count = document.getElementById('count_number').value;
+        let cnt = parseInt(count);
+
+        if(cnt > 0){
+            cnt--;
+        }
+        else{
+            cnt = 1;
+        }
+        count.value = cnt;
+        console.log(count);
+        console.log(cnt);
+    });
+</script>   
 <c:import url="/WEB-INF/views/inc/bottom.jsp" />
