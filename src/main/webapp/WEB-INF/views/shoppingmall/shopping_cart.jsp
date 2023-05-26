@@ -15,7 +15,7 @@
                 <table align="center">
                     <thead>
                         <tr>
-                            <th><input class="all_check"type="checkbox" name="all_check" id="all_check" /></th>
+                            <th><input class="all_check" type="checkbox" name="all_check" id="all_check"/></th>
                             <th>상품명 </th>
                             <th>가격</th>
                             <th>수량</th>
@@ -42,7 +42,7 @@
                             <td>
                                 <div>
                                     <button type="button" class="count_down" id="count_down">-</button>
-                                    <span name="count_number" id="count_number">1</span>
+                                    <span name="count_number" class="count_number" id="count_number">1</span>
                                     <button type="button" class="count_up"id="count_up">+</button>
                                 </div>
                             </td>
@@ -103,28 +103,51 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
-    $("#all_check").on("change", (e) => {
+    $(".all_check").on("change", (e) => {
         $(".check").prop("checked", $(e.currentTarget).prop("checked"));
     });
 </script>
 
+<!--수량 증감-->
 <script>
-    let minus = document.querySelector(".count_down");
-    let plus = document.querySelector(".count_up");
-    let result1 = document.querySelector(".price0-money");
-    $("#count_down").on("click", (e) => {
-        let count = document.getElementById('count_number').value;
-        let cnt = parseInt(count);
+    let cnt_number = document.querySelector(".count_number");
+    //let result1 = document.querySelector(".price0-money");
+    //let sprice = document.querySelector(".sale-price");
+    let i = 1;
 
-        if(cnt > 0){
-            cnt--;
-        }
-        else{
-            cnt = 1;
-        }
-        count.value = cnt;
-        console.log(count);
-        console.log(cnt);
+    $(".count_up").on("click", (e) => {
+        i++;
+        cnt_number.textContent = i;
     });
-</script>   
+    $(".count_down").on("click", (e) => {
+        if(i > 1){
+            i--;
+            cnt_number.textContent = i;
+        }
+    });
+</script>
+
+<!--선택 삭제-->
+<script>
+    $(".choice-del").on("click", (e) => {
+        if($("input:checkbox[class='check']:checked").length === 0){
+            alert("삭제할 항목을 선택해 주세요.");
+            return;
+        }
+        $("input:checkbox[class='check']:checked").each(function(k, kVal){
+            let a = kVal.parentElement.parentElement;
+            $(a).remove();
+        });
+    });
+</script>
+
+<!--전체 삭제-->
+<!--<script>
+    $(".all-del").on("click", (e) => {
+        $("input:checkbox[class='check']").each(function(k, kVal){
+            let a = kVal;
+            console.log(kVal);
+        });
+    });
+</script>-->
 <c:import url="/WEB-INF/views/inc/bottom.jsp" />
