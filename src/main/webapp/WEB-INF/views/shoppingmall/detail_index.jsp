@@ -941,40 +941,7 @@
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script>    
-    $(".thumbnail").on("click", (e) => {
-        const img = $(e.currentTarget).attr('src');
-        $("#target").attr('src', img);
-    });
-</script>
-
-<script>    
-    $(".bt").on("click", (e) => {
-        const target_id = $(e.currentTarget);
-        console.log(target_id);
-        $(target_id).css({
-            "color": "grey",
-            "font-weight": "600"
-        });
-        $(".bt").not(e.currentTarget).css({
-            "color": "#d5d5d5",
-            "font-weight": "500"
-        })
-    });
-</script>
-
-<script>    
-    $(".dmbt").on("click", (e) => {
-        const target_id = $(e.currentTarget);
-        console.log(target_id);
-        $(target_id).css({
-            "border-bottom" : "4px solid black"
-        });
-        $(".dmbt").not(e.currentTarget).css({
-            "border-bottom" : "none"
-        })
-    });
-</script>
+<script type="text/javascript" src="${contextPath}/assets/js/detail_index.js"></script>
 
 <c:import url="/WEB-INF/views/inc/bottom.jsp" />
 

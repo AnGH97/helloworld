@@ -350,20 +350,7 @@
     </section>
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="${contextPath}/assets/js/index.js"></script>
 
-<script>    
-    $(".mcbt").on("click", (e) => {
-        const target_id = $(e.currentTarget);
-        console.log(target_id);
-        $(target_id).css({
-            "font-weight": "800",
-            "color": "black"
-        });
-        $(".mcbt").not(e.currentTarget).css({
-            "font-weight": "500",
-            "color": "grey"
-        })
-    });
-</script>
 <c:import url="/WEB-INF/views/inc/bottom.jsp" />
 
