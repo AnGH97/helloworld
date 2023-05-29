@@ -25,6 +25,8 @@
             <div class="sort-list">
                 <span>442개의 상품</span>
                 <ul>
+                    <!--Get방식으로 query string으로 해서 데이터를 Mapper에 넘길 수 있도록-->
+                    <!--href 링크에 ?value=값으로 컨트롤러에 전송해서 그 값을 model에 넘겨 mapper가 받을 수 있도록 하라는 의미임. -->
                     <li class="first-sort-list"><a href="#main-category-img">상품정렬</a></li>
                     <li><a href="#main-category-img">낮은가격</a></li>
                     <li><a href="#main-category-img">높은가격</a></li>
