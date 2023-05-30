@@ -36,7 +36,7 @@
                             </div>
                             <div class="board-search-text">
                                 <input type="text" name="search-text" id="search" />
-                                <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>

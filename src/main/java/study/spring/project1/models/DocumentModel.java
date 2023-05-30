@@ -18,6 +18,8 @@ public class DocumentModel {
     private String type;   // 게시판 종류
     private String user_id;   // 회원 아이디 참조키
     private String writer;   // 작성자 아이디
+
+    private String search;  //Get방식으로 이름인지 제목인지 확인하기 위한 문자열
     
     private static int offset;
     private static int listCount;

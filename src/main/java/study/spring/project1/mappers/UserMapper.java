@@ -57,15 +57,15 @@ public interface UserMapper {
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, cart_id FROM user" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "<if test='name != null'>name LIKE concat('%', #{name}, '%')</if>" + 
-        "<if test='user_pw != null'>user_pw LIKE concat('%', #{user_pw}, '%')</if>" + 
-        "<if test='email != null'>email LIKE concat('%', #{email}, '%')</if>" + 
-        "<if test='birthdate != null'>birthdate LIKE concat('%', #{birthdate}, '%')</if>" + 
-        "<if test='gender != null'>gender LIKE concat('%', #{gender}, '%')</if>" + 
-        "<if test='tel != null'>tel LIKE concat('%', #{tel}, '%')</if>" + 
-        "<if test='address != null'>address LIKE concat('%', #{address}, '%')</if>" + 
-        "<if test='is_out != null'>is_out LIKE concat('%', #{is_out}, '%')</if>" + 
-        "<if test='reg_date != null'>reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
+        "<if test='id != null'>id LIKE concat('%', #{id}, '%')</if>" + 
+        "<if test='user_pw != null'>OR user_pw LIKE concat('%', #{user_pw}, '%')</if>" + 
+        "<if test='email != null'>OR email LIKE concat('%', #{email}, '%')</if>" + 
+        "<if test='birthdate != null'>OR birthdate LIKE concat('%', #{birthdate}, '%')</if>" + 
+        "<if test='gender != null'>OR gender LIKE concat('%', #{gender}, '%')</if>" + 
+        "<if test='tel != null'>OR tel LIKE concat('%', #{tel}, '%')</if>" + 
+        "<if test='address != null'>OR address LIKE concat('%', #{address}, '%')</if>" + 
+        "<if test='is_out != null'>OR is_out LIKE concat('%', #{is_out}, '%')</if>" + 
+        "<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
         "<if test='cart_id != null'>OR cart_id LIKE concat('%', #{cart_id}, '%')</if>" + 
         "</where>" + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
@@ -77,17 +77,28 @@ public interface UserMapper {
         "SELECT COUNT(*) AS cnt FROM user" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='name != null'>name LIKE concat('%', #{name}, '%')</if>" + 
-        "<if test='user_pw != null'>user_pw LIKE concat('%', #{user_pw}, '%')</if>" + 
-        "<if test='email != null'>email LIKE concat('%', #{email}, '%')</if>" + 
-        "<if test='birthdate != null'>birthdate LIKE concat('%', #{birthdate}, '%')</if>" + 
-        "<if test='gender != null'>gender LIKE concat('%', #{gender}, '%')</if>" + 
-        "<if test='tel != null'>tel LIKE concat('%', #{tel}, '%')</if>" + 
-        "<if test='address != null'>address LIKE concat('%', #{address}, '%')</if>" + 
-        "<if test='is_out != null'>is_out LIKE concat('%', #{is_out}, '%')</if>" + 
-        "<if test='reg_date != null'>reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
+        "<if test='user_pw != null'>OR user_pw LIKE concat('%', #{user_pw}, '%')</if>" + 
+        "<if test='email != null'>OR email LIKE concat('%', #{email}, '%')</if>" + 
+        "<if test='birthdate != null'>OR birthdate LIKE concat('%', #{birthdate}, '%')</if>" + 
+        "<if test='gender != null'>OR gender LIKE concat('%', #{gender}, '%')</if>" + 
+        "<if test='tel != null'>OR tel LIKE concat('%', #{tel}, '%')</if>" + 
+        "<if test='address != null'>OR address LIKE concat('%', #{address}, '%')</if>" + 
+        "<if test='is_out != null'>OR is_out LIKE concat('%', #{is_out}, '%')</if>" + 
+        "<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
         "<if test='cart_id != null'>OR cart_id LIKE concat('%', #{cart_id}, '%')</if>" + 
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCount(UserModel input);
+
+    //로그인 시 DB에 존재하는 아이디, 비밀번호가 일치하는지 확인 할 수 있도록
+    //1) ID를 검색해서 나온 user_pw를 controller에서 view로 전송하고 view에서 일치하는지 확인하도록 해야함.
+    //2) 회원 가입시 같은 아이디가 존재하는지 확인할 수 있도록 하여 select가 null이 아니라면 가입 할 수 없도록 view에서 처리해야함.
+    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+        "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, cart_id FROM user" + 
+        "<where>" + // <-- 검색 조건 동적 구성 시작
+        "<if test='id != null'>id LIKE concat('%', #{id}, '%')</if>" + 
+        "</where>" + 
+        "</script>") // <-- Dynamic SQL이 종료됨을 알림
+    public int selectCheck(UserModel input);    
 
 }

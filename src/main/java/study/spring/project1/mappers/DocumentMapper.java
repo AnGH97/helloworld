@@ -35,6 +35,7 @@ public interface DocumentMapper {
     @Delete("DELETE FROM document WHERE id=#{id}")
     int delete(DocumentModel input);
 
+    //커뮤니티 제목을 클릭했을 때 그에 대한 내용을 처리할 때 필요한 SQl
     //SELECT문(단일행 조회)을 수행하는 메서드 정의
     @Select("SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document WHERE id=#{id}")
     //조회 결과와 리턴할 DTO객체를 연결하기 위한 규칙 정의
@@ -53,19 +54,21 @@ public interface DocumentMapper {
         @Result(property="user_id", column="user_id" )})
     DocumentModel selectItem(DocumentModel input);
 
+    //커뮤니티 게시글 목록에서 게시글 번호, 제목, 작성자, 작성일, 조회횟수 필요
+    //즉, DB에서 Document에 존재하는 전체 내용을 다 가져와야함(목록으로 사용하기 때문에)
     //SELECT문(다중행 조회)을 수행하는 메서드 정의
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='type != null'>type LIKE concat('%', #{type}, '%')</if>" + 
-        "<if test='writer != null'>writer LIKE concat('%', #{writer}, '%')</if>" + 
-        "<if test='password != null'>password LIKE concat('%', #{password}, '%')</if>" + 
-        "<if test='subject != null'>subject LIKE concat('%', #{subject}, '%')</if>" + 
-        "<if test='content != null'>content LIKE concat('%', #{content}, '%')</if>" + 
-        "<if test='hit != null'>hit LIKE concat('%', #{hit}, '%')</if>" + 
-        "<if test='reg_date != null'>reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
-        "<if test='star != null'>star LIKE concat('%', #{star}, '%')</if>" + 
-        "<if test='user_id != null'>user_id LIKE concat('%', #{user_id}, '%')</if>" + 
+        "<if test='writer != null'>OR writer LIKE concat('%', #{writer}, '%')</if>" + 
+        "<if test='password != null'>OR password LIKE concat('%', #{password}, '%')</if>" + 
+        "<if test='subject != null'>OR subject LIKE concat('%', #{subject}, '%')</if>" + 
+        "<if test='content != null'>OR content LIKE concat('%', #{content}, '%')</if>" + 
+        "<if test='hit != null'>OR hit LIKE concat('%', #{hit}, '%')</if>" + 
+        "<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
+        "<if test='star != null'>OR star LIKE concat('%', #{star}, '%')</if>" + 
+        "<if test='user_id != null'>OR user_id LIKE concat('%', #{user_id}, '%')</if>" + 
         "</where>" + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
@@ -76,16 +79,34 @@ public interface DocumentMapper {
         "SELECT COUNT(*) AS cnt FROM document" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='type != null'>type LIKE concat('%', #{type}, '%')</if>" + 
-        "<if test='writer != null'>writer LIKE concat('%', #{writer}, '%')</if>" + 
-        "<if test='password != null'>password LIKE concat('%', #{password}, '%')</if>" + 
-        "<if test='subject != null'>subject LIKE concat('%', #{subject}, '%')</if>" + 
-        "<if test='content != null'>content LIKE concat('%', #{content}, '%')</if>" + 
-        "<if test='hit != null'>hit LIKE concat('%', #{hit}, '%')</if>" + 
-        "<if test='reg_date != null'>reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
-        "<if test='star != null'>star LIKE concat('%', #{star}, '%')</if>" + 
-        "<if test='user_id != null'>user_id LIKE concat('%', #{user_id}, '%')</if>" + 
+        "<if test='writer != null'>OR writer LIKE concat('%', #{writer}, '%')</if>" + 
+        "<if test='password != null'>OR password LIKE concat('%', #{password}, '%')</if>" + 
+        "<if test='subject != null'>OR subject LIKE concat('%', #{subject}, '%')</if>" + 
+        "<if test='content != null'>OR content LIKE concat('%', #{content}, '%')</if>" + 
+        "<if test='hit != null'>OR hit LIKE concat('%', #{hit}, '%')</if>" + 
+        "<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
+        "<if test='star != null'>OR star LIKE concat('%', #{star}, '%')</if>" + 
+        "<if test='user_id != null'>OR user_id LIKE concat('%', #{user_id}, '%')</if>" + 
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCount(DocumentModel input);    
-    
+
+    //이름 혹은 제목을 검색 하는 것이 필요
+    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+        "SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document" + 
+        "<where>" + // <-- 검색 조건 동적 구성 시작
+        "<if test='#{search} == 'name''>type LIKE concat('%', #{type}, '%')</if>" + 
+        "<if test='writer != null'>OR writer LIKE concat('%', #{writer}, '%')</if>" + 
+        "<if test='password != null'>OR password LIKE concat('%', #{password}, '%')</if>" + 
+        "<if test='subject != null'>OR subject LIKE concat('%', #{subject}, '%')</if>" + 
+        "<if test='content != null'>OR content LIKE concat('%', #{content}, '%')</if>" + 
+        "<if test='hit != null'>OR hit LIKE concat('%', #{hit}, '%')</if>" + 
+        "<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
+        "<if test='star != null'>OR star LIKE concat('%', #{star}, '%')</if>" + 
+        "<if test='user_id != null'>OR user_id LIKE concat('%', #{user_id}, '%')</if>" + 
+        "</where>" + 
+        "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
+        "</script>") // <-- Dynamic SQL이 종료됨을 알림
+   @ResultMap("myResultId")
+   List<DocumentModel> selectSearch(DocumentModel input);    
 }

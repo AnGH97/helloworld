@@ -56,12 +56,12 @@ public interface CartMapper {
         "SELECT id, user_id, product_id, adate, cnt, product_id1, color, size FROM cart" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='user_id != null'>user_id LIKE concat('%', #{user_id}, '%')</if>" + 
-        "<if test='product_id != null'>product_id LIKE concat('%', #{product_id}, '%')</if>" + 
-        "<if test='adate != null'>adate LIKE concat('%', #{adate}, '%')</if>" + 
-        "<if test='cnt != null'>cnt LIKE concat('%', #{cnt}, '%')</if>" + 
-        "<if test='product_id1 != null'>product_id1 LIKE concat('%', #{product_id1}, '%')</if>" + 
-        "<if test='color != null'>color LIKE concat('%', #{color}, '%')</if>" + 
-        "<if test='size != null'>size LIKE concat('%', #{size}, '%')</if>" + 
+        "<if test='product_id != null'>OR product_id LIKE concat('%', #{product_id}, '%')</if>" + 
+        "<if test='adate != null'>OR adate LIKE concat('%', #{adate}, '%')</if>" + 
+        "<if test='cnt != null'>OR cnt LIKE concat('%', #{cnt}, '%')</if>" + 
+        "<if test='product_id1 != null'>OR product_id1 LIKE concat('%', #{product_id1}, '%')</if>" + 
+        "<if test='color != null'>OR color LIKE concat('%', #{color}, '%')</if>" + 
+        "<if test='size != null'>OR size LIKE concat('%', #{size}, '%')</if>" + 
         "</where>" + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
@@ -72,12 +72,12 @@ public interface CartMapper {
         "SELECT COUNT(*) AS cnt FROM cart" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='user_id != null'>user_id LIKE concat('%', #{user_id}, '%')</if>" + 
-        "<if test='product_id != null'>product_id LIKE concat('%', #{product_id}, '%')</if>" + 
-        "<if test='adate != null'>adate LIKE concat('%', #{adate}, '%')</if>" + 
-        "<if test='cnt != null'>cnt LIKE concat('%', #{cnt}, '%')</if>" + 
-        "<if test='product_id1 != null'>product_id1 LIKE concat('%', #{product_id1}, '%')</if>" + 
-        "<if test='color != null'>color LIKE concat('%', #{color}, '%')</if>" + 
-        "<if test='size != null'>size LIKE concat('%', #{size}, '%')</if>" + 
+        "<if test='product_id != null'>OR product_id LIKE concat('%', #{product_id}, '%')</if>" + 
+        "<if test='adate != null'>OR adate LIKE concat('%', #{adate}, '%')</if>" + 
+        "<if test='cnt != null'>OR cnt LIKE concat('%', #{cnt}, '%')</if>" + 
+        "<if test='product_id1 != null'>OR product_id1 LIKE concat('%', #{product_id1}, '%')</if>" + 
+        "<if test='color != null'>OR color LIKE concat('%', #{color}, '%')</if>" + 
+        "<if test='size != null'>OR size LIKE concat('%', #{size}, '%')</if>" + 
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCount(CartModel input);    

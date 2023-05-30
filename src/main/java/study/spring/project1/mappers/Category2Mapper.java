@@ -50,7 +50,7 @@ public interface Category2Mapper {
             "SELECT id, name, category1_id FROM category2" + 
             "<where>" + // <-- 검색 조건 동적 구성 시작
             "<if test='name != null'>name LIKE concat('%', #{name}, '%')</if>" + 
-            "<if test='category1_id != null'>name LIKE concat('%', #{category1_id}, '%')</if>" + 
+            "<if test='category1_id != null'>OR category1_id LIKE concat('%', #{category1_id}, '%')</if>" + 
             "</where>" + 
             "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
             "</script>") // <-- Dynamic SQL이 종료됨을 알림
@@ -61,7 +61,7 @@ public interface Category2Mapper {
             "SELECT COUNT(*) AS cnt FROM category2" + 
             "<where>" + // <-- 검색 조건 동적 구성 시작
             "<if test='name != null'>name LIKE concat('%', #{name}, '%')</if>" + 
-            "<if test='category1_id != null'>name LIKE concat('%', #{category1_id}, '%')</if>" + 
+            "<if test='category1_id != null'>OR category1_id LIKE concat('%', #{category1_id}, '%')</if>" + 
             "</where>" + 
             "</script>") // <-- Dynamic SQL이 종료됨을 알림
         public int selectCount(Category2Model input);        
