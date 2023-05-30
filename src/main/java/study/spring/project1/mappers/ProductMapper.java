@@ -85,6 +85,15 @@ public interface ProductMapper {
     //상품 설명 글만 가져올 수 있도록 하는 select => 아직 확실히 필요한지 의문,,,
 
     //best 상품 노출 여부 -> 우먼스, 맨스, 등 따로 가능하도록 select를 만들어야함
+    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+        "SELECT p.id, p.name, p.price, p.sale, p.color, p.size, p.product_txt, p.best, p.sort FROM product AS p " +
+        "INNER JOIN category1 AS c " +
+        "ON #{c1} = c.name" + 
+        "WHERE p.best = Y " +
+        "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
+        "</script>") // <-- Dynamic SQL이 종료됨을 알림
+    @ResultMap("myResultId")
+    List<ProductModel> selectBestList(ProductModel input);        
 
     //sort 정렬 순서 -> 정렬할 경우 가격 높은 순, 낮은 순 model에 정렬을 받을 문자열 하나를 추가하여 'asc' 혹은 'desc'에 따라 정렬이 가능하도록 만들것.
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
@@ -92,7 +101,7 @@ public interface ProductMapper {
         "ORDER by price #{order}" + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
-   @ResultMap("myResultId")
-   List<ProductModel> selectSortList(ProductModel input);    
+    @ResultMap("myResultId")
+    List<ProductModel> selectSortList(ProductModel input);    
     
 }
