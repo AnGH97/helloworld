@@ -57,22 +57,22 @@
                             <label for="choice1">
                                 <select name="choice1" id="choice1">
                                     <option value="">옵션 선택</option>
-                                    <option value="블랙S">블랙 S</option>
-                                    <option value="블랙M">블랙 M</option>
-                                    <option value="블랙L">블랙 L</option>
-                                    <option value="블랙XL">블랙 XL</option>
-                                    <option value="모로칸블루S">모로칸블루 S</option>
-                                    <option value="모로칸블루M">모로칸블루 M</option>
-                                    <option value="모로칸블루L">모로칸블루 L</option>
-                                    <option value="모로칸블루XL">모로칸블루 XL</option>
-                                    <option value="오팔그레이S">오팔그레이 S</option>
-                                    <option value="오팔그레이M">오팔그레이 M</option>
-                                    <option value="오팔그레이L">오팔그레이 L</option>
-                                    <option value="오팔그레이XL">오팔그레이 XL</option>
-                                    <option value="이브닝그레이S">이브닝그레이 S</option>
-                                    <option value="이브닝그레이M">이브닝그레이 M</option>
-                                    <option value="이브닝그레이L">이브닝그레이 L</option>
-                                    <option value="이브닝그레이XL">이브닝그레이 XL</option>
+                                    <option value="블랙,S">블랙 S</option>
+                                    <option value="블랙,M">블랙 M</option>
+                                    <option value="블랙,L">블랙 L</option>
+                                    <option value="블랙,XL">블랙 XL</option>
+                                    <option value="모로칸블루,S">모로칸블루 S</option>
+                                    <option value="모로칸블루,M">모로칸블루 M</option>
+                                    <option value="모로칸블루,L">모로칸블루 L</option>
+                                    <option value="모로칸블루,XL">모로칸블루 XL</option>
+                                    <option value="오팔그레이,S">오팔그레이 S</option>
+                                    <option value="오팔그레이,M">오팔그레이 M</option>
+                                    <option value="오팔그레이,L">오팔그레이 L</option>
+                                    <option value="오팔그레이,XL">오팔그레이 XL</option>
+                                    <option value="이브닝그레이,S">이브닝그레이 S</option>
+                                    <option value="이브닝그레이,M">이브닝그레이 M</option>
+                                    <option value="이브닝그레이,L">이브닝그레이 L</option>
+                                    <option value="이브닝그레이,XL">이브닝그레이 XL</option>
                                 </select>
                             </label>
                         </div>
@@ -83,22 +83,22 @@
                             <label for="choice2">
                                 <select name="choice2" id="choice2">
                                     <option value="">옵션 선택</option>
-                                    <option value="블랙S">블랙 S</option>
-                                    <option value="블랙M">블랙 M</option>
-                                    <option value="블랙L">블랙 L</option>
-                                    <option value="블랙XL">블랙 XL</option>
-                                    <option value="모로칸블루S">모로칸블루 S</option>
-                                    <option value="모로칸블루M">모로칸블루 M</option>
-                                    <option value="모로칸블루L">모로칸블루 L</option>
-                                    <option value="모로칸블루XL">모로칸블루 XL</option>
-                                    <option value="오팔그레이S">오팔그레이 S</option>
-                                    <option value="오팔그레이M">오팔그레이 M</option>
-                                    <option value="오팔그레이L">오팔그레이 L</option>
-                                    <option value="오팔그레이XL">오팔그레이 XL</option>
-                                    <option value="이브닝그레이S">이브닝그레이 S</option>
-                                    <option value="이브닝그레이M">이브닝그레이 M</option>
-                                    <option value="이브닝그레이L">이브닝그레이 L</option>
-                                    <option value="이브닝그레이XL">이브닝그레이 XL</option>
+                                    <option value="블랙,S">블랙 S</option>
+                                    <option value="블랙,M">블랙 M</option>
+                                    <option value="블랙,L">블랙 L</option>
+                                    <option value="블랙,XL">블랙 XL</option>
+                                    <option value="모로칸블루,S">모로칸블루 S</option>
+                                    <option value="모로칸블루,M">모로칸블루 M</option>
+                                    <option value="모로칸블루,L">모로칸블루 L</option>
+                                    <option value="모로칸블루,XL">모로칸블루 XL</option>
+                                    <option value="오팔그레이,S">오팔그레이 S</option>
+                                    <option value="오팔그레이,M">오팔그레이 M</option>
+                                    <option value="오팔그레이,L">오팔그레이 L</option>
+                                    <option value="오팔그레이,XL">오팔그레이 XL</option>
+                                    <option value="이브닝그레이,S">이브닝그레이 S</option>
+                                    <option value="이브닝그레이,M">이브닝그레이 M</option>
+                                    <option value="이브닝그레이,L">이브닝그레이 L</option>
+                                    <option value="이브닝그레이,XL">이브닝그레이 XL</option>
                                 </select>
                             </label>
                         </div>

@@ -96,7 +96,7 @@ public interface UserMapper {
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, cart_id FROM user" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "<if test='id != null'>id LIKE concat('%', #{id}, '%')</if>" + 
+        "<if test='id != null'>id LIKE #{id}</if>" + 
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCheck(UserModel input);    
