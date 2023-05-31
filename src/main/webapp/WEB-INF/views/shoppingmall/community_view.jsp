@@ -5,19 +5,19 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:import url="/WEB-INF/views/inc/top.jsp" />
 <!--css-->
-<link rel="stylesheet" href="${contextPath}/assets/css/community_view.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/community_view.css"/>
 
 <!--메인 내용 영역-->
 <section class="main">
     <div class="content-container">
         <h1>커뮤니티</h1>
         <ul>
-            <li><a href="${contextPath}/shoppingmall/community1_index" class="content-first">공지사항</a></li>
-            <li><a href="${contextPath}/shoppingmall/community1_index">자주 묻는 질문</a></li>
-            <li><a href="${contextPath}/shoppingmall/community1_index">상품 문의</a></li>
-            <li><a href="${contextPath}/shoppingmall/community1_index">반품 문의</a></li>
-            <li><a href="${contextPath}/shoppingmall/community1_index">교환 문의</a></li>
-            <li><a href="${contextPath}/shoppingmall/community1_index" class="content-last">전국 매장 안내</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index" class="content-first">공지사항</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">자주 묻는 질문</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">상품 문의</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">반품 문의</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">교환 문의</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index" class="content-last">전국 매장 안내</a></li>
         </ul>
 
         <div class="content-a content1">
@@ -35,7 +35,7 @@
             <span class="text_txt"><p>게시판 글을 불러오는 공간입니다.</p></span>
         </div>
         <div class="content-a content4">
-            <a href="${contextPath}/shoppingmall/community1_index"><p>목록보기</p></a>
+            <a href="${pageContext.request.contextPath}/shoppingmall/community1_index"><p>목록보기</p></a>
         </div>
     </div>       
 </section>

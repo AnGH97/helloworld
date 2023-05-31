@@ -5,20 +5,20 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:import url="/WEB-INF/views/inc/top.jsp" />
 <!--community_index stype-->
-<link rel="stylesheet" href="${contextPath}/assets/css/detail_index.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/detail_index.css" />
 
 <!--메인 내용 영역-->
 <section class="main">
-    <form method="post" action="${contextPath}/shoppingmall/detail_index_add_ok.do"class="product-choice" name="product-choice" id="product-choice">
+    <form method="post" action="${pageContext.request.contextPath}/shoppingmall/detail_index_add_ok.do"class="product-choice" name="product-choice" id="product-choice">
         <div class="detail-top">
             <div class="detail-top-img">
-                <img class="preview" id="target" src="${contextPath}/assets/img/andar-deatil-top-img1.jpg"/>
+                <img class="preview" id="target" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img1.jpg"/>
                 <ul>
-                    <li class="item pull-left"><img class="thumbnail" src="${contextPath}/assets/img/andar-deatil-top-img1.jpg"/></li>
-                    <li class="item pull-left"><img class="thumbnail" src="${contextPath}/assets/img/andar-deatil-top-img2.jpg"/></li>
-                    <li class="item pull-left"><img class="thumbnail" src="${contextPath}/assets/img/andar-deatil-top-img3.jpg"/></li>
-                    <li class="item pull-left"><img class="thumbnail" src="${contextPath}/assets/img/andar-deatil-top-img4.jpg"/></li>
-                    <li class="item pull-left"><img class="thumbnail" src="${contextPath}/assets/img/andar-deatil-top-img5.jpg"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img1.jpg"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img2.jpg"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img3.jpg"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img4.jpg"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img5.jpg"/></li>
                 </ul>
             </div>
             <div class="detail-top-text">
@@ -118,28 +118,28 @@
     <div class="with-item-text"><span>같이 코디한 아이템</span></div>
     <div class="detail-top-with-items">
         <div class="detail-top-with-items-first">
-            <a href="${contextPath}/shoppingmall/detail_index"><img src="${contextPath}/assets/img/andar-deatil-top-img1.jpg"/>
+            <a href="${pageContext.request.contextPath}/shoppingmall/detail_index"><img src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img1.jpg"/>
                 <div class="detail-top-with-items-text">
                     <span class="detail-top-with-items-name"><p>[1+1] 에어쿨링 지니 시그니처 레깅스</p></span>
                     <span class="detail-top-with-items-price"><p class="sale">50%</p> <p class="s-price">49,000원</p> <p class="r-price">98,000원</p></span>
                 </div>
             </a></div>
         <div class="detail-top-with-items-second">
-            <a href="${contextPath}/shoppingmall/detail_index"><img src="${contextPath}/assets/img/andar-deatil-top-img2.jpg"/>
+            <a href="${pageContext.request.contextPath}/shoppingmall/detail_index"><img src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img2.jpg"/>
                 <div class="detail-top-with-items-text">
                     <span class="detail-top-with-items-name"><p>[1+1] 에어쿨링 지니 시그니처 레깅스</p></span>
                     <span class="detail-top-with-items-price"><p class="sale">50%</p> <p class="s-price">49,000원</p> <p class="r-price">98,000원</p></span>
                 </div>
             </a></div>
         <div class="detail-top-with-items-third">
-            <a href="${contextPath}/shoppingmall/detail_index"><img src="${contextPath}/assets/img/andar-deatil-top-img3.jpg"/>
+            <a href="${pageContext.request.contextPath}/shoppingmall/detail_index"><img src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img3.jpg"/>
                 <div class="detail-top-with-items-text">
                     <span class="detail-top-with-items-name"><p>[1+1] 에어쿨링 지니 시그니처 레깅스</p></span>
                     <span class="detail-top-with-items-price"><p class="sale">50%</p> <p class="s-price">49,000원</p> <p class="r-price">98,000원</p></span>
                 </div>
             </a></div>
         <div class="detail-top-with-items-fourth">
-            <a href="${contextPath}/shoppingmall/detail_index"><img src="${contextPath}/assets/img/andar-deatil-top-img4.jpg"/>
+            <a href="${pageContext.request.contextPath}/shoppingmall/detail_index"><img src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img4.jpg"/>
                 <div class="detail-top-with-items-text">
                     <span class="detail-top-with-items-name"><p>[1+1] 에어쿨링 지니 시그니처 레깅스</p></span>
                     <span class="detail-top-with-items-price"><p class="sale">50%</p> <p class="s-price">49,000원</p> <p class="r-price">98,000원</p></span>
@@ -208,9 +208,9 @@
                 </div>
                 <div class="star-middle" id="star-middle">
                     <div class="star-middle1">
-                        <button type=button class="bt date-resc" id="date-resc" onclick="location.href='#star-middle'">최신순</button>
-                        <button type=button class="bt star-up" id="star-up" onclick="location.href='#star-middle'">높은 별점순</button>
-                        <button type=button class="bt star-down" id="star-down" onclick="location.href='#star-middle'">낮은 별점순</button>
+                        <button type=button class="bt date-resc" id="date-resc" onclick="location.href='#star-middle?0'">최신순</button>
+                        <button type=button class="bt star-up" id="star-up" onclick="location.href='#star-middle?desc'">높은 별점순</button>
+                        <button type=button class="bt star-down" id="star-down" onclick="location.href='#star-middle?asc'">낮은 별점순</button>
                     </div>
                     <div class="star-middle2">
                         <table align="center">
@@ -376,14 +376,14 @@
                 </div>
                 <div class="star-bottom">
                     <button type="button" class="more" id="more" name="more">더보기</button>
-                    <a href="${contextPath}/shoppingmall/review_community_write"><p>리뷰 작성하기</p></a>
+                    <a href="${pageContext.request.contextPath}/shoppingmall/review_community_write"><p>리뷰 작성하기</p></a>
                 </div>
             </div>
         </div>
         <div class="detail-middle-text"id="detail-middle-text">
             <span class="detail-inform"><h4>상세정보</h4></span>
             <div class="detail-middle-text-img1">
-                <img src="${contextPath}/assets/img/xexymix_detail_img11.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img11.jpg" />
                 <div class="detail-middle-inform1">
                     <div class="detail_img11_text1">
                         <span><p>나의 라이프 스타일<br/>플러스 해 줄 레깅스,</p></span>
@@ -394,7 +394,7 @@
                 </div>
             </div>
             <div class="dtimg detail-middle-text-img2">
-                <img src="${contextPath}/assets/img/xexymix_detail_img21.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img21.jpg" />
                 <div class="dminform detail-middle-inform2">
                     <div class="ditext1 detail_img21_text1">
                         <span><p>어반 라이프를<br/>+하다</p></span>
@@ -410,10 +410,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img3">
-                <img src="${contextPath}/assets/img/xexymix_detail_img31.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img31.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img4">
-                <img src="${contextPath}/assets/img/xexymix_detail_img41.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img41.jpg" />
                 <div class="dminform detail-middle-inform3">
                     <div class="ditext1 detail_img41_text1">
                         <span><p>업그레이드 된 입체패턴과<br/>20가지 컬러 라인업</p></span>
@@ -429,10 +429,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img5">
-                <img src="${contextPath}/assets/img/xexymix_detail_img51.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img51.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img6">
-                <img src="${contextPath}/assets/img/xexymix_detail_img61.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img61.jpg" />
                 <div class="dminform detail-middle-inform4">
                     <div class="ditext1 detail_img61_text1">
                         <span><p>운동 시, 데일리,<br/>어느 상황에도 쾌적하게</p></span>
@@ -448,10 +448,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img7">
-                <img src="${contextPath}/assets/img/xexymix_detail_img71.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img71.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img8">
-                <img src="${contextPath}/assets/img/xexymix_detail_img81.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img81.jpg" />
                 <div class="dminform detail-middle-inform5">
                     <div class="ditext1 detail_img81_text1">
                         <span><p>완벽하게<br/>커버되는 Y존</p></span>
@@ -467,10 +467,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img9">
-                <img src="${contextPath}/assets/img/xexymix_detail_img91.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img91.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img10">
-                <img src="${contextPath}/assets/img/xexymix_detail_img101.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img101.jpg" />
                 <div class="dminform detail-middle-inform6">
                     <div class="ditext1 detail_img101_text1">
                         <span><p>면과 흡사한 구조로 직조한<br/>부드러운 촉감</p></span>
@@ -486,10 +486,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img11">
-                <img src="${contextPath}/assets/img/xexymix_detail_img111.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img111.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img12">
-                <img src="${contextPath}/assets/img/xexymix_detail_img121.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img121.jpg" />
                 <div class="dminform detail-middle-inform7">
                     <div class="ditext1 detail_img121_text1">
                         <span><p>다리가<br/>더 길어보이는 비밀</p></span>
@@ -505,10 +505,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img13">
-                <img src="${contextPath}/assets/img/xexymix_detail_img131.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img131.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img14">
-                <img src="${contextPath}/assets/img/xexymix_detail_img141.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img141.jpg" />
                 <div class="dminform detail-middle-inform8">
                     <hr />
                     <div class="ditext3 detail_img141_text3">
@@ -517,10 +517,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img15">
-                <img src="${contextPath}/assets/img/xexymix_detail_img151.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img151.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img16">
-                <img src="${contextPath}/assets/img/xexymix_detail_img161.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img161.jpg" />
                 <div class="dminform detail-middle-inform9">
                     <hr />
                     <div class="ditext3 detail_img161_text3">
@@ -529,10 +529,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img17">
-                <img src="${contextPath}/assets/img/xexymix_detail_img171.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img171.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img18">
-                <img src="${contextPath}/assets/img/xexymix_detail_img181.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img181.jpg" />
                 <div class="dminform detail-middle-inform10">
                     <hr />
                     <div class="ditext3 detail_img181_text3">
@@ -541,10 +541,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img19">
-                <img src="${contextPath}/assets/img/xexymix_detail_img191.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img191.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img20">
-                <img src="${contextPath}/assets/img/xexymix_detail_img201.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img201.jpg" />
                 <div class="dminform detail-middle-inform11">
                     <hr />
                     <div class="ditext3 detail_img201_text3">
@@ -553,10 +553,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img21">
-                <img src="${contextPath}/assets/img/xexymix_detail_img211.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img211.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img22">
-                <img src="${contextPath}/assets/img/xexymix_detail_img221.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img221.jpg" />
                 <div class="dminform detail-middle-inform12">
                     <hr />
                     <div class="ditext3 detail_img221_text3">
@@ -565,10 +565,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img23">
-                <img src="${contextPath}/assets/img/xexymix_detail_img231.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img231.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img24">
-                <img src="${contextPath}/assets/img/xexymix_detail_img241.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img241.jpg" />
                 <div class="dminform detail-middle-inform13">
                     <hr />
                     <div class="ditext3 detail_img241_text3">
@@ -577,10 +577,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img25">
-                <img src="${contextPath}/assets/img/xexymix_detail_img251.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img251.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img26">
-                <img src="${contextPath}/assets/img/xexymix_detail_img261.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img261.jpg" />
                 <div class="dminform detail-middle-inform14">
                     <hr />
                     <div class="ditext3 detail_img261_text3">
@@ -589,10 +589,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img27">
-                <img src="${contextPath}/assets/img/xexymix_detail_img271.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img271.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img28">
-                <img src="${contextPath}/assets/img/xexymix_detail_img281.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img281.jpg" />
                 <div class="dminform detail-middle-inform14">
                     <hr />
                     <div class="ditext3 detail_img281_text3">
@@ -601,10 +601,10 @@
                 </div>  
             </div>
             <div class="detail-middle-text-img29">
-                <img src="${contextPath}/assets/img/xexymix_detail_img291.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img291.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img30">
-                <img src="${contextPath}/assets/img/xexymix_detail_img301.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img301.jpg" />
                 <div class="dminform detail-middle-inform14">
                     <hr />
                     <div class="ditext3 detail_img301_text3">
@@ -613,10 +613,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img31">
-                <img src="${contextPath}/assets/img/xexymix_detail_img311.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img311.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img32">
-                <img src="${contextPath}/assets/img/xexymix_detail_img321.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img321.jpg" />
                 <div class="dminform detail-middle-inform14">
                     <hr />
                     <div class="ditext3 detail_img321_text3">
@@ -625,10 +625,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img33">
-                <img src="${contextPath}/assets/img/xexymix_detail_img331.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img331.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img34">
-                <img src="${contextPath}/assets/img/xexymix_detail_img341.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img341.jpg" />
                 <div class="dminform detail-middle-inform14">
                     <hr />
                     <div class="ditext3 detail_img341_text3">
@@ -637,10 +637,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img35">
-                <img src="${contextPath}/assets/img/xexymix_detail_img351.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img351.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img36">
-                <img src="${contextPath}/assets/img/xexymix_detail_img361.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img361.jpg" />
                 <div class="dminform detail-middle-inform14">
                     <hr />
                     <div class="ditext3 detail_img361_text3">
@@ -649,10 +649,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img37">
-                <img src="${contextPath}/assets/img/xexymix_detail_img371.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img371.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img38">
-                <img src="${contextPath}/assets/img/xexymix_detail_img381.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img381.jpg" />
                 <div class="dminform detail-middle-inform14">
                     <hr />
                     <div class="ditext3 detail_img381_text3">
@@ -661,10 +661,10 @@
                 </div>
             </div>
             <div class="detail-middle-text-img39">
-                <img src="${contextPath}/assets/img/xexymix_detail_img391.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img391.jpg" />
             </div>
             <div class="dtimg detail-middle-text-img40">
-                <img src="${contextPath}/assets/img/xexymix_detail_img401.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img401.jpg" />
                 <div class="dminform detail-middle-inform14">
                     <hr />
                     <div class="ditext3 detail_img401_text3">
@@ -673,14 +673,14 @@
                 </div>
             </div>
             <div class="detail-middle-text-img41">
-                <img src="${contextPath}/assets/img/xexymix_detail_img411.jpg" />
+                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img411.jpg" />
             </div>
             <span class="fabric"><h2>FABRIC INFO</h2>
                 <hr class="fabric-hr" />
             </span>
             <div class="fabric-info">
                 <div class="detail-middle-text-fabric-info1">
-                    <img src="${contextPath}/assets/img/xexymix_detail_fabric_info_img11.jpg" />
+                    <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_fabric_info_img11.jpg" />
                     <div class="fabric_info_text1">
                         <span><p>코튼라이크</p></span>
                     </div>
@@ -692,7 +692,7 @@
                     </div>
                 </div>
                 <div class="detail-middle-text-fabric-info2">
-                    <img src="${contextPath}/assets/img/xexymix_detail_fabric_info_img21.jpg" />
+                    <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_fabric_info_img21.jpg" />
                     <div class="fabric_info_text1">
                         <span><p>흡한속건</p></span>
                     </div>
@@ -704,7 +704,7 @@
                     </div>
                 </div>
                 <div class="detail-middle-text-fabric-info3">
-                    <img src="${contextPath}/assets/img/xexymix_detail_fabric_info_img31.jpg" />
+                    <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_fabric_info_img31.jpg" />
                     <div class="fabric_info_text1">
                         <span><p>4방 스트레치</p></span>
                     </div>
@@ -716,7 +716,7 @@
                     </div>
                 </div>
                 <div class="detail-middle-text-fabric-info4">
-                    <img src="${contextPath}/assets/img/xexymix_detail_fabric_info_img41.jpg" />
+                    <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_fabric_info_img41.jpg" />
                     <div class="fabric_info_text1">
                         <span><p>우수한 내구성과 형태안정성</p></span>
                     </div>
@@ -732,7 +732,7 @@
                 <hr class="design-hr" />
             </span>
             <div class="detail-middle-text-design-point1">
-                <img class="detail-text-design-point" src="${contextPath}/assets/img/xexymix_detail_design_point_img11.gif" />
+                <img class="detail-text-design-point" src="${pageContext.request.contextPath}/assets/img/xexymix_detail_design_point_img11.gif" />
                 <div class="design_point_text1">
                     <span><p>바디쉐입을 정리해 주는<br/>하이라이즈핏</p></span>
                 </div>
@@ -743,7 +743,7 @@
                 </div>
             </div>
             <div class="detail-middle-text-design-point2">
-                <img class="detail-text-design-point" src="${contextPath}/assets/img/xexymix_detail_design_point_img21.gif" />
+                <img class="detail-text-design-point" src="${pageContext.request.contextPath}/assets/img/xexymix_detail_design_point_img21.gif" />
                 <div class="design_point_text1">
                     <span><p>부위별 압박을 달리한<br/>입체 패턴</p></span>
                 </div>
@@ -756,7 +756,7 @@
                 </div>
             </div>
             <div class="detail-middle-text-design-point3">
-                <img class="detail-text-design-point" src="${contextPath}/assets/img/xexymix_detail_design_point_img31.gif" />
+                <img class="detail-text-design-point" src="${pageContext.request.contextPath}/assets/img/xexymix_detail_design_point_img31.gif" />
                 <div class="design_point_text1">
                     <span><p>완벽한 Y-zone 커버</p></span>
                 </div>
@@ -768,7 +768,7 @@
                 </div>
             </div>
             <div class="detail-middle-text-design-point4">
-                <img class="detail-text-design-point" src="${contextPath}/assets/img/xexymix_detail_design_point_img41.gif" />
+                <img class="detail-text-design-point" src="${pageContext.request.contextPath}/assets/img/xexymix_detail_design_point_img41.gif" />
                 <div class="design_point_text1">
                     <span><p>탄탄하게 잡아주는<br/>인심라인</p></span>
                 </div>
@@ -781,7 +781,7 @@
                 </div>
             </div>
             <div class="detail-middle-text-design-point5">
-                <img class="detail-text-design-point" src="${contextPath}/assets/img/xexymix_detail_design_point_img51.gif" />
+                <img class="detail-text-design-point" src="${pageContext.request.contextPath}/assets/img/xexymix_detail_design_point_img51.gif" />
                 <div class="design_point_text1">
                     <span><p>입체적인<br/>레그라인</p></span>
                 </div>
@@ -792,7 +792,7 @@
                 </div>
             </div>
             <div class="detail-middle-text-design-point6">
-                <img class="detail-text-design-point" src="${contextPath}/assets/img/xexymix_detail_design_point_img61.gif" />
+                <img class="detail-text-design-point" src="${pageContext.request.contextPath}/assets/img/xexymix_detail_design_point_img61.gif" />
                 <div class="design_point_text1">
                     <span><p>선 하나로 완성하는<br/>자연스러운 체형 보정</p></span>
                 </div>
@@ -807,14 +807,14 @@
     </div>
     <div class="detail-bottom">
         <div class="washing">
-            <img src="${contextPath}/assets/img/xexymix_washing1.jpg">
+            <img src="${pageContext.request.contextPath}/assets/img/xexymix_washing1.jpg">
         </div>
         <span class="size-recomend" id="size-recomend"><p>사이즈추천</p></span>
         <div class="size-info">
             <div class="pants-info">
                 <div class="pants-info-text">
                     <span class="size-info"><p>size info</p></span>
-                    <img src="${contextPath}/assets/img/xexymix_pants_size_info.jpg">
+                    <img src="${pageContext.request.contextPath}/assets/img/xexymix_pants_size_info.jpg">
                     <span class="size-info-announce"><p>※ 재는 방법, 위치에 따라 약 1~2cm의 오차가 발생 할 수 있습니다.</p></span>
                 </div>
                 <div class="pants-info-table">
@@ -941,7 +941,7 @@
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script type="text/javascript" src="${contextPath}/assets/js/detail_index.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/detail_index.js"></script>
 
 <c:import url="/WEB-INF/views/inc/bottom.jsp" />
 

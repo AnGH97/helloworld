@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://www.mysite.com" />
 
     <!-- reset.css -->
-    <link rel="stylesheet" type="text/css" href="${contextPath}/assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/css/reset.css" />
 
     <!--구글 웹 폰트 사용-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,6 +36,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <!--공통 css-->
-    <link rel="stylesheet" type="text/css" href="${contextPath}/assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/css/common.css" />
 </head>
 </html>

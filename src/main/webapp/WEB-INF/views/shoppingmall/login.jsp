@@ -5,11 +5,11 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:import url="/WEB-INF/views/inc/top.jsp" />
 <!--login style-->
-<link rel="stylesheet" href="${contextPath}/assets/css/login.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/login.css" />
 
 <!--메인 내용 영역-->
 <section class="main">
-    <form method="post" action="${contextPath}/shoppingmall/login_ok.do" class="login-form" name="login-form" id="login-form">
+    <form method="post" action="${pageContext.request.contextPath}/shoppingmall/login_ok.do" class="login-form" name="login-form" id="login-form">
         <div class="login">
             <span class="login-text"><h1>로그인</h1></span>
             <hr class="login-hr-first"/>
@@ -23,7 +23,7 @@
                 <ul>
                     <li><a class="f-grey" href="#">아이디 찾기</a></li>
                     <li><a class="f-grey" href="#">비밀번호 찾기</a></li>
-                    <li><a class="sign-in" href="${contextPath}/shoppingmall/signin">회원가입</a></li>
+                    <li><a class="sign-in" href="${pageContext.request.contextPath}/shoppingmall/signin">회원가입</a></li>
                 </ul>
             </div>
         </div>

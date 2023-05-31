@@ -30,10 +30,10 @@ Inner_index 페이지:
             category1_id가 우먼스인 product_id 들의 정보를 Product 테이블과, Img 테이블에서 select 해올것
     -> 검색했을때 검색 결과가 도출 될 수 있도록 하는게 필요함
     -> 낮은가격, 높은 가격으로 상품을 정렬할 수 있도록(같은 가격이면 정렬 순으로) 처음에는 그냥 정렬 순
-    * 여기에 존재하는 review는
+    * 여기에 존재하는 review는 => 잠시 보류
 
 Index 페이지:
-    Product와 Category1이 1:n으로 묶이는 테이블도 필요함
+    Product와 Category1이 1:n으로 묶이는 테이블도 필요함  => 잠시 보류
     ->Category1이 우먼스라면
         ->Category1_id가 우먼스인 Product의 정보와 Img를 select 할 수 있도록 해야함
     -> 검색했을때 검색 결과가 도출 될 수 있도록 하는게 필요함
@@ -47,15 +47,16 @@ Detail_index 페이지:
     Document
     -> type이 review인걸 select 할 수 있도록
     -> 정렬은 star의 점수대로 asc, desc,로 정렬할 수 있도록 
-    -> 제목, 내용, 작성일 select 할 수 있또록
+    -> 제목, 내용, 작성일 select 할 수 있또록 OK
 
 Community1_index 페이지:
     Document
-    -> 커뮤니티 게시글 목록에서 게시글 번호, 제목, 작성자, 작성일, 조회횟수 필요
-    -> 이름 혹은 제목을 검색 하는 것이 필요
-    : search=name&search-text=작성일
+    -> 커뮤니티 게시글 목록에서 게시글 번호, 제목, 작성자, 작성일, 조회 횟수 필요 OK
+    -> 이름 혹은 제목을 검색 하는 것이 필요OK
+    : search=name 혹은 title &search-text=검색어
+    test='#{search-text} == 'name''
     
 Community_view 페이지:
     Document
-    ->Document의 id가 일치하는 정보를 select 해오면 됨.
+    ->Document의 id가 일치하는 정보를 select 해오면 됨.  OK
 

@@ -5,20 +5,20 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:import url="/WEB-INF/views/inc/top.jsp" />
 <!--index stype-->
-<link rel="stylesheet" href="${contextPath}/assets/css/search_index.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/search_index.css" />
 
     <!--메인 내용 영역-->
     <section class="main">
         <div class="search-answer">
             <span class="search-answer-text">"레깅스"에 대한 442개의 통합 검색결과입니다.</span>
             <div class="search-answer-menu">
-                <form method="get" action="${contextPath}/shoppingmall/search_index" class="search-answer-form" name="search-answer-form" id="search-answer-form">
+                <form method="get" action="${pageContext.request.contextPath}/shoppingmall/search_index" class="search-answer-form" name="search-answer-form" id="search-answer-form">
                     <div class="re-search-button">
                         <label for="re-search">
                             <input type="text" name="search" class="re-search" id="re-search" placeholder="검색어를 입력하세요."
                                 onfocus="this.placeholder=''" onblur="this.placeholder='검색어를 입력하세요.'" />
                             <button type="submit" class="re-search-button">
-                                <img class="re-search" id="re-search-icon" src="${contextPath}/assets/img/xexymix_menu_view.png" />
+                                <img class="re-search" id="re-search-icon" src="${pageContext.request.contextPath}/assets/img/xexymix_menu_view.png" />
                             </button>
                         </label>
                     </div>
@@ -37,10 +37,10 @@
             <div class="sort-img">
                 <ul>
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img12.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img11.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img12.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img11.jpg" /></div>
                             </div>
 
                             <div class="combine-img-tag">
@@ -57,10 +57,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img22.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img21.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img22.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img21.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -76,10 +76,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img32.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img31.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img32.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img31.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -95,10 +95,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img42.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img41.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img42.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img41.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -114,10 +114,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img52.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img51.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img52.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img51.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -133,10 +133,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img62.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img61.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img62.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img61.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -152,10 +152,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img72.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img71.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img72.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img71.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -171,10 +171,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img82.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img81.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img82.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img81.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -190,10 +190,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img92.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img91.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img92.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img91.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -209,10 +209,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img102.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img101.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img102.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img101.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -228,10 +228,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img112.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img111.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img112.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img111.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -247,10 +247,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img122.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img121.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img122.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img121.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -266,10 +266,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img132.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img131.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img132.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img131.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -285,10 +285,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img142.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img141.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img142.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img141.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -304,10 +304,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img152.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img151.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img152.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img151.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -323,10 +323,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img162.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img161.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img162.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img161.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -342,10 +342,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img172.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img171.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img172.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img171.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -361,10 +361,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img182.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img181.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img182.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img181.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -380,10 +380,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img192.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img191.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img192.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img191.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>
@@ -399,10 +399,10 @@
                     </li>
 
                     <li>
-                        <a href="${contextPath}/shoppingmall/detail_index">
+                        <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
-                                <div class="img-first"><img src="${contextPath}/assets/img/andar_sort_img202.jpg" /></div>
-                                <div class="img-second"><img src="${contextPath}/assets/img/andar_sort_img201.jpg" /></div>
+                                <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img202.jpg" /></div>
+                                <div class="img-second"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img201.jpg" /></div>
                             </div>
                             <div class="combine-img-tag">
                                 <span class="review">리뷰 127,438</span>

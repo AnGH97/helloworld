@@ -6,7 +6,7 @@
 <c:import url="/WEB-INF/views/inc/top.jsp" />
 
 <!--login style-->
-<link rel="stylesheet" href="${contextPath}/assets/css/signin.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/signin.css" />
 
     <!--메인 내용 영역-->
     <section class="main">
@@ -384,6 +384,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
-<script type="text/javascript" src="${contextPath}/assets/js/signin.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/signin.js"></script>
 
 <c:import url="/WEB-INF/views/inc/bottom.jsp" />

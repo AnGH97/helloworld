@@ -11,6 +11,7 @@ public class ImgModel {
     private int id;   // 상품 이미지 일련번호
     private String img_path;   // 이미지 경로
     private int product_id;   // 상품 번호 참조키
+    private String thumbnail;   // 대표 이미지 설정
 
     private static int offset;
     private static int listCount;

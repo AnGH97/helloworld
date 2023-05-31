@@ -5,13 +5,13 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:import url="/WEB-INF/views/inc/top.jsp" />
 <!--css-->
-<link rel="stylesheet" href="${contextPath}/assets/css/review_community_write.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/review_community_write.css"/>
 
     <!--메인 내용 영역-->
     <section class="main">
         <div class="content-container">
             <h1>리뷰작성</h1>
-            <form method="post" action="${contextPath}/shoppingmall/review_community_write_ok.do" class="form-horizontal" name="join_form" id="join_form">
+            <form method="post" action="${pageContext.request.contextPath}/shoppingmall/review_community_write_ok.do" class="form-horizontal" name="join_form" id="join_form">
                 <div class="content-a content0">
                     <span><p>TITLE</p></span>
                     <input class="text_title" type="text" name="text_title" id="text_title" maxlength="50" placeholder="제목을 입력하세요."

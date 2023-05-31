@@ -8,7 +8,7 @@
         <div class="top-item">
             <div class="top-item1">
                 <a href="#" class="footer-logo">
-                    <img src="${contextPath}/assets/img/xexymix_header_logo_bk.png" />
+                    <img src="${pageContext.request.contextPath}/assets/img/xexymix_header_logo_bk.png" />
                 </a>
                 <p>애슬레저 1위, 브랜드 고객충성도 애슬레저룩 부문 2년 연속 대상 [2021, 2022]</p>
             </div>
@@ -79,7 +79,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script type="text/javascript" src="${contextPath}/assets/js/common.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/common.js"></script>
 
 <c: import url="/WEB-INF/views/inc/footer.jsp"/>
 

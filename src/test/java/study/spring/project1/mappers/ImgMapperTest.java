@@ -18,7 +18,7 @@ public class ImgMapperTest {
     @DisplayName("이미지 추가 테스트")
     void insertImg(){
         ImgModel input = new ImgModel();
-        input.setImg_path("${contextPath}/assets/img/andar-deatil-top-img1.jpg");
+        input.setImg_path("${pageContext.request.contextPath}/assets/img/andar-deatil-top-img1.jpg");
         input.setProduct_id(3);
 
         int output = imgmapper.insert(input);

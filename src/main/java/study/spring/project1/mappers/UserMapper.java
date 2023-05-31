@@ -17,17 +17,17 @@ import study.spring.project1.models.UserModel;
 @Mapper
 public interface UserMapper {
     //INSERT문을 수행하는 메서드 정의
-    @Insert("INSERT INTO user (id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, cart_id) VALUES (#{id}, #{name}, #{user_pw}, #{email}, #{birthdate}, #{gender}, #{tel}, #{address}, #{is_out}, #{reg_date}, #{cart_id})")
+    @Insert("INSERT INTO user (name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, user_id) VALUES (#{name}, #{user_pw}, #{email}, #{birthdate}, #{gender}, #{tel}, #{address}, #{is_out}, #{reg_date}, #{user_id})")
     //INSERT문에서 필요한 PK에 대한 옵션 정의
     // --> userGeneratedKeys: AUTO_INCREMENT가 적용된 테이블인 경우 사용
     // --> keyProperty: 파라미터로 전달되는 DTO객체에서 PK에 대응되는 멤버변수
     // --> keyColumn: 테이블의 Primary Key 칼럼명
-    @Options(useGeneratedKeys=false, keyProperty="id", keyColumn = "id")
+    @Options(useGeneratedKeys=true, keyProperty="id", keyColumn = "id")
     //INSERT, UPDATE, DELET용 메서드는 반드시 int형 리턴 --> 적용된 행의 수를 반환
     int insert(UserModel input);
 
     //UPDATE문을 수행하는 메서드 정의
-    @Update("UPDATE user SET name=#{name}, user_pw=#{user_pw}, email=#{email}, birthdate=#{birthdate}, gender=#{gender}, tel=#{tel}, address=#{address}, is_out=#{is_out}, reg_date=#{reg_date} WHERE id=#{id}")
+    @Update("UPDATE user SET name=#{name}, user_pw=#{user_pw}, email=#{email}, birthdate=#{birthdate}, gender=#{gender}, tel=#{tel}, address=#{address}, is_out=#{is_out}, reg_date=#{reg_date}, user_id=#{user_id} WHERE id=#{id}")
     int update(UserModel input);
 
     //DELETE문을 수행하는 메서드 정의
@@ -35,7 +35,7 @@ public interface UserMapper {
     int delete(UserModel input);
 
     //SELECT문(단일행 조회)을 수행하는 메서드 정의
-    @Select("SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, cart_id FROM user WHERE id=#{id}")
+    @Select("SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, user_id FROM user WHERE id=#{id}")
     //조회 결과와 리턴할 DTO객체를 연결하기 위한 규칙 정의
     // --> property : DTO 객체의 멤버변수 이름
     // --> column : SELECT문에 명시된 필드 이름(AS 옵션을 사용할 경우 별칭으로 명시)
@@ -50,14 +50,14 @@ public interface UserMapper {
         @Result( property="address", column="address"),
         @Result( property="is_out", column="is_out"),
         @Result(property="reg_date", column="reg_date" ),
-        @Result(property="cart_id", column="cart_id")})
+        @Result(property="user_id", column="user_id" )})
     UserModel selectItem(UserModel input);
 
     //SELECT문(다중행 조회)을 수행하는 메서드 정의
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
-        "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, cart_id FROM user" + 
+        "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, user_id FROM user" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "<if test='id != null'>id LIKE concat('%', #{id}, '%')</if>" + 
+        "<if test='user_id != null'>user_id LIKE concat('%', #{user_id}, '%')</if>" + 
         "<if test='user_pw != null'>OR user_pw LIKE concat('%', #{user_pw}, '%')</if>" + 
         "<if test='email != null'>OR email LIKE concat('%', #{email}, '%')</if>" + 
         "<if test='birthdate != null'>OR birthdate LIKE concat('%', #{birthdate}, '%')</if>" + 
@@ -66,7 +66,6 @@ public interface UserMapper {
         "<if test='address != null'>OR address LIKE concat('%', #{address}, '%')</if>" + 
         "<if test='is_out != null'>OR is_out LIKE concat('%', #{is_out}, '%')</if>" + 
         "<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
-        "<if test='cart_id != null'>OR cart_id LIKE concat('%', #{cart_id}, '%')</if>" + 
         "</where>" + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
@@ -85,7 +84,6 @@ public interface UserMapper {
         "<if test='address != null'>OR address LIKE concat('%', #{address}, '%')</if>" + 
         "<if test='is_out != null'>OR is_out LIKE concat('%', #{is_out}, '%')</if>" + 
         "<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
-        "<if test='cart_id != null'>OR cart_id LIKE concat('%', #{cart_id}, '%')</if>" + 
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCount(UserModel input);
@@ -94,9 +92,9 @@ public interface UserMapper {
     //1) ID를 검색해서 나온 user_pw를 controller에서 view로 전송하고 view에서 일치하는지 확인하도록 해야함.
     //2) 회원 가입시 같은 아이디가 존재하는지 확인할 수 있도록 하여 select가 null이 아니라면 가입 할 수 없도록 view에서 처리해야함.
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
-        "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, cart_id FROM user" + 
+        "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, user_idFROM user" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "<if test='id != null'>id LIKE #{id}</if>" + 
+        "<if test='user_id != null'>user_id LIKE #{user_id}</if>" + 
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCheck(UserModel input);    

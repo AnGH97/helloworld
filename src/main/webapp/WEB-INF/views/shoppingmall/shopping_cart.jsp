@@ -5,7 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:import url="/WEB-INF/views/inc/top.jsp" />
 <!--css-->
-<link rel="stylesheet" href="${contextPath}/assets/css/shopping_cart.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/shopping_cart.css" />
 
     <!--메인 내용 영역-->
     <section class="main">
@@ -29,7 +29,7 @@
                         <tr>
                             <td><input class="check" type="checkbox" name="check1" id="check1" /></td>
                             <td>
-                                <img src="${contextPath}/assets/img/xexymix_cart_img1.jpg" />
+                                <img src="${pageContext.request.contextPath}/assets/img/xexymix_cart_img1.jpg" />
                                 <div class="product-name">
                                     <span>아이스페더 숏슬리브 1+1</span>
                                     <span>선택1: 블랙M, 선택2: 다크그레이XL 1개</span>    
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="cart-button2">
-                    <button type="button" class="go-shopping" id="go-shopping" onclick="location.href='${contextPath}/shoppingmall/index'">쇼핑하기</button>
+                    <button type="button" class="go-shopping" id="go-shopping" onclick="location.href='${pageContext.request.contextPath}/shoppingmall/index'">쇼핑하기</button>
                     <button type="button" class="order" id="order" onclick="location.href='#'" >주문하기</button>
                 </div>
                 
@@ -102,5 +102,5 @@
     </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script type="text/javascript" src="${contextPath}/assets/js/shopping_cart.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/shopping_cart.js"></script>
 <c:import url="/WEB-INF/views/inc/bottom.jsp" />
