@@ -17,7 +17,7 @@ import study.spring.project1.models.ImgModel;
 @Mapper
 public interface ImgMapper {
     //INSERT문을 수행하는 메서드 정의
-    @Insert("INSERT INTO img (img_path, product_id) VALUES (#{img_path}, #{product_id})")
+    @Insert("INSERT INTO img (img_path, product_id, thumbnail) VALUES (#{img_path}, #{product_id}, #{thumbnail})")
     //INSERT문에서 필요한 PK에 대한 옵션 정의
     // --> userGeneratedKeys: AUTO_INCREMENT가 적용된 테이블인 경우 사용
     // --> keyProperty: 파라미터로 전달되는 DTO객체에서 PK에 대응되는 멤버변수
@@ -27,7 +27,7 @@ public interface ImgMapper {
     int insert(ImgModel input); 
 
     //UPDATE문을 수행하는 메서드 정의
-    @Update("UPDATE img SET img_path=#{img_path}, product_id=#{product_id} WHERE id=#{id}")
+    @Update("UPDATE img SET img_path=#{img_path}, product_id=#{product_id}, thumbnail=#{thumbnail} WHERE id=#{id}")
     int update(ImgModel input);
 
     //DELETE문을 수행하는 메서드 정의
@@ -35,19 +35,20 @@ public interface ImgMapper {
     int delete(ImgModel input);
 
     //SELECT문(단일행 조회)을 수행하는 메서드 정의
-    @Select("SELECT id, img_path, product_id FROM img WHERE id=#{id}")
+    @Select("SELECT id, img_path, product_id, thumbnail FROM img WHERE id=#{id}")
     //조회 결과와 리턴할 DTO객체를 연결하기 위한 규칙 정의
     // --> property : DTO 객체의 멤버변수 이름
     // --> column : SELECT문에 명시된 필드 이름(AS 옵션을 사용할 경우 별칭으로 명시)
     @Results(id = "myResultId", value={
         @Result(property="id", column="id"),
         @Result(property="img_path", column="img_path" ),
+        @Result(property="thumbnail", column="thumbnail" ),
         @Result(property="product_id", column="product_id")})
     ImgModel selectItem(ImgModel input);
 
     //SELECT문(다중행 조회)을 수행하는 메서드 정의
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
-        "SELECT id, img_path, product_id FROM img" + 
+        "SELECT id, img_path, product_id, thumbnail FROM img" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='img_path != null'>img_path LIKE concat('%', #{img_path}, '%')</if>" + 
         "<if test='product_id != null'>OR product_id LIKE concat('%', #{product_id}, '%')</if>" + 

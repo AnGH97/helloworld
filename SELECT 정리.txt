@@ -1,26 +1,26 @@
 Login 페이지:
     User
-    -> 로그인 시 DB에 존재하는 아이디와 비밀번호와 일치하는지 확인할 수 있도록
+    -> 로그인 시 DB에 존재하는 아이디와 비밀번호와 일치하는지 확인할 수 있도록 OK
 
 ShoppingCart 페이지:
     Product
-    -> 선택한 상품의 정보 select + 이미지가 필요(Img DB에서 select 필요)
+    -> 선택한 상품의 정보 select + 이미지가 필요(Img DB에서 select 필요)  OK
     Img
-    -> Product의 id와 Img의 Product_id가 일치하여 이미지 가져오기
-    -> Img DB에 대표 이미지로 설정할 column 추가해야함
+    -> Product의 id와 Img의 Product_id가 일치하여 이미지 가져오기 OK
+    -> Img DB에 대표 이미지로 설정할 column 추가해야함 OK
     * 색상, 사이즈는 controlller에서 ,를 기준으로 split 해서 데이터가 들어오도록 만듬.
 
 Search_index 페이지:
     Product
-    -> 검색 결과에 맞는 상품의 정보 select
+    -> 검색 결과에 맞는 상품의 정보 select OK
     Img
-    -> Product의 id와 Img의 Product_id가 일치하여 이미지 가져오기 이때 대표 이미지 2개만 가져오도록 설정.
-    -> Img DB에 대표 이미지로 설정할 column 추가해야함(enum으로 1, 2 로 추가)   
+    -> Product의 id와 Img의 Product_id가 일치하여 이미지 가져오기 이때 대표 이미지 2개만 가져오도록 설정. OK
+    -> Img DB에 대표 이미지로 설정할 column 추가해야함(enum으로 1, 2 로 추가)   OK
     * Inner_index 페이지와 , Index 페이지도 위와 같음.
 
 Signin 페이지:
     User
-    -> 회원 가입시 같은 아이디가 존재하는지 확인할 수 있도록
+    -> 회원 가입시 같은 아이디가 존재하는지 확인할 수 있도록   OK
 
 Inner_index 페이지:
     Category2_has_product, Product 페이지 mapper 따로 작성
@@ -33,17 +33,17 @@ Inner_index 페이지:
     * 여기에 존재하는 review는 => 잠시 보류
 
 Index 페이지:
-    Product와 Category1이 1:n으로 묶이는 테이블도 필요함  => 잠시 보류
+    Product와 Category1이 1:n으로 묶이는 테이블도 필요함 OK
     ->Category1이 우먼스라면
         ->Category1_id가 우먼스인 Product의 정보와 Img를 select 할 수 있도록 해야함
-    -> 검색했을때 검색 결과가 도출 될 수 있도록 하는게 필요함
+    -> 검색했을때 검색 결과가 도출 될 수 있도록 하는게 필요함  OK
     -> 낮은가격, 높은 가격으로 상품을 정렬할 수 있도록(같은 가격이면 정렬 순으로) 처음에는 그냥 정렬 순   
 
 Detail_index 페이지:
     Product
-    ->Product_id에 맞는 모든 정보 select
+    ->Product_id에 맞는 모든 정보 select   OK
     Img
-    -> Product의 id와 Img의 Product_id가 일치하여 이미지 가져오기  
+    -> Product의 id와 Img의 Product_id가 일치하여 이미지 가져오기 OK  
     Document
     -> type이 review인걸 select 할 수 있도록
     -> 정렬은 star의 점수대로 asc, desc,로 정렬할 수 있도록 

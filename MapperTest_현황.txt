@@ -3,3 +3,4 @@ MapperTest
 ->Category1Mapper/OK
 ->DocumentMapper/OK
 ->Category2Mapper/OK
+->ImgMapper/OK
