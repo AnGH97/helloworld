@@ -13,7 +13,7 @@ public class DocumentModel {
     private int id;   // 게시글 번호
     private String password;   // 게시물 비밀번호
     private String reg_date;   // 게시글 작성일
-    private int star;   // 리뷰 별점
+    private Integer star;   // 리뷰 별점
     private String subject;   // 게시글 제목
     private String type;   // 게시판 종류
     private int user_id;

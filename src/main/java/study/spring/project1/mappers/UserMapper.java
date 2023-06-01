@@ -92,11 +92,11 @@ public interface UserMapper {
     //1) ID를 검색해서 나온 user_pw를 controller에서 view로 전송하고 view에서 일치하는지 확인하도록 해야함.
     //2) 회원 가입시 같은 아이디가 존재하는지 확인할 수 있도록 하여 select가 null이 아니라면 가입 할 수 없도록 view에서 처리해야함.
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
-        "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, user_idFROM user" + 
+        "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, user_id FROM user" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='user_id != null'>user_id LIKE #{user_id}</if>" + 
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
-    public int selectCheck(UserModel input);    
+    UserModel selectCheck(UserModel input);    
 
 }

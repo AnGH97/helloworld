@@ -1,0 +1,5 @@
+MapperTest
+->UserMapper/OK
+->Category1Mapper/OK
+->DocumentMapper/OK
+->Category2Mapper/OK

@@ -18,7 +18,7 @@ import org.apache.ibatis.annotations.ResultMap;
 @Mapper
 public interface DocumentMapper {
     //INSERT문을 수행하는 메서드 정의
-    @Insert("INSERT INTO document (type, writer, password, subject, content, hit, reg_date, star, user_id) VALUES (#{type}, #{writer}, #{password}, #{subject}, #{content}, #{hit}, #{reg_date}, #{star}, #{writer})")
+    @Insert("INSERT INTO document (type, writer, password, subject, content, hit, reg_date, star, user_id) VALUES (#{type}, #{writer}, #{password}, #{subject}, #{content}, #{hit}, #{reg_date}, #{star}, #{user_id})")
     //INSERT문에서 필요한 PK에 대한 옵션 정의
     // --> userGeneratedKeys: AUTO_INCREMENT가 적용된 테이블인 경우 사용
     // --> keyProperty: 파라미터로 전달되는 DTO객체에서 PK에 대응되는 멤버변수
@@ -28,7 +28,7 @@ public interface DocumentMapper {
     int insert(DocumentModel input);
 
     //UPDATE문을 수행하는 메서드 정의
-    @Update("UPDATE document SET type=#{type}, writer=#{writer}, password=#{password}, subject=#{subject}, content=#{content}, hit=#{hit}, reg_date=#{reg_date}, star=#{star}, user_id=#{writer} WHERE id=#{id}")
+    @Update("UPDATE document SET type=#{type}, writer=#{writer}, password=#{password}, subject=#{subject}, content=#{content}, hit=#{hit}, reg_date=#{reg_date}, star=#{star}, user_id=#{user_id} WHERE id=#{id}")
     int update(DocumentModel input);
 
     //DELETE문을 수행하는 메서드 정의
@@ -93,22 +93,23 @@ public interface DocumentMapper {
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "<if test='#{search_text} != null'>" +
-        "<choose>" + 
-        "<when test='#{search} == name'>AND writer LIKE concat('%', #{search_text}, '%')</when>" + 
-        "<when test='#{search} == title'>AND subject LIKE concat('%', #{search_text}, '%')</when>" + 
-        "</choose>" + 
+        "<if test='search_text != null'>" +
+        "CASE " + 
+        "WHEN #{search} LIKE 'name' THEN writer LIKE concat('%', #{search_text}, '%') " +
+        "WHEN #{search} LIKE 'title' THEN subject LIKE concat('%', #{search_text}, '%') " +
+        "END " + 
         "</if>" + 
         "</where>" + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
    @ResultMap("myResultId")
    List<DocumentModel> selectSearch(DocumentModel input);
-
+    
+   //Review글만 불러오도록 하는 SQL
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document " + 
         "WHERE type LIKE 'review' " + 
-        "<if test='sort != 0'>ORDER BY #{sort}</if>" + 
+        "<if test='sort != null'>ORDER BY star #{sort}</if>" + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     @ResultMap("myResultId")

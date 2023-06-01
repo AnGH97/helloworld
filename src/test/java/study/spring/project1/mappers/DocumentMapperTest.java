@@ -21,14 +21,15 @@ public class DocumentMapperTest {
     @DisplayName("게시글 추가 테스트")
     void insertDocument(){
         DocumentModel input = new DocumentModel();
-        input.setType("review");
-        input.setWriter("angachi576");
+        input.setType("top1");
+        input.setWriter("angachi575");
         input.setPassword("12345");
-        input.setSubject("리뷰글");
-        input.setContent("Hello World");
+        input.setSubject("공지사항");
+        input.setContent("Hello");
         input.setHit(0);
         input.setReg_date("2023-05-31");
         input.setStar(4);
+        input.setUser_id(1);
 
         int output = documentMapper.insert(input);
 
@@ -37,17 +38,18 @@ public class DocumentMapperTest {
     }
     
     @Test
-    @DisplayName("게시글 추가 테스트")
+    @DisplayName("게시글 수정 테스트")
     void updatetDocument(){
         DocumentModel input = new DocumentModel();
         input.setType("review");
-        input.setWriter("angachi566");
+        input.setWriter("angachi56");
         input.setPassword("12345");
         input.setSubject("리뷰글");
         input.setContent("Hello World");
         input.setHit(5);
         input.setReg_date("2023-05-31");
         input.setStar(null);
+        input.setUser_id(2);
 
         int output = documentMapper.update(input);
 
@@ -55,7 +57,7 @@ public class DocumentMapperTest {
     }
 
     @Test
-    @DisplayName("카테고리 삭제 테스트")
+    @DisplayName("게시글 삭제 테스트")
     void deleteDocument(){
         DocumentModel input = new DocumentModel();
         input.setId(5);
@@ -68,7 +70,7 @@ public class DocumentMapperTest {
     @DisplayName("하나의 게시글 조회 테스트")
     void selectItemDocument(){
         DocumentModel input = new DocumentModel();
-        input.setId(5);
+        input.setId(18);
         DocumentModel output = documentMapper.selectItem(input);
 
         log.debug("result: " + output.toString());
@@ -76,14 +78,29 @@ public class DocumentMapperTest {
 
     @Test
     @DisplayName("게시글 목록 조회 테스트")
-    void selectAllDepartment(){
+    void selectDocumentList(){
         DocumentModel input = new DocumentModel();
-        input.setType("content1");
+        input.setWriter("angachi576");
 
         List<DocumentModel> output = documentMapper.selectList(input);
 
         for(DocumentModel item : output){
             log.debug("output: "+ item.toString());
         }
-    }      
+    } 
+    
+    @Test
+    @DisplayName("게시글 검색 테스트")
+    void selectSearch(){
+        DocumentModel input = new DocumentModel();
+        input.setSearch("title");
+        input.setSearch_text("공지사항");
+
+        List<DocumentModel> output = documentMapper.selectSearch(input);
+
+        for(DocumentModel item : output){
+            log.debug("output: "+ item.toString());
+        }
+    }
+    
 }

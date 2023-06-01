@@ -21,7 +21,7 @@ public class Category1MapperTest {
     @DisplayName("카테고리 추가 테스트")
     void insertCategory1(){
         Category1Model input = new Category1Model();
-        input.setName("프로모션");
+        input.setName("우먼즈");
 
         int output = category1Mapper.insert(input);
 
@@ -33,8 +33,8 @@ public class Category1MapperTest {
     @DisplayName("카테고리 수정 테스트")
     void updateCategory1(){
         Category1Model input = new Category1Model();
-        input.setId(0);
-        input.setName("프로모션");
+        input.setId(2);
+        input.setName("커뮤니티");
         int output = category1Mapper.update(input);
 
         log.debug("result: " + output);
@@ -44,7 +44,7 @@ public class Category1MapperTest {
     @DisplayName("카테고리 삭제 테스트")
     void deleteCategory1(){
         Category1Model input = new Category1Model();
-        input.setId(0);
+        input.setId(2);
 
         int output = category1Mapper.delete(input);
 
@@ -66,7 +66,7 @@ public class Category1MapperTest {
     @DisplayName("카테고리 목록 조회 테스트")
     void selectAllDepartment(){
         Category1Model input = new Category1Model();
-        input.setName("우먼스");
+        input.setName("커뮤니티");
 
         List<Category1Model> output = category1Mapper.selectList(input);
 
