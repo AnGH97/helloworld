@@ -22,8 +22,8 @@ public class Category2_has_productMapperTest {
     void insertCategory2(){
         Category2_has_productModel input = new Category2_has_productModel();
 
-        input.setCategory2_id(4);
-        input.setProduct_id(1);
+        input.setCategory2_id(1);
+        input.setProduct_id(3);
 
         int output = category2_has_productMapper.insert(input);
 
@@ -71,7 +71,7 @@ public class Category2_has_productMapperTest {
 
     @Test
     @DisplayName("카테고리 목록 조회 테스트")
-    void selectAllDepartment(){
+    void selectAlleCategory2(){
         Category2_has_productModel input = new Category2_has_productModel();
         input.setCategory2_id(1);
 

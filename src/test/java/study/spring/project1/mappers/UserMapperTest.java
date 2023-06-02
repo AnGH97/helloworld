@@ -107,7 +107,6 @@ public class UserMapperTest {
         else{
             log.debug("result: " + output);
         }
-        
     }
 
 }

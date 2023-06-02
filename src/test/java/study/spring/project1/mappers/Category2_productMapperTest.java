@@ -21,8 +21,8 @@ public class Category2_productMapperTest {
     @DisplayName("카테고리 2의 상품 목록 테스트")
     void selectUserListCart(){
         ProductModel input = new ProductModel();
-        input.setC1("5");
-        input.setC2("4");
+        input.setC1(5);
+        input.setC2(4);
 
         List<ProductModel> output = category2_productMapper.selectProductDetailList(input);
 

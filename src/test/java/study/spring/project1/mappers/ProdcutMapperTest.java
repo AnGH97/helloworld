@@ -96,7 +96,7 @@ public class ProdcutMapperTest {
     @DisplayName("BEST 상품 목록 조회 테스트")
     void selectProductBestList(){
         ProductModel input = new ProductModel();
-        input.setC1("우먼즈");
+        input.setC1(5);
         input.setId(1);
         input.setOrder("asc");
         
@@ -125,7 +125,7 @@ public class ProdcutMapperTest {
     void selectItemImg(){
         ProductModel input = new ProductModel();
         input.setId(1);
-        input.setC1("우먼즈");
+        input.setC1(5);
 
         List<ProductModel> output = productMapper.selectItemImg(input);
 
