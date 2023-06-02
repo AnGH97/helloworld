@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class Category2_has_productModel {
     private int category2_id;   // 자식 카테고리 참조키
     private int product_id;   // 상품 번호 참조키
+    private int id; // Cateory2_has_product의 PK
 
     private static int offset;
     private static int listCount;

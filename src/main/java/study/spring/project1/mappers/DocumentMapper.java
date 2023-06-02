@@ -109,7 +109,7 @@ public interface DocumentMapper {
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document " + 
         "WHERE type LIKE 'review' " + 
-        "<if test='sort != null'>ORDER BY star #{sort}</if>" + 
+        "<if test='sort != null'>ORDER BY star ${sort}</if>" + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     @ResultMap("myResultId")

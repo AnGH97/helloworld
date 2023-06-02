@@ -20,8 +20,8 @@ public class ImgMapperTest {
     @DisplayName("이미지 추가 테스트")
     void insertImg(){
         ImgModel input = new ImgModel();
-        input.setImg_path("${pageContext.request.contextPath}/assets/img/andar-deatil-top-img5.jpg");
-        input.setProduct_id(1);
+        input.setImg_path("${pageContext.request.contextPath}/assets/img/xexymix_detail_img22.jpg");
+        input.setProduct_id(2);
         input.setThumbnail(null);
 
         int output = imgmapper.insert(input);

@@ -17,6 +17,8 @@ public class CartModel {
     private String user_id;   // 회원 정보
     private int user_id1;   // 사용자 ID
 
+    private String cuser_id;    //로그인시 쿠키를 생성하고 그 쿠키에서 받아올 회원 아이디 정보
+
     private static int offset;
     private static int listCount;
 

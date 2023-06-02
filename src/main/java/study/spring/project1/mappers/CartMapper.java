@@ -18,7 +18,7 @@ import study.spring.project1.models.CartModel;
 @Mapper
 public interface CartMapper {
     //INSERT문을 수행하는 메서드 정의
-    @Insert("INSERT INTO cart (user_id, adate, cnt, user_id1, color, size, user_id1) VALUES (#{user_id}, #{adate}, #{cnt}, #{user_id1}, #{color}, #{size}, #{user_id1})")
+    @Insert("INSERT INTO cart (adate, cnt, user_id, product_id1, color, size, user_id1) VALUES (#{adate}, #{cnt}, #{user_id}, #{product_id1}, #{color}, #{size}, #{user_id1})")
     //INSERT문에서 필요한 PK에 대한 옵션 정의
     // --> cartGeneratedKeys: AUTO_INCREMENT가 적용된 테이블인 경우 사용
     // --> keyProperty: 파라미터로 전달되는 DTO객체에서 PK에 대응되는 멤버변수
@@ -28,7 +28,7 @@ public interface CartMapper {
     int insert(CartModel input);
 
     //UPDATE문을 수행하는 메서드 정의
-    @Update("UPDATE cart SET user_id=#{user_id}, product_id=#{product_id}, adate=#{adate}, cnt=#{cnt}, user_id1=#{user_id1}, color=#{color}, size=#{size} WHERE id=#{id}")
+    @Update("UPDATE cart SET user_id=#{user_id}, product_id1=#{product_id1}, adate=#{adate}, cnt=#{cnt}, user_id1=#{user_id1}, color=#{color}, size=#{size} WHERE id=#{id}")
     int update(CartModel input);
 
     //DELETE문을 수행하는 메서드 정의
@@ -36,14 +36,14 @@ public interface CartMapper {
     int delete(CartModel input);
 
     //SELECT문(단일행 조회)을 수행하는 메서드 정의
-    @Select("SELECT id, user_id, product_id, adate, cnt, user_id1, color, size FROM cart WHERE id=#{id}")
+    @Select("SELECT id, user_id, product_id1, adate, cnt, user_id1, color, size FROM cart WHERE id=#{id}")
     //조회 결과와 리턴할 DTO객체를 연결하기 위한 규칙 정의
     // --> property : DTO 객체의 멤버변수 이름
     // --> column : SELECT문에 명시된 필드 이름(AS 옵션을 사용할 경우 별칭으로 명시)
     @Results(id = "myResultId", value={
         @Result( property="id", column="id"),
         @Result( property="user_id", column="user_id"),
-        @Result( property="product_id", column="product_id"),
+        @Result( property="product_id1", column="product_id1"),
         @Result( property="adate", column="adate"),
         @Result( property="cnt", column="cnt"),
         @Result( property="user_id1", column="user_id1"),
@@ -53,10 +53,10 @@ public interface CartMapper {
 
     //SELECT문(다중행 조회)을 수행하는 메서드 정의
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
-        "SELECT id, user_id, product_id, adate, cnt, user_id1, color, size FROM cart" + 
+        "SELECT id, user_id, product_id1, adate, cnt, user_id1, color, size FROM cart" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='user_id != null'>user_id LIKE concat('%', #{user_id}, '%')</if>" + 
-        "<if test='product_id != null'>OR product_id LIKE concat('%', #{product_id}, '%')</if>" + 
+        "<if test='product_id1 != null'>OR product_id1 LIKE concat('%', #{product_id1}, '%')</if>" + 
         "<if test='adate != null'>OR adate LIKE concat('%', #{adate}, '%')</if>" + 
         "<if test='cnt != null'>OR cnt LIKE concat('%', #{cnt}, '%')</if>" + 
         "<if test='user_id1 != null'>OR user_id1 LIKE concat('%', #{user_id1}, '%')</if>" + 
@@ -72,7 +72,7 @@ public interface CartMapper {
         "SELECT COUNT(*) AS cnt FROM cart" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='user_id != null'>user_id LIKE concat('%', #{user_id}, '%')</if>" + 
-        "<if test='product_id != null'>OR product_id LIKE concat('%', #{product_id}, '%')</if>" + 
+        "<if test='product_id != null'>OR product_id1 LIKE concat('%', #{product_id1}, '%')</if>" + 
         "<if test='adate != null'>OR adate LIKE concat('%', #{adate}, '%')</if>" + 
         "<if test='cnt != null'>OR cnt LIKE concat('%', #{cnt}, '%')</if>" + 
         "<if test='user_id1 != null'>OR user_id1 LIKE concat('%', #{user_id1}, '%')</if>" + 
@@ -81,5 +81,20 @@ public interface CartMapper {
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCount(CartModel input);    
+
+    //하나의 사용자가 담은 장바구니 불러오기.
+    //SELECT문(다중행 조회)을 수행하는 메서드 정의
+    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+        "SELECT c.id, c.user_id, c.product_id1, c.adate, c.cnt, c.user_id1, c.color, c.size, " +
+        "p.id, p.name, p.price, p.sale, p.color, p.size, p.category1_id, i.img_path, i.thumbnail " +
+        "FROM cart AS c, product AS p, img AS  i " + 
+        "WHERE c.user_id=#{cuser_id} " + 
+        "AND c.product_id1=p.id " +
+        "AND c.product_id1=i.product_id " + 
+        "AND i.thumbnail='1' " + 
+        "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
+        "</script>") // <-- Dynamic SQL이 종료됨을 알림
+   @ResultMap("myResultId")
+   List<CartModel> selectUserList(CartModel input);    
     
 }

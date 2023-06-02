@@ -102,5 +102,19 @@ public class DocumentMapperTest {
             log.debug("output: "+ item.toString());
         }
     }
+
+    @Test
+    @DisplayName("게시글 중 리뷰만 검색 테스트")
+    void selectReview(){
+        DocumentModel input = new DocumentModel();
+
+        input.setSort("desc");
+
+        List<DocumentModel> output = documentMapper.selectReview(input);
+
+        for(DocumentModel item : output){
+            log.debug("output: "+ item.toString());
+        }
+    }
     
 }
