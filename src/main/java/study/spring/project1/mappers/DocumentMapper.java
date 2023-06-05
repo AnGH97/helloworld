@@ -60,14 +60,14 @@ public interface DocumentMapper {
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "<if test='type != null'>type LIKE concat('%', #{type}, '%')</if>" + 
+        "<if test='#{contype} != null'>#{contype}=type</if>" + 
         "<if test='writer != null'>OR writer LIKE concat('%', #{writer}, '%')</if>" + 
-        "<if test='password != null'>OR password LIKE concat('%', #{password}, '%')</if>" + 
+        //"<if test='password != null'>OR password LIKE concat('%', #{password}, '%')</if>" + 
         "<if test='subject != null'>OR subject LIKE concat('%', #{subject}, '%')</if>" + 
-        "<if test='content != null'>OR content LIKE concat('%', #{content}, '%')</if>" + 
-        "<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
-        "<if test='star != null'>OR star LIKE concat('%', #{star}, '%')</if>" + 
-        "<if test='user_id != null'>OR user_id LIKE concat('%', #{user_id}, '%')</if>" + 
+        //"<if test='content != null'>OR content LIKE concat('%', #{content}, '%')</if>" + 
+        //"<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
+        //"<if test='star != null'>OR star LIKE concat('%', #{star}, '%')</if>" + 
+        //"<if test='user_id != null'>OR user_id LIKE concat('%', #{user_id}, '%')</if>" + 
         "</where>" + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
@@ -77,14 +77,15 @@ public interface DocumentMapper {
    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT COUNT(*) AS cnt FROM document" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "<if test='type != null'>type LIKE concat('%', #{type}, '%')</if>" + 
+        "<if test='#{contype} != null'>#{contype}=type</if>" + 
+        //"<if test='type != null'>type LIKE concat('%', #{type}, '%')</if>" + 
         "<if test='writer != null'>OR writer LIKE concat('%', #{writer}, '%')</if>" + 
-        "<if test='password != null'>OR password LIKE concat('%', #{password}, '%')</if>" + 
+        //"<if test='password != null'>OR password LIKE concat('%', #{password}, '%')</if>" + 
         "<if test='subject != null'>OR subject LIKE concat('%', #{subject}, '%')</if>" + 
-        "<if test='content != null'>OR content LIKE concat('%', #{content}, '%')</if>" + 
-        "<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
-        "<if test='star != null'>OR star LIKE concat('%', #{star}, '%')</if>" + 
-        "<if test='user_id != null'>OR user_id LIKE concat('%', #{user_id}, '%')</if>" + 
+        //"<if test='content != null'>OR content LIKE concat('%', #{content}, '%')</if>" + 
+        //"<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
+        //"<if test='star != null'>OR star LIKE concat('%', #{star}, '%')</if>" + 
+        //"<if test='user_id != null'>OR user_id LIKE concat('%', #{user_id}, '%')</if>" + 
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCount(DocumentModel input);    
@@ -93,10 +94,10 @@ public interface DocumentMapper {
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "<if test='search_text != null'>" +
+        "<if test='keyword != null'>" +
         "CASE " + 
-        "WHEN #{search} LIKE 'name' THEN writer LIKE concat('%', #{search_text}, '%') " +
-        "WHEN #{search} LIKE 'title' THEN subject LIKE concat('%', #{search_text}, '%') " +
+        "WHEN #{search} LIKE 'name' THEN writer LIKE concat('%', #{keyword}, '%') " +
+        "WHEN #{search} LIKE 'title' THEN subject LIKE concat('%', #{keyword}, '%') " +
         "END " + 
         "</if>" + 
         "</where>" + 

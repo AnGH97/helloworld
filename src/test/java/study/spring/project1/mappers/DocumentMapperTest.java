@@ -94,7 +94,7 @@ public class DocumentMapperTest {
     void selectSearch(){
         DocumentModel input = new DocumentModel();
         input.setSearch("title");
-        input.setSearch_text("공지사항");
+        input.setKeyword("공지사항");
 
         List<DocumentModel> output = documentMapper.selectSearch(input);
 

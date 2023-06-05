@@ -16,12 +16,13 @@ public class DocumentModel {
     private Integer star;   // 리뷰 별점
     private String subject;   // 게시글 제목
     private String type;   // 게시판 종류
-    private int user_id;
+    private Integer user_id;
     private String writer;   // 작성자 아이디
 
     private String search;  //Get방식으로 이름인지 제목인지 확인하기 위한 문자열
-    private String search_text; //검색 내용을 받아오기 위한 문자열
+    private String keyword; //검색 내용을 받아오기 위한 문자열
     private String sort;    //review를 정렬하기 위한 문자열
+    private String contype; //링크에서 가져오기
     
     private static int offset;
     private static int listCount;

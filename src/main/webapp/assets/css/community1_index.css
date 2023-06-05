@@ -64,7 +64,7 @@
     align-items: center;
  }
 
- .main .content-container .board-search-subject .board-search .board-search-text {
+ .main .content-container .board-search-subject .board-search .board-keyword {
     display: block;
     display: flex;
  }

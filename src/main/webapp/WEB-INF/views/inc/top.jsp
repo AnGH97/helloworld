@@ -23,12 +23,12 @@
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">프로모션</a></li>
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">커뮤니티</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">공지사항</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">자주 묻는 질문</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">상품 문의</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">반품 문의</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">교환 문의</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">전국 매장 안내</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content1" class="content-first">공지사항</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content2">자주 묻는 질문</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content3">상품 문의</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content4">반품 문의</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content5">교환 문의</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content6" class="content-last">전국 매장 안내</a></li>
                         </ul>
                     </li>
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/index">베스트</a>
@@ -86,7 +86,7 @@
                     <img class="main-search" id="search-open" src="${pageContext.request.contextPath}/assets/img/xexymix_menu_view.png" />
                     <form method="get" action="${pageContext.request.contextPath}/shoppingmall/search_index" class="main-search" name="main-search" id="main-search-form">
                         <span id="search-close" class="search-close">X</span>
-                        <div class="search-text">
+                        <div class="keyword">
                             <span>검색</span>
                         </div>
                         <div class="search-button">
@@ -115,12 +115,12 @@
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">프로모션</a></li>
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">커뮤니티</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">공지사항</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">자주 묻는 질문</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">상품 문의</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">반품 문의</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">교환 문의</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">전국 매장 안내</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content1" class="content-first">공지사항</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content2">자주 묻는 질문</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content3">상품 문의</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content4">반품 문의</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content5">교환 문의</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content6" class="content-last">전국 매장 안내</a></li>
                                 </ul>
                             </li>
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index">베스트</a>

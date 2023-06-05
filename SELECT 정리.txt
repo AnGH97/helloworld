@@ -53,8 +53,8 @@ Community1_index 페이지:
     Document
     -> 커뮤니티 게시글 목록에서 게시글 번호, 제목, 작성자, 작성일, 조회 횟수 필요 OK
     -> 이름 혹은 제목을 검색 하는 것이 필요OK
-    : search=name 혹은 title &search-text=검색어
-    test='#{search-text} == 'name''
+    : search=name 혹은 title &keyword=검색어
+    test='#{keyword} == 'name''
     
 Community_view 페이지:
     Document
