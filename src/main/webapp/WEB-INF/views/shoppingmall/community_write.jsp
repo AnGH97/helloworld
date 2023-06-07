@@ -12,14 +12,14 @@
     <div class="content-container">
         <h1>커뮤니티</h1>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index" class="content-first">공지사항</a></li>
-            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">자주 묻는 질문</a></li>
-            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">상품 문의</a></li>
-            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">반품 문의</a></li>
-            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">교환 문의</a></li>
-            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index" class="content-last">전국 매장 안내</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content1" class="content-first">공지사항</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content2">자주 묻는 질문</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content3">상품 문의</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content4">반품 문의</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content5">교환 문의</a></li>
+            <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content6" class="content-last">전국 매장 안내</a></li>
         </ul>
-        <form method="post" action="${pageContext.request.contextPath}/shoppingmall/community_write_ok.do" class="form-horizontal" name="join_form" id="join_form">
+        <form method="post" action="${pageContext.request.contextPath}/shoppingmall/community_write_ok.do?contype=${contype}" class="form-horizontal" name="join_form" id="join_form">
             <div class="content-a content0">
                 <span><p>TITLE</p></span>
                 <input class="text_title" type="text" name="text_title" id="text_title" maxlength="50" />

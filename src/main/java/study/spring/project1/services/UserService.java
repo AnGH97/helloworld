@@ -75,14 +75,21 @@ public interface UserService {
 
 
     /**
-     * 로그인 시 DB에 존재하는 아이디, 비밀번호가 일치하는지 확인 할 수 있도록 사용자 정보를 리턴한다.
-     * 1) ID를 검색해서 나온 user_pw를 controller에서 view로 전송하고 view에서 일치하는지 확인하도록 해야함.
-     * 2) 회원 가입시 같은 아이디가 존재하는지 확인할 수 있도록 하여 select가 null이 아니라면 가입 할 수 없도록 view에서 처리해야함.
+    *회원 가입시 같은 아이디가 존재하는지 확인할 수 있도록 하여 select가 null이 아니라면 가입 할 수 없도록 view에서 처리해야함.
      * @param input
      * @return
      * @throws NullPointerException
      * @throws Exception
      */
-    public UserModel selectCheck(UserModel input) throws NullPointerException, Exception;
+    public UserModel selectSigninCheck(UserModel input) throws NullPointerException, Exception;
+
+    /**
+     * 로그인 시 DB에 존재하는 아이디, 비밀번호가 일치하는지 확인 할 수 있도록 사용자 정보를 리턴한다.
+     * @param input
+     * @return
+     * @throws NullPointerException
+     * @throws Exception
+     */
+    public UserModel selectLoginCheck(UserModel input) throws NullPointerException, Exception;
     
 }

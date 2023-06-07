@@ -22,9 +22,9 @@
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content6" class="content-last">전국 매장 안내</a></li>
                 </ul>
 
-                <form method="get" action="${pageContext.request.contextPath}/shoppingmall/community1_index" class="search-form" name="search-form" id="search-form">
+                <form method="get" action="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=${contype}" class="search-form" name="search-form" id="search-form">
                     <div class="board-search-subject">
-                        <h2>공지사항</h2>
+                        <h2>${conname}</h2>
                         <div class="board-search">
                             <div class="board-search-radio">
                                 <label>
@@ -38,6 +38,7 @@
                             </div>
                             <div class="board-keyword">
                                 <input type="text" name="keyword" id="keyword" />
+                                <input type="hidden" id="contype" name="contype" value=${contype}>
                                 <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </div>
                         </div>
@@ -66,9 +67,8 @@
                                 <%-- 조회결과가 있는 경우 --%>
                                 <c:otherwise>
                                     <%-- 조회 결과에 따른 반복 처리--%>
-                                    <c:forEach var="item" items="${output}" varStatus="status">
-                
-                                        <%-- 출력을 위해 준비한 학과이름과 위치--%>
+                                    <c:forEach var="item" items="${output}" varStatus="status">              
+                                        <%-- 출력을 위해 필요한 게시물 관련 정보 처리--%>
                                         <c:set var="id" value="${item.id}" />
                                         <c:set var="subject" value="${item.subject}" />
                                         <c:set var="writer" value="${item.writer}" />
@@ -78,7 +78,6 @@
                                         <c:if test="${keyword != ''}">
                                             <%-- 검색어에 <mark> 태그를 적용한 문자열 변수를 준비 --%>
                                                 <c:set var="mark" value="<mark>${keyword}</mark>"></c:set>
-                                                
                                                 <%-- 출력을 위해 준비한 학과 이름과 위치에서 검색어와 일치하는 단어를 형광팬 효과로 변경 --%>
                                                 <c:set var="subject" value="${fn:replace(subject, keyword, mark)}"></c:set>
                                                 <c:set var="writer" value="${fn:replace(writer, keyword, mark)}"></c:set>
@@ -86,6 +85,7 @@
                                         <%-- 상세페이지로 이동하기 위한 URL --%>
                                         <c:url value="/shoppingmall/community_view" var="viewUrl">
                                             <c:param name="id" value="${item.id}"></c:param>
+                                            <c:param name="contype" value="${item.type}"></c:param>
                                         </c:url>
                 
                                         <tr>
@@ -187,7 +187,7 @@
                 </div>
             </div>
 
-            <a class="write" href="${pageContext.request.contextPath}/shoppingmall/community_write">글쓰기</a>
+            <a class="write" href="${pageContext.request.contextPath}/shoppingmall/community_write?contype=${contype}">글쓰기</a>
 
             <div class="paging">
             <!-- 페이지 번호 구현-->

@@ -69,6 +69,8 @@
     width: 400px;
     height: 25px;
     line-height: 20px;
+    color: black;
+    font-weight: 500;
 }
 
 .main .content-container .content1 .content1-name span.name{
@@ -83,6 +85,8 @@
     width: 200px;
     height: 25px;
     line-height: 20px;
+    color: black;
+    font-weight: 500;
 }
 
 .main .content-container .content1 .content1-name{
@@ -107,6 +111,8 @@
     border: 1.5px solid #d5d5d5;
     margin: 25px 0;
     width: 900px;
+    color: black;
+    font-weight: 500;
 }
 
 .main .content-container .content4 a{

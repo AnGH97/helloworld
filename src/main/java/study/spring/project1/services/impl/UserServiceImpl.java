@@ -91,12 +91,19 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public UserModel selectCheck(UserModel input) throws NullPointerException, Exception {
-        UserModel output = userMapper.selectCheck(input);
+    public UserModel selectSigninCheck(UserModel input) throws NullPointerException, Exception {
+        UserModel output = userMapper.selectSigninCheck(input);
+        return output;
+    }
 
-        if(output == null){
-            throw new NullPointerException("사용 가능한 아이디 입니다.");
+    @Override
+    public UserModel selectLoginCheck(UserModel input) throws NullPointerException, Exception {
+        UserModel output = userMapper.selectLoginCheck(input);
+
+        if (output == null) {
+            throw new NullPointerException("아이디나 비밀번호를 확인하세요.");
         }
+
         return output;
     }
     

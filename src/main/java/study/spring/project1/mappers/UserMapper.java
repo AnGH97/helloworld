@@ -97,6 +97,13 @@ public interface UserMapper {
         "<if test='user_id != null'>user_id LIKE #{user_id}</if>" + 
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
-    UserModel selectCheck(UserModel input);    
+    UserModel selectSigninCheck(UserModel input);    
+
+    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+        "SELECT id, name, user_pw, email, birthdate, gender, tel, address, is_out, reg_date, user_id FROM user " + 
+        "WHERE user_id=#{user_id} AND " + 
+        "user_pw=md5(#{user_pw}) " +
+        "</script>") // <-- Dynamic SQL이 종료됨을 알림
+    UserModel selectLoginCheck(UserModel input);   
 
 }

@@ -61,9 +61,15 @@ public interface DocumentMapper {
         "SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='#{contype} != null'>#{contype}=type</if>" + 
-        "<if test='writer != null'>OR writer LIKE concat('%', #{writer}, '%')</if>" + 
+        "<if test='keyword != null'>" +
+        "CASE " + 
+        "WHEN #{search} LIKE 'name' THEN writer LIKE concat('%', #{keyword}, '%') " +
+        "WHEN #{search} LIKE 'title' THEN subject LIKE concat('%', #{keyword}, '%') " +
+        "END " + 
+        "</if>" + 
+        //"<if test='writer != null'>OR writer LIKE concat('%', #{writer}, '%')</if>" + 
         //"<if test='password != null'>OR password LIKE concat('%', #{password}, '%')</if>" + 
-        "<if test='subject != null'>OR subject LIKE concat('%', #{subject}, '%')</if>" + 
+        //"<if test='subject != null'>OR subject LIKE concat('%', #{subject}, '%')</if>" + 
         //"<if test='content != null'>OR content LIKE concat('%', #{content}, '%')</if>" + 
         //"<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
         //"<if test='star != null'>OR star LIKE concat('%', #{star}, '%')</if>" + 
@@ -78,10 +84,16 @@ public interface DocumentMapper {
         "SELECT COUNT(*) AS cnt FROM document" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='#{contype} != null'>#{contype}=type</if>" + 
+        "<if test='keyword != null'>" +
+        "CASE " + 
+        "WHEN #{search} LIKE 'name' THEN writer LIKE concat('%', #{keyword}, '%') " +
+        "WHEN #{search} LIKE 'title' THEN subject LIKE concat('%', #{keyword}, '%') " +
+        "END " + 
+        "</if>" + 
         //"<if test='type != null'>type LIKE concat('%', #{type}, '%')</if>" + 
-        "<if test='writer != null'>OR writer LIKE concat('%', #{writer}, '%')</if>" + 
+        //"<if test='writer != null'>OR writer LIKE concat('%', #{writer}, '%')</if>" + 
         //"<if test='password != null'>OR password LIKE concat('%', #{password}, '%')</if>" + 
-        "<if test='subject != null'>OR subject LIKE concat('%', #{subject}, '%')</if>" + 
+        //"<if test='subject != null'>OR subject LIKE concat('%', #{subject}, '%')</if>" + 
         //"<if test='content != null'>OR content LIKE concat('%', #{content}, '%')</if>" + 
         //"<if test='reg_date != null'>OR reg_date LIKE concat('%', #{reg_date}, '%')</if>" + 
         //"<if test='star != null'>OR star LIKE concat('%', #{star}, '%')</if>" + 

@@ -97,16 +97,22 @@ public class UserMapperTest {
     @DisplayName("사용자 ID 중복 테스트")
     void selectUserID(){
         UserModel input = new UserModel();
-        input.setUser_id("cyj960921");
+        input.setUser_id("kkkkkkkk");
 
-        UserModel output = userMapper.selectCheck(input);
-        if(output == null){
-            System.out.println("검색 결과 없음");
-            return;
-        }
-        else{
-            log.debug("result: " + output);
-        }
+        UserModel output = userMapper.selectSigninCheck(input);
+
+        log.debug("result: " + output);
+    }
+
+    @Test
+    @DisplayName("로그인 테스트")
+    void selectUserLoginID(){
+        UserModel input = new UserModel();
+        input.setUser_id("kkkkkkkk");
+        input.setUser_pw("123456");
+
+        UserModel output = userMapper.selectLoginCheck(input);
+        log.debug("result: " + output);
     }
 
 }

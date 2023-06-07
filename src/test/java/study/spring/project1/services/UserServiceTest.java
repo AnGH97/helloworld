@@ -147,7 +147,7 @@ public class UserServiceTest {
         UserModel output = null;
 
         try {
-            output = userService.selectCheck(input);
+            output = userService.selectLoginCheck(input);
         } catch (NullPointerException e) {
             e.printStackTrace();
         } catch (Exception e) {

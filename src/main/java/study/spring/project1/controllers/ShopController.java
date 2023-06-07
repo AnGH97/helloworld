@@ -1,5 +1,7 @@
 package study.spring.project1.controllers;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -10,10 +12,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import lombok.RequiredArgsConstructor;
+import study.spring.project1.exceptions.StringFormatException;
 import study.spring.project1.helpers.Pagenation;
+import study.spring.project1.helpers.RegexHelper;
 import study.spring.project1.helpers.WebHelper;
 import study.spring.project1.models.DocumentModel;
+import study.spring.project1.models.UserModel;
 import study.spring.project1.services.DocumentService;
+import study.spring.project1.services.UserService;
 
 @Controller
 @RequiredArgsConstructor
@@ -23,25 +29,82 @@ public class ShopController {
     private final WebHelper webHelper;
 
     private final DocumentService documentService;
+
+    private final RegexHelper regexHelper;
+
+    private final UserService userService;
     
     @GetMapping("/shoppingmall/community_view")
-    public ModelAndView community_view(Model model){
+    public ModelAndView community_view(Model model,
+        @RequestParam(value="id", defaultValue = "0") int id){
+            DocumentModel input = new DocumentModel();
+            input.setId(id);
+
+            DocumentModel output = null;
+
+            try {
+                output = documentService.selectItem(input);
+            } catch (Exception e) {
+                return webHelper.serverError(e);
+            }
+            
+            model.addAttribute("output", output);
+
+
         return new ModelAndView("shoppingmall/community_view");
     }
 
     @GetMapping("/shoppingmall/community_write")
-    public ModelAndView community_write(Model model){
+    public ModelAndView community_write(Model model,
+        @RequestParam(value="contype", required = false) String contype){
+        model.addAttribute("contype", contype);
+        
         return new ModelAndView("shoppingmall/community_write");
     }
 
     @PostMapping("/shoppingmall/community_write_ok.do")
-    public ModelAndView community_write_ok(Model model){
-        return webHelper.redirect("/shoppingmall/community1_index", "저장되었습니다.");
+    public ModelAndView community_write_ok(Model model,
+        @RequestParam(value="contype", required = false) String contype,
+        @RequestParam(value="text_title") String subject,
+        @RequestParam(value="user_name") String writer,
+        @RequestParam(value="user_pw") String password,
+        @RequestParam(value="content-title") String content){
+
+            LocalDate now = LocalDate.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String date = now.format(formatter);
+            
+            try {
+                regexHelper.isValue(subject, "제목을 입력하세요.");
+                regexHelper.isValue(writer, "이름을 입력하세요.");
+                regexHelper.isValue(password, "비밀번호를 입력하세요.");
+                regexHelper.isValue(content, "내용을 입력하세요.");
+            } catch (StringFormatException e) {
+                return webHelper.badRequest(e);
+            }
+
+            DocumentModel input = new DocumentModel();
+            input.setContype(contype);
+            input.setSubject(subject);
+            input.setWriter(writer);
+            input.setPassword(password);
+            input.setContent(content);
+            input.setType(contype);
+            input.setHit(0);
+            input.setReg_date(date);
+
+            try {
+                documentService.insert(input);
+            } catch (Exception e) {
+                return webHelper.serverError(e);
+            }
+
+        return webHelper.redirect("/shoppingmall/community1_index?contype=" + input.getContype(), "저장되었습니다.");
     }    
 
     @GetMapping("/shoppingmall/community1_index")
     public ModelAndView community1_index(Model model,
-                        @RequestParam(value="contype", defaultValue = "null") String contype,
+                        @RequestParam(value="contype", required = false) String contype,
                         @RequestParam(value="keyword", required = false) String keyword,
                         @RequestParam(value="search", defaultValue = "") String search,
                         @RequestParam(value="page", defaultValue = "1") int nowPage){
@@ -49,16 +112,40 @@ public class ShopController {
         int listCount = 10; //한 페이지당 표시할 목록 수
         int pageCount = 5;  //한 그룹당 표시할 페이지 번호 수
 
+        String conname = null;
+        int number = 0;
+
         List<DocumentModel> output = null; //조회 결과가 저장될 객체
         Pagenation pagenation = null;   //페이지 번호를 계산한 결과가 저장될 객체
 
         //조회에 필요한 조건값(검색어)를 Beans에 담는다.
         DocumentModel input = new DocumentModel();
 
-        if(contype != null){
+        if(contype.equals("content1")){
             input.setContype(contype);
+            conname = "공지사항";
         }
-        
+        else if(contype.equals("content2")){
+            input.setContype(contype);
+            conname = "자주 묻는 질문";
+        }
+        else if(contype.equals("content3")){
+            input.setContype(contype);
+            conname = "상품 문의";
+        }
+        else if(contype.equals("content4")){
+            input.setContype(contype);
+            conname = "반품 문의";
+        }
+        else if(contype.equals("content5")){
+            input.setContype(contype);
+            conname = "교환 문의";
+        }
+        else if(contype.equals("content6")){
+            input.setContype(contype);
+            conname = "전국 매장 안내";
+        } 
+
         if(search.equals("writer")){
             input.setWriter(keyword);
         }
@@ -86,6 +173,8 @@ public class ShopController {
         } 
 
         //view 처리
+        model.addAttribute("number", number);
+        model.addAttribute("conname", conname);
         model.addAttribute("contype", contype);
         model.addAttribute("output", output);
         model.addAttribute("keyword", keyword);
@@ -121,8 +210,30 @@ public class ShopController {
     }
 
     @PostMapping("/shoppingmall/login_ok.do")
-    public ModelAndView login_ok(Model model){
-        return webHelper.redirect("/shoppingmall/index", "OOO님 환영합니다.");
+    public ModelAndView login_ok(Model model, 
+        @RequestParam(value="user_id") String user_id,
+        @RequestParam(value="user_pw") String user_pw){
+
+            try {
+                regexHelper.isValue(user_id, "아이디를 입력하세요.");
+                regexHelper.isValue(user_pw, "비밀번호를 입력하세요.");
+            } catch (StringFormatException e) {
+                return webHelper.badRequest(e);
+            }
+
+            UserModel input = new UserModel();
+            input.setUser_id(user_id);
+            input.setUser_pw(user_pw);
+            
+            UserModel output = null;
+
+            try {
+                output = userService.selectLoginCheck(input);
+            }catch (Exception e) {
+                return webHelper.redirect("/shoppingmall/login", "아이디 비밀번호가 잘못되었습니다.");
+            }
+
+        return webHelper.redirect("/shoppingmall/index", output.getName()+"님 환영합니다.");
     }    
 
     @GetMapping("/shoppingmall/review_community_write")

@@ -215,7 +215,58 @@
                     <div class="star-middle2">
                         <table align="center">
                             <tbody>
-                                <tr>
+                                <c:choose>
+                                    <%-- 조회 결과가 없는 경우 --%>
+                                    <c:when test="${output == null || fn:length(output) == 0}">
+                                        <h3>작성된 리뷰가 없습니다.</h3>
+                                    </c:when>
+                                    <%-- 조회결과가 있는 경우 --%>
+                                    <c:otherwise>
+                                        <%-- 조회 결과에 따른 반복 처리--%>
+                                        <c:forEach var="item" items="${output}" varStatus="status">              
+                                            <%-- 출력을 위해 필요한 게시물 관련 정보 처리--%>
+                                            <c:set var="id" value="${item.id}" />
+                                            <c:set var="subject" value="${item.subject}" />
+                                            <c:set var="writer" value="${item.writer}" />
+                                            <c:set var="reg_date" value="${item.reg_date}" />
+                                            <c:set var="hit" value="${item.hit}" />
+                                            <c:set var="star" value="${item.star}" />
+                                            <c:set var="content" value="${item.content}" />
+                                            <tr>
+                                                <td class="td1" align="center">
+                                                    <div class="td1-1">
+                                                        <div class="star-emo">
+                                                            <label for="star-review1">
+                                                                <input type="checkbox" id="star-review1" name="star-review1" class="value1" value="1" />
+                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                            </label>
+                                                            <label for="star-review2">
+                                                                <input type="checkbox" id="star-review2" name="star-review2" class="value2" value="2" />
+                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                            </label>
+                                                            <label for="star-review3">
+                                                                <input type="checkbox" id="star-review3" name="star-review3" class="value3" value="3" />
+                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                            </label>
+                                                            <label for="star-review4">
+                                                                <input type="checkbox" id="star-review4" name="star-review4" class="value1" value="4" />
+                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                            </label>
+                                                            <label for="star-review5">
+                                                                <input type="checkbox" id="star-review5" name="star-review5" class="value5" value="5" />
+                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                            </label>
+                                                        </div>
+                                                        <div class="star-text">아주 좋아요</div>
+                                                    </div>
+                                                    <div class="read-text"><span>${item.content}</span></div>
+                                                </td>
+                                                <td class="td2">2023.05.18</td>
+                                            </tr>
+                                        </c:forEach>
+                                    </c:otherwise>
+                                </c:choose>
+<!--                                <tr>
                                     <td class="td1">
                                         <div class="td1-1">
                                             <div class="star-emo">
@@ -369,7 +420,7 @@
                                         <div class="read-text"><span>리뷰가 작성된 공간입니다.!!!!!!!!!!!!!!!!!!!!!!!!!!!</span></div>
                                     </td>
                                     <td class="td2">2023.05.18</td>
-                                </tr>
+                                </tr>-->
                             </tbody>
                         </table>
                     </div>
