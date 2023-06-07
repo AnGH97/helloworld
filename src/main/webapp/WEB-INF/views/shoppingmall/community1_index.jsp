@@ -189,6 +189,7 @@
 
             <a class="write" href="${pageContext.request.contextPath}/shoppingmall/community_write">글쓰기</a>
 
+            <div class="paging">
             <!-- 페이지 번호 구현-->
             <%-- 이전 그룹에 대한 링크 --%>
             <c:choose>
@@ -218,11 +219,11 @@
                 <c:choose>
                     <%--현재 머물고 있는 페이지 번호를 출력할 경우 링크 적용 안함 --%>
                     <c:when test="${pagenation.nowPage == i}">
-                        <strong>[${i}]</strong>
+                        <strong>&nbsp&nbsp${i}&nbsp&nbsp</strong>
                     </c:when>
                     <%-- 나머지 페이지의 경우 링크 적용함 --%>
                     <c:otherwise>
-                        <a href="${pageUrl}">[${i}]</a>
+                        <a href="${pageUrl}">${i}</a>
                     </c:otherwise>
                 </c:choose>
             </c:forEach>
@@ -241,7 +242,8 @@
                 <c:otherwise>
                     >
                 </c:otherwise>
-            </c:choose>            
+            </c:choose>
+            </div>            
             <!--<div class="pagenation">-->
                 <!--페이지 번호-->
             <!--<ul class="paging">

@@ -41,7 +41,7 @@ public class ShopController {
 
     @GetMapping("/shoppingmall/community1_index")
     public ModelAndView community1_index(Model model,
-                        @RequestParam(value="contype", required = false) String contype,
+                        @RequestParam(value="contype", defaultValue = "null") String contype,
                         @RequestParam(value="keyword", required = false) String keyword,
                         @RequestParam(value="search", defaultValue = "") String search,
                         @RequestParam(value="page", defaultValue = "1") int nowPage){

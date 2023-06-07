@@ -21,7 +21,7 @@
             <div class="menu menu-item2">
                 <ul class="menu-item2-line">
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">프로모션</a></li>
-                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index">커뮤니티</a>
+                    <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content1">커뮤니티</a>
                         <ul class="item-in-item">
                             <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content1" class="content-first">공지사항</a></li>
                             <li><a href="${pageContext.request.contextPath}/shoppingmall/community1_index?contype=content2">자주 묻는 질문</a></li>
