@@ -185,7 +185,23 @@ public class ShopController {
     }
 
     @GetMapping("/shoppingmall/detail_index")
-    public ModelAndView detail_index(Model model){
+    public ModelAndView detail_index(Model model,
+        @RequestParam(value="sort", required = false) String sort){
+        DocumentModel dinput = new DocumentModel();
+        if(sort != null){
+            dinput.setSort(sort);
+        }
+
+        List<DocumentModel> doutput = null;
+
+        try {
+            doutput = documentService.selectReview(dinput);
+        }catch (Exception e) {
+            return webHelper.serverError(e);
+        }
+
+        model.addAttribute("doutput", doutput);
+
         return new ModelAndView("shoppingmall/detail_index");
     }
 
@@ -233,6 +249,7 @@ public class ShopController {
                 return webHelper.redirect("/shoppingmall/login", "아이디 비밀번호가 잘못되었습니다.");
             }
 
+
         return webHelper.redirect("/shoppingmall/index", output.getName()+"님 환영합니다.");
     }    
 
@@ -242,7 +259,43 @@ public class ShopController {
     }
 
     @PostMapping("/shoppingmall/review_community_write_ok.do")
-    public ModelAndView review_community_write_ok(Model model){
+    public ModelAndView review_community_write_ok(Model model,
+        @RequestParam(value="text_title") String subject,
+        @RequestParam(value="user_name") String writer,
+        @RequestParam(value="user_pw") String password,
+        @RequestParam(value="review-star") String star,
+        @RequestParam(value="content-title") String content){
+            LocalDate now = LocalDate.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String date = now.format(formatter);
+
+            try {
+                regexHelper.isValue(subject, "제목을 입력하세요.");
+                regexHelper.isValue(writer, "아이디를 입력하세요.");
+                regexHelper.isValue(password, "비밀번호를 입력하세요.");
+                regexHelper.isValue(star, "만족도를 입력하세요.");
+                regexHelper.isValue(content, "내용을 입력하세요.");
+            } catch (StringFormatException e) {
+                return webHelper.badRequest(e);
+            }
+
+
+            DocumentModel input = new DocumentModel();
+            input.setSubject(subject);
+            input.setWriter(writer);
+            input.setPassword(password);
+            input.setStar(Integer.parseInt(star));
+            input.setContent(content);
+            input.setType("review");
+            input.setHit(0);
+            input.setReg_date(date);
+
+            try {
+                documentService.insert(input);
+            }  catch (Exception e) {
+                e.printStackTrace();
+            }
+
         return webHelper.redirect("/shoppingmall/detail_index#detail-middle-review", "리뷰 작성이 완료되었습니다.");
     }    
 

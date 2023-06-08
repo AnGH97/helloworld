@@ -121,8 +121,9 @@ public interface DocumentMapper {
    //Review글만 불러오도록 하는 SQL
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, type, writer, password, subject, content, hit, reg_date, star, user_id FROM document " + 
-        "WHERE type LIKE 'review' " + 
-        "<if test='sort != null'>ORDER BY star ${sort}</if>" + 
+        "WHERE type = 'review' ORDER BY " + 
+        "<if test='sort != null'>star ${sort},</if>" + 
+        "reg_date desc " + 
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     @ResultMap("myResultId")

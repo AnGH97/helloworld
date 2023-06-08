@@ -208,22 +208,22 @@
                 </div>
                 <div class="star-middle" id="star-middle">
                     <div class="star-middle1">
-                        <button type=button class="bt date-resc" id="date-resc" onclick="location.href='#star-middle?0'">최신순</button>
-                        <button type=button class="bt star-up" id="star-up" onclick="location.href='#star-middle?desc'">높은 별점순</button>
-                        <button type=button class="bt star-down" id="star-down" onclick="location.href='#star-middle?asc'">낮은 별점순</button>
+                        <a class="bt date-resc" id="date-resc" href="${pageContext.request.contextPath}/shoppingmall/detail_index#star-middle">최신순</a>
+                        <a class="bt date-resc" id="date-resc" href="${pageContext.request.contextPath}/shoppingmall/detail_index?sort=desc#star-middle">높은 별점순</a>
+                        <a class="bt date-resc" id="date-resc" href="${pageContext.request.contextPath}/shoppingmall/detail_index?sort=asc#star-middle">낮은 별점순</a>
                     </div>
                     <div class="star-middle2">
                         <table align="center">
                             <tbody>
                                 <c:choose>
                                     <%-- 조회 결과가 없는 경우 --%>
-                                    <c:when test="${output == null || fn:length(output) == 0}">
-                                        <h3>작성된 리뷰가 없습니다.</h3>
+                                    <c:when test="${doutput == null || fn:length(doutput) == 0}">
+                                        <td colspan="2" align="center">조회결과가 없습니다.</td>
                                     </c:when>
                                     <%-- 조회결과가 있는 경우 --%>
                                     <c:otherwise>
                                         <%-- 조회 결과에 따른 반복 처리--%>
-                                        <c:forEach var="item" items="${output}" varStatus="status">              
+                                        <c:forEach var="item" items="${doutput}" varStatus="status">              
                                             <%-- 출력을 위해 필요한 게시물 관련 정보 처리--%>
                                             <c:set var="id" value="${item.id}" />
                                             <c:set var="subject" value="${item.subject}" />
@@ -233,36 +233,51 @@
                                             <c:set var="star" value="${item.star}" />
                                             <c:set var="content" value="${item.content}" />
                                             <tr>
-                                                <td class="td1" align="center">
+                                                <td class="td1">
                                                     <div class="td1-1">
                                                         <div class="star-emo">
-                                                            <label for="star-review1">
-                                                                <input type="checkbox" id="star-review1" name="star-review1" class="value1" value="1" />
-                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
-                                                            </label>
-                                                            <label for="star-review2">
-                                                                <input type="checkbox" id="star-review2" name="star-review2" class="value2" value="2" />
-                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
-                                                            </label>
-                                                            <label for="star-review3">
-                                                                <input type="checkbox" id="star-review3" name="star-review3" class="value3" value="3" />
-                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
-                                                            </label>
-                                                            <label for="star-review4">
-                                                                <input type="checkbox" id="star-review4" name="star-review4" class="value1" value="4" />
-                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
-                                                            </label>
-                                                            <label for="star-review5">
-                                                                <input type="checkbox" id="star-review5" name="star-review5" class="value5" value="5" />
-                                                                <i class="fa-solid fa-star" style="color: #fbca18;"></i>
-                                                            </label>
+                                                            <c:choose>
+                                                                <c:when test="${item.star == 5}">
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                </c:when>
+                                                                <c:when test="${item.star == 4}">
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                </c:when>
+                                                                <c:when test="${item.star == 3}">
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>                                                                    
+                                                                </c:when>
+                                                                <c:when test="${item.star == 2}">
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                                </c:when>
+                                                                <c:when test="${item.star == 1}">
+                                                                    <i class="fa-solid fa-star" style="color: #fbca18;"></i>
+                                                            </c:when>
+                                                            </c:choose>
                                                         </div>
-                                                        <div class="star-text">아주 좋아요</div>
+                                                        <div class="star-text">
+                                                            <c:choose>
+                                                                <c:when test="${item.star == 5}">아주 좋아요</c:when>
+                                                                <c:when test="${item.star == 4}">맘에 들어요</c:when>
+                                                                <c:when test="${item.star == 3}">보통이에요</c:when>
+                                                                <c:when test="${item.star == 2}">그냥 그래요</c:when>
+                                                                <c:when test="${item.star == 1}">별로에요</c:when>
+                                                            </c:choose>
+                                                        </div>
                                                     </div>
                                                     <div class="read-text"><span>${item.content}</span></div>
                                                 </td>
-                                                <td class="td2">2023.05.18</td>
-                                            </tr>
+                                                <td class="td2">${item.reg_date}</td>
+                                            </tr>                                            
                                         </c:forEach>
                                     </c:otherwise>
                                 </c:choose>

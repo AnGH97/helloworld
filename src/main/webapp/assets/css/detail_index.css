@@ -431,7 +431,7 @@
    border-bottom: 1px solid #d5d5d5;
 }
 
-.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle1 button{
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle1 a{
    display: flex;
    margin-left: 20px;
    margin-right: 15px;
@@ -443,7 +443,7 @@
    cursor: pointer;
 }
 
-.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle1 button:hover{
+.main .detail-middle .detail-middle-review .detail-middle-review-star .star-middle .star-middle1 a:hover{
    color: grey;
    font-weight: 600;
 }
