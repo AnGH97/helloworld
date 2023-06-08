@@ -71,12 +71,11 @@ public interface ProductMapper {
 
    //BEST 상품을 포함한 모든 상품의 정보를 SELECT 하는 함수
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
-        "SELECT p.id, p.name, p.price, p.sale, p.color, p.size, p.product_txt, p.best, p.sort, p.category1_id, i.img_path, i.thumbnail FROM product AS p, img as i " +
+        "SELECT p.id, p.name, p.price, p.sale, p.color, p.size, p.best, p.sort, p.category1_id, i.img_path, i.thumbnail FROM product AS p, img as i " +
         "WHERE p.category1_id=(SELECT id FROM category1 WHERE name=#{c1name}) " +
-        "AND i.product_id = p.id " + 
-        "AND i.thumbnail IS NOT NULL " + 
-        "ORDER BY p.sort asc " + 
-        "<if test='order != null'>, p.price ${order}</if>" + 
+        "AND p.id = i.product_id " + 
+        "<if test='order == null'>ORDER BY p.sort asc</if>" + 
+        "<if test='order != null'>ORDER BY p.sale ${order}</if>" +        
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     @Results(id = "myResultId", value={
@@ -91,21 +90,14 @@ public interface ProductMapper {
         @Result(property="category1_id", column="category1_id"),
         @Result(property="sort", column="sort"),
         @Result(property="img_path", column="img_path"),
+        @Result(property="c1name", column="c1name"),
         @Result(property="thumbnail", column="thumbnail"),
     })
    List<ProductModel> selectList(ProductModel input);
 
    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
-        "SELECT COUNT(*) AS cnt FROM product" + 
-        "<where>" + // <-- 검색 조건 동적 구성 시작
-        "<if test='name != null'>name LIKE concat('%', #{name}, '%')</if>" + 
-        "<if test='price != null'>OR price LIKE #{price} </if>" + 
-        "<if test='sale != null'>OR sale LIKE #{sale} </if>" + 
-        "<if test='color != null'>OR color LIKE concat('%', #{color}, '%')</if>" + 
-        "<if test='size != null'>OR size LIKE concat('%', #{size}, '%')</if>" + 
-        "<if test='best != null'>OR best LIKE concat('%', #{best}, '%')</if>" + 
-        "<if test='sort != null'>OR sort LIKE concat('%', #{sort}, '%')</if>" + 
-        "</where>" + 
+        "SELECT COUNT(*) AS cnt FROM product " + 
+        "WHERE category1_id=${c1} " +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCount(ProductModel input);    
 

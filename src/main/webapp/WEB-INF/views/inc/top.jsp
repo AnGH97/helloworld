@@ -32,7 +32,7 @@
                         </ul>
                     </li>
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=베스트">베스트</a></li>
-                    <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=1+1">1+1</a>
+                    <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=opo">1+1</a>
                         <ul class="item-in-item">
                             <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">상의</a></li>
                             <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">하의</a></li>
@@ -117,7 +117,7 @@
                                 </ul>
                             </li>
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=베스트">베스트</a></li>
-                            <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=1+1">1+1</a>
+                            <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=opo">1+1</a>
                                 <ul class="item-in-item">
                                     <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">상의</a></li>
                                     <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">하의</a></li>

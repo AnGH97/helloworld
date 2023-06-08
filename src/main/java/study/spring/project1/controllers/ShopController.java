@@ -16,9 +16,11 @@ import study.spring.project1.exceptions.StringFormatException;
 import study.spring.project1.helpers.Pagenation;
 import study.spring.project1.helpers.RegexHelper;
 import study.spring.project1.helpers.WebHelper;
+import study.spring.project1.models.Category2Model;
 import study.spring.project1.models.DocumentModel;
 import study.spring.project1.models.ProductModel;
 import study.spring.project1.models.UserModel;
+import study.spring.project1.services.Category2Service;
 import study.spring.project1.services.DocumentService;
 import study.spring.project1.services.ProductService;
 import study.spring.project1.services.UserService;
@@ -37,6 +39,8 @@ public class ShopController {
     private final UserService userService;
 
     private final ProductService productService;
+
+    private final Category2Service category2Service;
     
     @GetMapping("/shoppingmall/community_view")
     public ModelAndView community_view(Model model,
@@ -216,10 +220,13 @@ public class ShopController {
 
     @GetMapping({"/shoppingmall/index", "/shoppingmall/index?category1=베스트"})
     public ModelAndView index(Model model,
+        @RequestParam(value="order", required = false) String order,
         @RequestParam(value="category1", required = false) String cn1,
         @RequestParam(value="page", defaultValue = "1") int nowPage){
 
         ProductModel input = new ProductModel();
+
+        Category2Model cinput = new Category2Model();
 
         if(cn1 != null){
             if(cn1.equals("우먼즈")){
@@ -234,19 +241,35 @@ public class ShopController {
                 input.setC1(14);
                 input.setC1name(cn1);
             }
+            else if(cn1.equals("테니스")){
+                input.setC1(13);
+                input.setC1name(cn1);
+            }
+            else if(cn1.equals("opo")){
+                input.setC1(10);
+                cn1="1+1";
+                input.setC1name(cn1);
+            }
             else if(cn1.equals("베스트")){
                 input.setC1(9);
                 input.setC1name(cn1);
             }
         }
 
+        if(order != null){
+            input.setOrder(order);
+        }
+
+        cinput.setCategory1_id(input.getC1());
+
         int totalCount = 0; //전체 게시글 수
-        int listCount = 10; //한 페이지당 표시할 목록 수
+        int listCount = 24; //한 페이지당 표시할 목록 수
         int pageCount = 5;  //한 그룹당 표시할 페이지 번호 수
 
         Pagenation pagenation = null;   //페이지 번호를 계산한 결과가 저장될 객체
 
         List<ProductModel> output = null;
+        List<Category2Model>coutput = null;
 
         
         try {
@@ -260,14 +283,18 @@ public class ShopController {
             ProductModel.setListCount(pagenation.getListCount());
             //데이터 조회하기
             output=productService.selectList(input);
+            coutput=category2Service.selectList(cinput);
 
         } catch (Exception e) {
             return webHelper.serverError(e);
         }
         
+        model.addAttribute("cn1", cn1);
         model.addAttribute("c1name", input.getC1name());
         model.addAttribute("output", output);
+        model.addAttribute("coutput", coutput);
         model.addAttribute("pagenation", pagenation);
+        model.addAttribute("totalCount", totalCount);
 
         return new ModelAndView("shoppingmall/index");
     }

@@ -35,10 +35,10 @@ public class ImgMapperTest {
     void updateImg(){
         ImgModel input = new ImgModel();
         
-        input.setImg_path("${pageContext.request.contextPath}/assets/img/womens/outer/product10_21.jpg");
-        input.setProduct_id(15);
+        input.setImg_path("/assets/img/womens/outer/product11_21.jpg");
+        input.setProduct_id(16);
         input.setThumbnail("2");
-        input.setId(28);
+        input.setId(30);
 
         int output = imgmapper.update(input);
         log.debug("result: " + output);
