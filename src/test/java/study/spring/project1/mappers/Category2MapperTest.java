@@ -21,8 +21,8 @@ public class Category2MapperTest {
     @DisplayName("카테고리 추가 테스트")
     void insertCategory2(){
         Category2Model input = new Category2Model();
-        input.setName("레깅스");
-        input.setCategory1_id(5);
+        input.setName("세트");
+        input.setCategory1_id(12);
 
         int output = category2Mapper.insert(input);
 

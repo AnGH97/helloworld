@@ -22,8 +22,8 @@ public class Category2_has_productMapperTest {
     void insertCategory2(){
         Category2_has_productModel input = new Category2_has_productModel();
 
-        input.setCategory2_id(1);
-        input.setProduct_id(3);
+        input.setCategory2_id(18);
+        input.setProduct_id(16);
 
         int output = category2_has_productMapper.insert(input);
 

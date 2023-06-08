@@ -22,15 +22,15 @@ public class ProdcutMapperTest {
     void insertProduct(){
         ProductModel input = new ProductModel();
 
-        input.setName("아이스페더 컴포트 숏슬리브 1+1");
-        input.setPrice(78000);
+        input.setName("XXMX 데일리 코튼 크롭 가디건");
+        input.setPrice(47000);
         input.setSale(29800);
-        input.setColor("블랙,백아이보리,블러쉬핑크,시어스킨,피치허니,쉐도우민트,솔져네이비,레몬블링");
-        input.setSize("S,M,L,XL,XXL");
+        input.setColor("블랙,아이보리,엔젤핑크,아이비그린");
+        input.setSize("s,m,l");
         input.setProduct_txt("HTML로 작성될 부분입니다.");
         input.setBest("N");
-        input.setSort("f");
-        input.setCategory1_id(5);
+        input.setSort("a");
+        input.setCategory1_id(11);
 
         int output = productMapper.insert(input);
 
@@ -63,7 +63,7 @@ public class ProdcutMapperTest {
     @DisplayName("상품 삭제 테스트")
     void deleteProduct(){
         ProductModel input = new ProductModel();
-        input.setId(2);
+        input.setId(3);
 
         int output = productMapper.delete(input);
         log.debug("output : " + output);
@@ -96,8 +96,8 @@ public class ProdcutMapperTest {
     @DisplayName("BEST 상품 목록 조회 테스트")
     void selectProductBestList(){
         ProductModel input = new ProductModel();
-        input.setC1(5);
-        input.setId(1);
+        input.setC1(11);
+        input.setId(17);
         input.setOrder("asc");
         
         List<ProductModel> output = productMapper.selectBestList(input);

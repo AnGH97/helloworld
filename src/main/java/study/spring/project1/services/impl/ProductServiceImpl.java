@@ -5,8 +5,12 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
+import study.spring.project1.mappers.CartMapper;
+import study.spring.project1.mappers.Category2_has_productMapper;
 import study.spring.project1.mappers.ImgMapper;
 import study.spring.project1.mappers.ProductMapper;
+import study.spring.project1.models.CartModel;
+import study.spring.project1.models.Category2_has_productModel;
 import study.spring.project1.models.ImgModel;
 import study.spring.project1.models.ProductModel;
 import study.spring.project1.services.ProductService;
@@ -16,6 +20,8 @@ import study.spring.project1.services.ProductService;
 public class ProductServiceImpl implements ProductService{
     private final ProductMapper productMapper;
     private final ImgMapper imgMapper;
+    private final CartMapper cartMapper;
+    private final Category2_has_productMapper category2_has_productMapper;
 
     @Override
     public ProductModel insert(ProductModel input) throws NullPointerException, Exception {
@@ -46,6 +52,13 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public void delete(ProductModel input) throws NullPointerException, Exception {
+         CartModel cartModel = new CartModel();
+         cartModel.setProduct_id1(input.getId());
+         cartMapper.delete(cartModel);
+
+         Category2_has_productModel category2_has_productModel = new Category2_has_productModel();
+         category2_has_productModel.setProduct_id(input.getId());
+         category2_has_productMapper.delete(category2_has_productModel);
          //상품 삭제를 위해 참조 관계에 있는 자식 데이터를 순서대로 삭제
          ImgModel imgModel = new ImgModel();
          imgModel.setProduct_id(input.getId());

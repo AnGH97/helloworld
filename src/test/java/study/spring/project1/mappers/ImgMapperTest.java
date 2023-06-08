@@ -20,9 +20,9 @@ public class ImgMapperTest {
     @DisplayName("이미지 추가 테스트")
     void insertImg(){
         ImgModel input = new ImgModel();
-        input.setImg_path("${pageContext.request.contextPath}/assets/img/xexymix_detail_img22.jpg");
-        input.setProduct_id(2);
-        input.setThumbnail(null);
+        input.setImg_path("${pageContext.request.contextPath}/assets/img/womens/outer/product11_21.jpg");
+        input.setProduct_id(16);
+        input.setThumbnail("2");
 
         int output = imgmapper.insert(input);
 
@@ -35,10 +35,10 @@ public class ImgMapperTest {
     void updateImg(){
         ImgModel input = new ImgModel();
         
-        input.setImg_path("${pageContext.request.contextPath}/assets/img/andar-deatil-top-img5.jpg");
-        input.setProduct_id(1);
+        input.setImg_path("${pageContext.request.contextPath}/assets/img/womens/outer/product10_21.jpg");
+        input.setProduct_id(15);
         input.setThumbnail("2");
-        input.setId(7);
+        input.setId(28);
 
         int output = imgmapper.update(input);
         log.debug("result: " + output);

@@ -21,7 +21,7 @@ public class Category1MapperTest {
     @DisplayName("카테고리 추가 테스트")
     void insertCategory1(){
         Category1Model input = new Category1Model();
-        input.setName("우먼즈");
+        input.setName("용품");
 
         int output = category1Mapper.insert(input);
 
@@ -44,7 +44,7 @@ public class Category1MapperTest {
     @DisplayName("카테고리 삭제 테스트")
     void deleteCategory1(){
         Category1Model input = new Category1Model();
-        input.setId(2);
+        input.setId(4);
 
         int output = category1Mapper.delete(input);
 

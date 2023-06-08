@@ -22,6 +22,10 @@ public class ProductModel {
     private String order;   // view에서 파라미터로 넘어 왔을 때 'desc' 혹은 'asc'인지 확인 할 수 있도록 하는 변수
     private Integer c1;   // view에서 파라미터로 넘어 왔을 때 베스트, 맨즈, 우먼즈 인지를 확인 할 수 있도록 하는 변수
     private Integer c2;      // view에서 파라미터로 넘어 왔을 때 c1의 내부 카테고리를 확인 할 수 있도록 하는 변수
+    private String c1name;
+
+    private String img_path;
+    private String thumbnail;
 
     private static int offset;
     private static int listCount;

@@ -17,8 +17,10 @@ import study.spring.project1.helpers.Pagenation;
 import study.spring.project1.helpers.RegexHelper;
 import study.spring.project1.helpers.WebHelper;
 import study.spring.project1.models.DocumentModel;
+import study.spring.project1.models.ProductModel;
 import study.spring.project1.models.UserModel;
 import study.spring.project1.services.DocumentService;
+import study.spring.project1.services.ProductService;
 import study.spring.project1.services.UserService;
 
 @Controller
@@ -33,6 +35,8 @@ public class ShopController {
     private final RegexHelper regexHelper;
 
     private final UserService userService;
+
+    private final ProductService productService;
     
     @GetMapping("/shoppingmall/community_view")
     public ModelAndView community_view(Model model,
@@ -210,8 +214,61 @@ public class ShopController {
         return webHelper.redirect("/shoppingmall/detail_index", "장바구니에 담겼습니다.");
     }
 
-    @GetMapping("/shoppingmall/index")
-    public ModelAndView index(Model model){
+    @GetMapping({"/shoppingmall/index", "/shoppingmall/index?category1=베스트"})
+    public ModelAndView index(Model model,
+        @RequestParam(value="category1", required = false) String cn1,
+        @RequestParam(value="page", defaultValue = "1") int nowPage){
+
+        ProductModel input = new ProductModel();
+
+        if(cn1 != null){
+            if(cn1.equals("우먼즈")){
+                input.setC1(11);
+                input.setC1name(cn1);
+            }
+            else if(cn1.equals("맨즈")){
+                input.setC1(12);
+                input.setC1name(cn1);
+            }
+            else if(cn1.equals("용품")){
+                input.setC1(14);
+                input.setC1name(cn1);
+            }
+            else if(cn1.equals("베스트")){
+                input.setC1(9);
+                input.setC1name(cn1);
+            }
+        }
+
+        int totalCount = 0; //전체 게시글 수
+        int listCount = 10; //한 페이지당 표시할 목록 수
+        int pageCount = 5;  //한 그룹당 표시할 페이지 번호 수
+
+        Pagenation pagenation = null;   //페이지 번호를 계산한 결과가 저장될 객체
+
+        List<ProductModel> output = null;
+
+        
+        try {
+            //전체 게시글 수 조회
+            totalCount = productService.selectCount(input);
+            //페이지 번호 계산 --> 계산 결과를 로그로 출력될 것이다.
+            pagenation = new Pagenation(nowPage, totalCount, listCount, pageCount);
+
+            //SQL의 LIMIT절에서 사용될 값을 Beans의 static 변수에 저장
+            ProductModel.setOffset(pagenation.getOffset());
+            ProductModel.setListCount(pagenation.getListCount());
+            //데이터 조회하기
+            output=productService.selectList(input);
+
+        } catch (Exception e) {
+            return webHelper.serverError(e);
+        }
+        
+        model.addAttribute("c1name", input.getC1name());
+        model.addAttribute("output", output);
+        model.addAttribute("pagenation", pagenation);
+
         return new ModelAndView("shoppingmall/index");
     }
 

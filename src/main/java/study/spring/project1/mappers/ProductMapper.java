@@ -40,7 +40,7 @@ public interface ProductMapper {
     //조회 결과와 리턴할 DTO객체를 연결하기 위한 규칙 정의
     // --> property : DTO 객체의 멤버변수 이름
     // --> column : SELECT문에 명시된 필드 이름(AS 옵션을 사용할 경우 별칭으로 명시)
-    @Results(id = "myResultId", value={
+    @Results(id = "myResultId1", value={
         @Result(property="id", column="id"),
         @Result(property="name", column="name"),
         @Result(property="price", column="price"),
@@ -55,7 +55,7 @@ public interface ProductMapper {
 
     //검색 결과에 맞는 상품의 정보 select
     //SELECT문(다중행 조회)을 수행하는 메서드 정의
-    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+    /**@Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT id, name, price, sale, color, size, product_txt, best, sort, category1_id FROM product" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         "<if test='name != null'>name LIKE concat('%', #{name}, '%')</if>" + 
@@ -67,6 +67,32 @@ public interface ProductMapper {
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
    @ResultMap("myResultId")
+   List<ProductModel> selectList(ProductModel input);*/
+
+   //BEST 상품을 포함한 모든 상품의 정보를 SELECT 하는 함수
+    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+        "SELECT p.id, p.name, p.price, p.sale, p.color, p.size, p.product_txt, p.best, p.sort, p.category1_id, i.img_path, i.thumbnail FROM product AS p, img as i " +
+        "WHERE p.category1_id=(SELECT id FROM category1 WHERE name=#{c1name}) " +
+        "AND i.product_id = p.id " + 
+        "AND i.thumbnail IS NOT NULL " + 
+        "ORDER BY p.sort asc " + 
+        "<if test='order != null'>, p.price ${order}</if>" + 
+        "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
+        "</script>") // <-- Dynamic SQL이 종료됨을 알림
+    @Results(id = "myResultId", value={
+        @Result(property="id", column="id"),
+        @Result(property="name", column="name"),
+        @Result(property="price", column="price"),
+        @Result(property="sale", column="sale"),
+        @Result(property="color", column="color"),
+        @Result(property="size", column="size"),
+        @Result(property="product_txt", column="product_txt"),
+        @Result(property="best", column="best"),
+        @Result(property="category1_id", column="category1_id"),
+        @Result(property="sort", column="sort"),
+        @Result(property="img_path", column="img_path"),
+        @Result(property="thumbnail", column="thumbnail"),
+    })
    List<ProductModel> selectList(ProductModel input);
 
    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
@@ -86,7 +112,7 @@ public interface ProductMapper {
     //best 상품 노출 + 높은 가격순, 낮은 가격순 정렬이 가능하도록 만듬.
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT p.id, p.name, p.price, p.sale, p.color, p.size, p.product_txt, p.best, p.sort, p.category1_id, i.id, i.img_path, i.thumbnail FROM product AS p, img as i " +
-        "WHERE p.category1_id=(SELECT id FROM category1 WHERE name=#{c1}) " +
+        "WHERE p.category1_id=(SELECT id FROM category1 WHERE name=#{c1name}) " +
         "AND i.product_id = p.id " + 
         "AND p.best='Y' " + 
         "AND i.thumbnail IS NOT NULL " + 
