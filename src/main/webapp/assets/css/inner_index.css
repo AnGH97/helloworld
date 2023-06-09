@@ -87,37 +87,34 @@
  }
  
  .sort-img ul li a .combine-img{
-   overflow: hidden;
-   text-align: center;
-}
-
-.sort-img ul li a .combine-img img{
-   width: 355px;
-   height: 522px;
-   margin: auto;
-   object-fit: cover;
-   
-}
-
-.sort-img ul li a .combine-img div.img-first{
-   display: block;
-   position: absolute;
-}
-
-img.img-second{
-   display: none;
-   width: 355px;
-   position: absolute;
-   margin-left: 10px ;
-   margin-top: 20px;
-   height: 522px;
-}
-
-li:hover + img.img-second{
-   display: block;
-   width: 355px;
-   position: absolute;
-}
+    overflow: hidden;
+    text-align: center;
+ }
+ 
+ .sort-img ul li a .combine-img img{
+    width: 355px;
+    height: 522px;
+    margin: auto;
+    object-fit: cover;
+    
+ }
+ 
+ .sort-img ul li a .combine-img div.img-first{
+    display: block;
+    position: absolute;
+ }
+ 
+ .sort-img ul li a .combine-img div.img-second{
+    display: none;
+    width: 302px;
+    position: absolute;
+ }
+ 
+ .sort-img ul li a .combine-img:hover div.img-second{
+    display: block;
+    width: 302px;
+    position: absolute;
+ }
  
  .sort-img ul li a .combine-img-tag{
    margin-top: 555px;

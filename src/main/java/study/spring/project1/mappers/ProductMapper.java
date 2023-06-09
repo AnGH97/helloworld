@@ -70,14 +70,26 @@ public interface ProductMapper {
    List<ProductModel> selectList(ProductModel input);*/
 
    //BEST 상품을 포함한 모든 상품의 정보를 SELECT 하는 함수
-    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+
+   @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+    "SELECT p.id, p.`name`, p.price, p.sale, p.color, p.product_txt, p.size, p.best, p.sort, p.category1_id " +
+    "FROM product AS p " + 
+    "INNER JOIN category1 AS c1 ON p.category1_id = c1.id " +
+    "<where>" + // <-- 검색 조건 동적 구성 시작
+    "c1.id=${c1} " +
+    "</where>" + 
+    "<if test='order == null'>ORDER BY p.sort asc</if>" + 
+    "<if test='order != null'>ORDER BY p.sale ${order}</if>" +   
+    "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
+    "</script>") // <-- Dynamic SQL이 종료됨을 알림   
+    /**@Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT p.id, p.name, p.price, p.sale, p.color, p.size, p.best, p.sort, p.category1_id, i.img_path, i.thumbnail FROM product AS p, img as i " +
         "WHERE p.category1_id=(SELECT id FROM category1 WHERE name=#{c1name}) " +
         "AND p.id = i.product_id " + 
         "<if test='order == null'>ORDER BY p.sort asc</if>" + 
         "<if test='order != null'>ORDER BY p.sale ${order}</if>" +        
         "<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
-        "</script>") // <-- Dynamic SQL이 종료됨을 알림
+        "</script>") // <-- Dynamic SQL이 종료됨을 알림*/
     @Results(id = "myResultId", value={
         @Result(property="id", column="id"),
         @Result(property="name", column="name"),

@@ -10,3 +10,11 @@
         "color": "grey"
     })
 });
+
+$(".hover-img").on("mouseenter mouseleave", (e) => {
+    const current = $(e.currentTarget);
+    const tmp = current.attr("src");
+    const over = current.data("over");
+    current.attr("src", over);
+    current.data("over", tmp);
+});

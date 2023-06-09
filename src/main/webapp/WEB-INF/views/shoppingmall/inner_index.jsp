@@ -70,8 +70,8 @@
                                         <span class="money"
                                             ><p class="sale"><fmt:formatNumber value="${(item.price-item.sale)/item.price}" type="percent" /></p>
                                             <p class="sale-price"><fmt:formatNumber value="${item.sale}" pattern="#,###" />원</p>
-                                            <p class="just-price"><fmt:formatNumber value="${item.price}" pattern="#,###" /></p
-                                        ></span>
+                                            <p class="just-price"><fmt:formatNumber value="${item.price}" pattern="#,###" />원</p>
+                                        </span>
                                     </div>
                                 </a>
                             </li>
@@ -133,13 +133,4 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/inner_index.js"></script>
-<script>
-    $(".hover-img").on("mouseenter mouseleave", (e) => {
-        const current = $(e.currentTarget);
-        const tmp = current.attr("src");
-        const over = current.data("over");
-        current.attr("src", over);
-        current.data("over", tmp);
-    });
-</script>
 <c:import url="/WEB-INF/views/inc/bottom.jsp" />

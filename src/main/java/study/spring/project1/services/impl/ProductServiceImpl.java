@@ -86,7 +86,20 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public List<ProductModel> selectList(ProductModel input) throws NullPointerException, Exception {
-        return productMapper.selectList(input);
+        List<ProductModel> productList = productMapper.selectList(input);     
+
+        if (productList == null) {
+            throw new NullPointerException("조회된 데이터가 없습니다.");
+        }
+
+        for (ProductModel item : productList) {
+            ImgModel imgModel = new ImgModel();
+            imgModel.setProduct_id(item.getId());
+            List<ImgModel> imgList = imgMapper.selectList(imgModel);
+            item.setImgList(imgList);
+        }
+
+        return productList;
     }
 
     @Override

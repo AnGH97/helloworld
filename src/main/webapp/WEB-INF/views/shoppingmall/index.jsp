@@ -10,7 +10,24 @@
     <!--메인 내용 영역-->
     <section class="main">
         <div class="main_img">
-            <img src="${pageContext.request.contextPath}/assets/img/andar_main_img.jpg" />
+            <c:if test="${cn1 == '베스트'}">
+                <img src="${pageContext.request.contextPath}/assets/img/main_img/main_img6.jpg" />
+            </c:if>
+            <c:if test="${cn1 == '1+1'}">
+                <img src="${pageContext.request.contextPath}/assets/img/main_img/main_img1.jpg" />
+            </c:if>
+            <c:if test="${cn1 == '우먼즈'}">
+                <img src="${pageContext.request.contextPath}/assets/img/main_img/main_img3.jpg" />
+            </c:if>
+            <c:if test="${cn1 == '맨즈'}">
+                <img src="${pageContext.request.contextPath}/assets/img/main_img/main_img2.jpg" />
+            </c:if>
+            <c:if test="${cn1 == '테니스'}">
+                <img src="${pageContext.request.contextPath}/assets/img/main_img/main_img4.jpg" />
+            </c:if>
+            <c:if test="${cn1 == '용품'}">
+                <img src="${pageContext.request.contextPath}/assets/img/main_img/main_img5.jpg" />
+            </c:if>
         </div>
         <div class="main-category">
             <span><h1>${c1name}</h1></span>
@@ -54,33 +71,35 @@
                             <c:forEach var="item" items="${output}" varStatus="status">
         
                                 <%-- 출력을 위해 준비한 학과이름과 위치--%>
-                                <c:set var="img" value="${item.img_path}" />
                                 <c:set var="name" value="${item.name}" />
                                 <c:set var="price" value="${item.price}" />
                                 <c:set var="sale" value="${item.sale}" />
-                                <c:set var="thumbnail" value="${item.thumbnail}" />
 
                                 <%-- 상세페이지로 이동하기 위한 URL --%>
                                 <c:url value="${pageContext.request.contextPath}/shoppingmall/detail_index" var="viewUrl">
                                     <c:param name="id" value="${item.id}"></c:param>
                                 </c:url>
-                                <c:if test="${item.thumbnail == '1'}">
                                 <li>
                                     <a href="${viewUrl}">
                                         <div class="combine-img">
-                                                <div class="img-first"><img src="${item.img_path}" /></div>
+                                            <div class="img-first">
+                                                <c:if test="${fn:length(item.imgList) == 1}">
+                                                    <img src="${item.imgList[0].img_path}" alt="${item.name}" />
+                                                </c:if>
+                                                <c:if test="${fn:length(item.imgList) == 2}">
+                                                    <img class="hover-img" src="${item.imgList[0].img_path}" alt="${item.name}" data-over="${item.imgList[1].img_path}" />
+                                                </c:if>
+                                            </div>
                                                 <div class="combine-img-tag">
                                                     <span class="review">리뷰 127,438</span>
                                                     <span class="product-name">${item.name}</span>
                                                 </div>
-                                                <span class="money"><p class="sale"><fmt:formatNumber value="${(item.price-item.sale)/item.price}" type="percent" /></p> <p class="sale-price">${item.sale}원</p> <p class="just-price">${item.price}원</p></span>
+                                                <span class="money"><p class="sale"><fmt:formatNumber value="${(item.price-item.sale)/item.price}" type="percent" /></p> 
+                                                    <p class="sale-price">${item.sale}원</p> <p class="just-price">${item.price}원</p>
+                                                </span>
                                         </div>
                                     </a>
                                 </li> 
-                                </c:if> 
-                                <c:if test="${item.thumbnail == '2'}">
-                                    <img class="img-second" src="${item.img_path}" /> 
-                                </c:if>
                             </c:forEach>
                         </c:otherwise>
                     </c:choose>
