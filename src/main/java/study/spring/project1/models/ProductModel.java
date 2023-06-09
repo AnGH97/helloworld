@@ -1,5 +1,6 @@
 package study.spring.project1.models;
 
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 public class ProductModel {
     private String best;   // best 상품 노출 여부
     private int category1_id;   // 카테고리 1의 아이디
+    private int category2_id;   // 카테고리 2의 아이디
     private String color;   // 상품 색상
     private int id;   // 상품 번호
     private String name;   // 상품 이름
@@ -25,8 +27,7 @@ public class ProductModel {
     private String c1name;
     private String c2name;
 
-    private String img_path;
-    private String thumbnail;
+    List<ImgModel> imgList;   // 상품 이미지 리스트
 
     private static int offset;
     private static int listCount;

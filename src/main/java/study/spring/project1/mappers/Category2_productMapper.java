@@ -14,17 +14,14 @@ public interface Category2_productMapper {
     //Category2를 클릭했을 때 나오는 상품 목록
     //SELECT문(다중행 조회)을 수행하는 메서드 정의
     @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
-        "SELECT p.id, p.name, p.price, p.sale, p.color, p.size, p.best, p.sort, p.category1_id, i.img_path, i.thumbnail " + 
-        "FROM product AS p, category2_has_product AS c2p, img AS i, category1 AS ca1, category2 AS ca2 " + 
+        "SELECT p.id, p.`name`, p.price, p.sale, p.color, p.product_txt, p.size, p.best, p.sort, c1.id as category1_id, c2.id as category2_id " +
+        "FROM product AS p " + 
+        "INNER JOIN category2_has_product AS cp ON p.id = cp.product_id " +
+        "INNER JOIN category2 AS c2 ON cp.category2_id = c2.id " +
+        "INNER JOIN category1 AS c1 ON c2.category1_id = c1.id " +
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "${c2}=c2p.category2_id " +
-        "AND c2p.category2_id=ca2.id " + 
-        "AND c2p.product_id=p.id " +
-        "AND p.category1_id=ca1.id " +
-        "AND ca2.category1_id=ca1.id " +
-        "AND ca1.id=${c1} " +
-        "AND p.id=i.product_id " + 
-        "AND i.thumbnail IS NOT NULL " +
+        "c1.id=${c1} " +
+        "AND c2.id=${c2} " +
         "</where>" + 
         "<if test='order == null'>ORDER BY p.sort asc</if>" + 
         "<if test='order != null'>ORDER BY p.sale ${order}</if>" +   
@@ -40,6 +37,7 @@ public interface Category2_productMapper {
             @Result(property="product_txt", column="product_txt"),
             @Result(property="best", column="best"),
             @Result(property="category1_id", column="category1_id"),
+            @Result(property="category2_id", column="category2_id"),
             @Result(property="sort", column="sort"),
             @Result(property="img_path", column="img_path"),
             @Result(property="c1name", column="c1name"),
@@ -48,14 +46,13 @@ public interface Category2_productMapper {
 
     
    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
-        "SELECT COUNT(*) AS cnt FROM product AS p, category2_has_product AS c2p, category1 AS ca1, category2 AS ca2 " + 
+        "SELECT COUNT(*) FROM product AS p " + 
+        "INNER JOIN category2_has_product AS cp ON p.id = cp.product_id " +
+        "INNER JOIN category2 AS c2 ON cp.category2_id = c2.id " +
+        "INNER JOIN category1 AS c1 ON c2.category1_id = c1.id " +
         "<where>" + // <-- 검색 조건 동적 구성 시작
-        "${c2}=c2p.category2_id " +
-        "AND c2p.category2_id=ca2.id " + 
-        "AND c2p.product_id=p.id " +
-        "AND p.category1_id=ca1.id " +
-        "AND ca2.category1_id=ca1.id " +
-        "AND ca1.id=${c1} " +
+        "c1.id=${c1} " +
+        "AND c2.id=${c2} " +
         "</where>" + 
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
     public int selectCount(ProductModel input);  
