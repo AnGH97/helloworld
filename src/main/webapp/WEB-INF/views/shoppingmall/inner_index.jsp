@@ -10,26 +10,76 @@
     <!--메인 내용 영역-->
     <section class="main">
         <div class="main-category">
-            <span><h1>베스트</h1></span>
+            <span><h1>${c1name}</h1></span>
             <ul>
-                <li><a href="#main-category" class="entire mcbt">전체</a></li>
-                <li><a href="#main-category" class="mcbt">우먼즈</a></li>
-                <li><a href="#main-category" class="mcbt">맨즈</a></li>
-                <li><a href="#main-category" class="mcbt">용품</a></li>
+                <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=${c1name}">전체</a></li>
+                <c:forEach var="item1" items="${coutput}" varStatus="status">
+                    <c:set var="name" value="${item1.name}" />
+                    <c:if test="${item.category1_id != '1+1'}">
+                        <c:set var="category1_id" value="${item.category1_id}" />
+                    </c:if>
+                    <c:if test="${item.category1_id == '1+1'}">
+                        <c:set var="category1_id" value="opo" />
+                    </c:if>
+                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}&&category2=${item1.name}">${item1.name}</a></li>
+                </c:forEach>
             </ul>
         </div>
         <div class="main-category-img" id="main-category-img">
             <div class="sort-list" id="sort-list">
-                <span>442개의 상품</span>
+                <span>${totalCount}개의 상품</span>
                 <ul>
-                    <li class="first-sort-list"><a href="#sort-list">상품정렬</a></li>
-                    <li><a href="#sort-list">낮은가격</a></li>
-                    <li><a href="#sort-list">높은가격</a></li>
+                    <li class="first-sort-list"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}&&category2=${c2name}">상품정렬</a></li>
+                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}&&category2=${c2name}&&order=asc">낮은가격</a></li>
+                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}&&category2=${c2name}&&order=desc">높은가격</a></li>
                 </ul>
             </div>
             <div class="sort-img">
                 <ul>
-                    <li>
+                    <c:choose>
+                        <%-- 조회 결과가 없는 경우 --%>
+                        <c:when test="${output == null || fn:length(output) == 0}">
+                            <li>
+                                <h1>열심히 상품을 준비중입니다.</h1>
+                            </li>
+                        </c:when>
+                        <%-- 조회결과가 있는 경우 --%>
+                        <c:otherwise>
+                            <%-- 조회 결과에 따른 반복 처리--%>
+                            <c:forEach var="item" items="${output}" varStatus="status">
+        
+                                <%-- 출력을 위해 준비한 학과이름과 위치--%>
+                                <c:set var="img" value="${item.img_path}" />
+                                <c:set var="name" value="${item.name}" />
+                                <c:set var="price" value="${item.price}" />
+                                <c:set var="sale" value="${item.sale}" />
+                                <c:set var="thumbnail" value="${item.thumbnail}" />
+
+                                <%-- 상세페이지로 이동하기 위한 URL --%>
+                                <c:url value="${pageContext.request.contextPath}/shoppingmall/detail_index" var="viewUrl">
+                                    <c:param name="id" value="${item.id}"></c:param>
+                                </c:url>
+                                <c:if test="${item.thumbnail == '1'}">
+                                <li>
+                                    <a href="${viewUrl}">
+                                        <div class="combine-img">
+                                                <div class="img-first"><img src="${item.img_path}" /></div>
+                                                <div class="combine-img-tag">
+                                                    <span class="review">리뷰 127,438</span>
+                                                    <span class="product-name">${item.name}</span>
+                                                </div>
+                                                <span class="money"><p class="sale"><fmt:formatNumber value="${(item.price-item.sale)/item.price}" type="percent" /></p><p class="sale-price"><fmt:formatNumber value="${item.sale}" pattern="#,###"/>원</p> <p class="just-price"><fmt:formatNumber value="${item.price}" pattern="#,###"/> </p></span>
+                                        </div>
+                                    </a>
+                                </li> 
+                                </c:if> 
+                                <c:if test="${item.thumbnail == '2'}">
+                                    <img class="img-second" src="${item.img_path}" /> 
+                                </c:if>
+                            </c:forEach>
+                        </c:otherwise>
+                    </c:choose>
+ <!--                    <li>
                         <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
                                 <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img12.jpg" /></div>
@@ -45,7 +95,7 @@
                         <span class="money"><p class="sale">50%</p> <p class="sale-price">49000원</p> <p class="just-price">98000원</p></span>
                     </li>
 
-                    <li>
+                  <li>
                         <a href="${pageContext.request.contextPath}/shoppingmall/detail_index">
                             <div class="combine-img">
                                 <div class="img-first"><img src="${pageContext.request.contextPath}/assets/img/andar_sort_img22.jpg" /></div>
@@ -328,22 +378,62 @@
                             </div>
                         </a>
                         <span class="money"><p class="sale">50%</p> <p class="sale-price">49000원</p> <p class="just-price">98000원</p></span>
-                    </li>
+                    </li>--> 
                 </ul>
             </div>
         </div>
-        <div class="pagenation">
-            <!--페이지 번호-->
-            <ul class="paging">
-                <li><a href=#> < </a></li>
-                <li class="active"><a href=#>1</a></li>
-                <li><a href=#>2</a></li>
-                <li><a href=#>3</a></li>
-                <li><a href=#>4</a></li>
-                <li><a href=#>5</a></li>
-                <li><a href=#>></a></li>
-            </ul>
-        </div>
+        <div class="paging">
+            <!-- 페이지 번호 구현-->
+            <%-- 이전 그룹에 대한 링크 --%>
+            <c:choose>
+                <%-- 이전 그룹으로 이동 가능하다면?--%>
+                <c:when test="${pagenation.prevPage > 0}">
+                    <%-- 이동할 URL 생성 --%>
+                    <c:url value="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}}&&category2=${c2name}" var="prevPageUrl">
+                        <c:param name="page" value="${pagenation.prevPage}"></c:param>
+                    </c:url>
+                    <a href="${prevPageUrl}"><</a>
+                </c:when>
+                <c:otherwise>
+                    <
+                </c:otherwise>
+            </c:choose>
+
+            <%--페이지 번호(시작 페이지부터 끝 페이지까지 반복) --%>
+            <c:forEach var="i" begin="${pagenation.startPage}" end="${pagenation.endPage}" varStatus="status">
+                <%--이동할 URL 생성--%>
+                <c:url value="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}}&&category2=${c2name}" var="pageUrl">
+                    <c:param name="page" value="${i}"></c:param>
+                </c:url>
+
+                <%-- 페이지 번호 출력 --%>
+                <c:choose>
+                    <%--현재 머물고 있는 페이지 번호를 출력할 경우 링크 적용 안함 --%>
+                    <c:when test="${pagenation.nowPage == i}">
+                        <strong>&nbsp&nbsp${i}&nbsp&nbsp</strong>
+                    </c:when>
+                    <%-- 나머지 페이지의 경우 링크 적용함 --%>
+                    <c:otherwise>
+                        <a href="${pageUrl}">${i}</a>
+                    </c:otherwise>
+                </c:choose>
+            </c:forEach>
+
+            <%--다음 그룹에 대한 링크 --%>
+            <c:choose>
+                <%--다음 그룹으로 이동이 가능하다면?--%>
+                <c:when test="${pagenation.nextPage > 0}">
+                    <%--이동할 URL 생성 --%>
+                    <c:url value="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}&&category2=${c2name}" var="nextPageUrl">
+                        <c:param name="page" value="${pagenation.nextPage}"></c:param>
+                    </c:url>
+                    <a href="${nextPageUrl}">></a>
+                </c:when>
+                <c:otherwise>
+                    >
+                </c:otherwise>
+            </c:choose>
+            </div>   
     </section>
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

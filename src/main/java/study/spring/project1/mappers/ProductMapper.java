@@ -91,8 +91,7 @@ public interface ProductMapper {
         @Result(property="sort", column="sort"),
         @Result(property="img_path", column="img_path"),
         @Result(property="c1name", column="c1name"),
-        @Result(property="thumbnail", column="thumbnail"),
-    })
+        @Result(property="thumbnail", column="thumbnail")})
    List<ProductModel> selectList(ProductModel input);
 
    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림

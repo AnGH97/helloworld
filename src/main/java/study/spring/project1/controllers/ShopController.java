@@ -21,6 +21,7 @@ import study.spring.project1.models.DocumentModel;
 import study.spring.project1.models.ProductModel;
 import study.spring.project1.models.UserModel;
 import study.spring.project1.services.Category2Service;
+import study.spring.project1.services.Category2_productService;
 import study.spring.project1.services.DocumentService;
 import study.spring.project1.services.ProductService;
 import study.spring.project1.services.UserService;
@@ -41,6 +42,8 @@ public class ShopController {
     private final ProductService productService;
 
     private final Category2Service category2Service;
+
+    private final Category2_productService category2_productService;
     
     @GetMapping("/shoppingmall/community_view")
     public ModelAndView community_view(Model model,
@@ -300,7 +303,162 @@ public class ShopController {
     }
 
     @GetMapping("/shoppingmall/inner_index")
-    public ModelAndView inner_index(Model model){
+    public ModelAndView inner_index(Model model,
+        @RequestParam(value="category1", required=false) String c1name,
+        @RequestParam(value="category2", required = false) String c2name,
+        @RequestParam(value="order", required = false) String order,
+        @RequestParam(value="page", defaultValue = "1") int nowPage){
+        
+            ProductModel input = new ProductModel();
+
+            Category2Model cinput = new Category2Model();
+
+            if(c1name != null){
+                if(c1name.equals("우먼즈") && c2name != null){
+                    input.setC1(11);
+                    input.setC1name(c1name);
+                    if(c2name.equals("상의")){
+                        input.setC2(16);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("하의")){
+                        input.setC2(17);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("아우터")){
+                        input.setC2(18);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("조거팬츠")){
+                        input.setC2(19);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("세트")){
+                        input.setC2(20);
+                        input.setC2name(c2name);
+                    }
+                }
+                else if(c1name.equals("맨즈") && c2name != null){
+                    input.setC1(12);
+                    input.setC1name(c1name);
+                    if(c2name.equals("상의")){
+                        input.setC2(21);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("하의")){
+                        input.setC2(22);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("아우터")){
+                        input.setC2(23);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("조거팬츠")){
+                        input.setC2(24);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("세트")){
+                        input.setC2(32);
+                        input.setC2name(c2name);
+                    }
+                }
+                else if(c1name.equals("용품") && c2name != null){
+                    input.setC1(14);
+                    input.setC1name(c1name);
+                    if(c2name.equals("양말")){
+                        input.setC2(28);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("모자")){
+                        input.setC2(29);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("가방")){
+                        input.setC2(30);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("홈트용품")){
+                        input.setC2(31);
+                        input.setC2name(c2name);
+                    }
+                }
+                else if(c1name.equals("테니스") && c2name != null){
+                    input.setC1(13);
+                    input.setC1name(c1name);
+                    if(c2name.equals("맨즈")){
+                        input.setC2(25);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("우먼즈")){
+                        input.setC2(26);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("용품")){
+                        input.setC2(27);
+                        input.setC2name(c2name);
+                    }
+                }
+                else if(c1name.equals("opo") && c2name != null){
+                    input.setC1(10);
+                    c1name="1+1";
+                    input.setC1name(c1name);
+                    if(c2name.equals("상의")){
+                        input.setC2(13);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("하의")){
+                        input.setC2(14);
+                        input.setC2name(c2name);
+                    }
+                    else if(c2name.equals("용품")){
+                        input.setC2(15);
+                        input.setC2name(c2name);
+                    }
+                }
+            }
+
+            if(order != null){
+                input.setOrder(order);
+            }
+
+            cinput.setCategory1_id(input.getC1());
+
+            int totalCount = 0; //전체 게시글 수
+            int listCount = 24; //한 페이지당 표시할 목록 수
+            int pageCount = 5;  //한 그룹당 표시할 페이지 번호 수
+    
+            Pagenation pagenation = null;   //페이지 번호를 계산한 결과가 저장될 객체
+    
+            List<ProductModel> output = null;
+
+            List<Category2Model>coutput = null;
+
+
+            
+            try {
+                //전체 게시글 수 조회
+                totalCount = category2_productService.selectCount(input);
+                //페이지 번호 계산 --> 계산 결과를 로그로 출력될 것이다.
+                pagenation = new Pagenation(nowPage, totalCount, listCount, pageCount);
+
+                //SQL의 LIMIT절에서 사용될 값을 Beans의 static 변수에 저장
+                ProductModel.setOffset(pagenation.getOffset());
+                ProductModel.setListCount(pagenation.getListCount());
+
+                output = category2_productService.selectProductDetailList(input);
+                coutput=category2Service.selectList(cinput);
+
+            } catch (Exception e) {
+                return webHelper.serverError(e);
+            }
+
+            model.addAttribute("c2name", c2name);
+            model.addAttribute("c1name", c1name);
+            model.addAttribute("output", output);
+            model.addAttribute("coutput", coutput);
+            model.addAttribute("pagenation", pagenation);
+            model.addAttribute("totalCount", totalCount);
+
         return new ModelAndView("shoppingmall/inner_index");
     }
 

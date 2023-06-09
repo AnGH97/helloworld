@@ -18,5 +18,10 @@ public class Category2_productServiceImpl implements Category2_productService{
     public List<ProductModel> selectProductDetailList(ProductModel input) throws NullPointerException, Exception {
         return category2_productMapper.selectProductDetailList(input);
     }
+
+    @Override
+    public int selectCount(ProductModel input) throws NullPointerException, Exception {
+        return category2_productMapper.selectCount(input);
+    }
     
 }

@@ -18,14 +18,14 @@
                 <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=${cn1}">전체</a></li>
                 <c:forEach var="item1" items="${coutput}" varStatus="status">
                     <c:set var="name" value="${item1.name}" />
-                    <c:set var="category1_id" value="${item.category1_id}" />
-
+                    <c:if test="${item.category1_id != '1+1'}">
+                        <c:set var="category1_id" value="${item.category1_id}" />
+                    </c:if>
+                    <c:if test="${item.category1_id == '1+1'}">
+                        <c:set var="category1_id" value="opo" />
+                    </c:if>
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${cn1}&&category2=${item1.name}">${item1.name}</a></li>
                 </c:forEach>
-                <!--<li><a href="${pageContext.request.contextPath}/shoppingmall/index#main-category" class="entire mcbt">전체</a></li>
-                <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=${cn1}#main-category-img" class="mcbt">우먼즈</a></li>
-                <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=맨즈#main-category-img" class="mcbt">맨즈</a></li>
-                <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=용품#main-category-img" class="mcbt">용품</a></li>-->
             </ul>
         </div>
         <div class="main-category-img" id="main-category-img">

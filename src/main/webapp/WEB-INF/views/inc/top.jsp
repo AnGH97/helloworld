@@ -34,42 +34,42 @@
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=베스트">베스트</a></li>
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=opo">1+1</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">상의</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">하의</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">용품</a></li>
+                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=opo&&category2=상의">상의</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=opo&&category2=하의">하의</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=opo&&category2=용품">용품</a></li>
                         </ul>
                     </li>
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=우먼즈">우먼즈</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">상의</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">하의</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">아우터</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">조거팬츠</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">세트</a></li>
+                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=상의">상의</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=하의">하의</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=아우터">아우터</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=조거팬츠">조거팬츠</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=세트">세트</a></li>
                         </ul>
                     </li>
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=맨즈">맨즈</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">상의</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">하의</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">아우터</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">조거팬츠</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">세트</a></li>
+                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=상의">상의</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=하의">하의</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=아우터">아우터</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=조거팬츠">조거팬츠</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=세트">세트</a></li>
                         </ul>
                     </li>
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=테니스">테니스</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">맨즈</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">우먼즈</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">용품</a></li>
+                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=테니스&&category2=맨즈">맨즈</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=테니스&&category2=우먼즈">우먼즈</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=테니스&&category2=용품">용품</a></li>
                         </ul>
                     </li>
                     <li><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=용품">용품</a>
                         <ul class="item-in-item">
-                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">양말</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">모자</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">가방</a></li>
-                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">홈트용품</a></li>
+                            <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=용품&&category2=양말">양말</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=용품&&category2=모자">모자</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=용품&&category2=가방">가방</a></li>
+                            <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=용품&&category2=홈트용품">홈트용품</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -119,42 +119,42 @@
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=베스트">베스트</a></li>
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=opo">1+1</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">상의</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">하의</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">용품</a></li>
+                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=opo&&category2=상의">상의</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=opo&&category2=하의">하의</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=opo&&category2=용품">용품</a></li>
                                 </ul>
                             </li>
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=우먼즈">우먼즈</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">상의</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">하의</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">아우터</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">조거팬츠</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">세트</a></li>
+                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=상의">상의</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=하의">하의</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=아우터">아우터</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=조거팬츠">조거팬츠</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=우먼즈&&category2=세트">세트</a></li>
                                 </ul>
                             </li>
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=맨즈">맨즈</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">상의</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">하의</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">아우터</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">조거팬츠</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">세트</a></li>
+                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=상의">상의</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=하의">하의</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=아우터">아우터</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=조거팬츠">조거팬츠</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=맨즈&&category2=세트">세트</a></li>
                                 </ul>
                             </li>
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=테니스">테니스</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">맨즈</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">우먼즈</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">용품</a></li>
+                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=테니스&&category2=맨즈">맨즈</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=테니스&&category2=우먼즈">우먼즈</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=테니스&&category2=용품">용품</a></li>
                                 </ul>
                             </li>
                             <li class="mtitle"><a href="${pageContext.request.contextPath}/shoppingmall/index?category1=용품">용품</a>
                                 <ul class="item-in-item">
-                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">양말</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">모자</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">가방</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index">홈트용품</a></li>
+                                    <li class="in-item-first"><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=용품&&category2=양말">양말</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=용품&&category2=모자">모자</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=용품&&category2=가방">가방</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=용품&&category2=홈트용품">홈트용품</a></li>
                                 </ul>
                             </li>
                         </ul>

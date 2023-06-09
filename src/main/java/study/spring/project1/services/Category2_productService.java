@@ -7,5 +7,7 @@ import study.spring.project1.models.ProductModel;
 public interface Category2_productService {
 
     public List<ProductModel> selectProductDetailList(ProductModel input) throws NullPointerException, Exception;
+
+    public int selectCount(ProductModel input) throws NullPointerException, Exception;    
     
 }
