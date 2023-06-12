@@ -84,7 +84,7 @@ public class ImgServiceTest {
     @DisplayName("하나의 이미지 조회 테스트")
     void selectImgItem(){
         ImgModel input = new ImgModel();
-        input.setId(3);
+        input.setId(8);
 
         ImgModel output = null;
 

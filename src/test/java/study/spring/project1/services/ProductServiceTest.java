@@ -96,7 +96,7 @@ public class ProductServiceTest {
     @DisplayName("하나의 상품 조회 테스트")
     void selectProductItem(){
         ProductModel input = new ProductModel();
-        input.setId(3);
+        input.setId(8);
 
         ProductModel output = null;
 

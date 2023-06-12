@@ -14,7 +14,7 @@
     <header class="header">
         <div class="header-container">
             <div class="menu menu-item1">
-                <a href="${pageContext.request.contextPath}/shoppingmall/index">
+                <a href="${pageContext.request.contextPath}/shoppingmall/index?category1=베스트">
                     <img src="${pageContext.request.contextPath}/assets/img/xexymix_header_logo_bk.png" />
                 </a>
             </div>

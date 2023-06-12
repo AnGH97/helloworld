@@ -88,7 +88,7 @@
             <%-- 이전 그룹으로 이동 가능하다면?--%>
             <c:when test="${pagenation.prevPage > 0}">
                 <%-- 이동할 URL 생성 --%>
-                <c:url value="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}}&&category2=${c2name}" var="prevPageUrl">
+                <c:url value="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}&&category2=${c2name}" var="prevPageUrl">
                     <c:param name="page" value="${pagenation.prevPage}"></c:param>
                 </c:url>
                 <a href="${prevPageUrl}"><</a>
@@ -99,7 +99,7 @@
         <%--페이지 번호(시작 페이지부터 끝 페이지까지 반복) --%>
         <c:forEach var="i" begin="${pagenation.startPage}" end="${pagenation.endPage}" varStatus="status">
             <%--이동할 URL 생성--%>
-            <c:url value="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}}&&category2=${c2name}" var="pageUrl">
+            <c:url value="${pageContext.request.contextPath}/shoppingmall/inner_index?category1=${c1name}&&category2=${c2name}" var="pageUrl">
                 <c:param name="page" value="${i}"></c:param>
             </c:url>
 

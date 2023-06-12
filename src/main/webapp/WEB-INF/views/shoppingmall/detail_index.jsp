@@ -12,24 +12,25 @@
     <form method="post" action="${pageContext.request.contextPath}/shoppingmall/detail_index_add_ok.do"class="product-choice" name="product-choice" id="product-choice">
         <div class="detail-top">
             <div class="detail-top-img">
-                <img class="preview" id="target" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img1.jpg"/>
+                <img class="preview" id="target" src="${output.imgList[0].img_path}"/>
                 <ul>
-                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img1.jpg"/></li>
-                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img2.jpg"/></li>
-                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img3.jpg"/></li>
-                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img4.jpg"/></li>
-                    <li class="item pull-left"><img class="thumbnail" src="${pageContext.request.contextPath}/assets/img/andar-deatil-top-img5.jpg"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${output.imgList[0].img_path}"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${output.imgList[1].img_path}"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${output.imgList[2].img_path}"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${output.imgList[3].img_path}"/></li>
+                    <li class="item pull-left"><img class="thumbnail" src="${output.imgList[4].img_path}"/></li>
                 </ul>
             </div>
             <div class="detail-top-text">
                 <div class="detail-top-text-first">
-                    <span class="detail-product-name"><p>V업 3D 플러스 레깅스 1+1</p></span>
-                    <span class="detail-product-code">XWFMG01H2</span>
+                    <span class="detail-product-name"><p>${output.name}</p></span>
+                    <span class="detail-product-code"></span>
                 </div>
                 <div class="detail-top-text-second">
                     <div class="detail-top-text-second-num1">
                         <div class="detail-top-text-second-left"><p>판매가</p></div>
-                        <div class="detail-top-text-second-right"><p class="price1">88,000원</p> <p class="price2">58,800원</p></div>
+                        <div class="detail-top-text-second-right"><p class="price1"><fmt:formatNumber value="${output.price}" pattern="#,###" />원</p>
+                            <p class="price2"><fmt:formatNumber value="${output.sale}" pattern="#,###" />원</p></div>
                     </div>
                     <div class="detail-top-text-second-num2">   
                         <div class="detail-top-text-second-left"><p>멤버쉽 할인가</p></div>
@@ -37,12 +38,12 @@
                             <a class="right-first">펼쳐보기<i class="fa fa-angle-down" aria-hidden="true"></i>
                                 <ul class="membership">
                                     <li>멤버쉽 할인가</li>
-                                    <li><p>VVIP</p> <p>10%</p> <p class="m-price">52,920원</p></li>
-                                    <li><p> VIP</p> <p>7%</p> <p class="m-price">54,684원</p></li>
-                                    <li><p>PREMIUM</p> <p>5%</p> <p class="m-price">55,860원</p></li>
-                                    <li><p>FAMILY</p> <p>3%</p> <p class="m-price">57,036원</p></li>
-                                    <li><p>FRIEND</p> <p>1%</p> <p class="m-price">58,212원</p></li>
-                                    <li class="right-li-last"><p>HELLO</p> <p class="m-price">58,800원</p></li>
+                                    <li><p>VVIP</p> <p>10%</p> <p class="m-price"><fmt:formatNumber value="${output.sale * 0.9}" pattern="#,###" />원</p></li>
+                                    <li><p> VIP</p> <p>7%</p> <p class="m-price"><fmt:formatNumber value="${output.sale * 0.93}" pattern="#,###" />원</p></li>
+                                    <li><p>PREMIUM</p> <p>5%</p> <p class="m-price"><fmt:formatNumber value="${output.sale * 0.95}" pattern="#,###" />원</p></li>
+                                    <li><p>FAMILY</p> <p>3%</p> <p class="m-price"><fmt:formatNumber value="${output.sale * 0.97}" pattern="#,###" />원</p></li>
+                                    <li><p>FRIEND</p> <p>1%</p> <p class="m-price"><fmt:formatNumber value="${output.sale * 0.99}" pattern="#,###" />원</p></li>
+                                    <li class="right-li-last"><p>HELLO</p> <p class="m-price"><fmt:formatNumber value="${output.sale}" pattern="#,###" />원</p></li>
                                 </ul>
                             </a>
                         </div>
@@ -208,9 +209,9 @@
                 </div>
                 <div class="star-middle" id="star-middle">
                     <div class="star-middle1">
-                        <a class="bt date-resc" id="date-resc" href="${pageContext.request.contextPath}/shoppingmall/detail_index#star-middle">최신순</a>
-                        <a class="bt date-resc" id="date-resc" href="${pageContext.request.contextPath}/shoppingmall/detail_index?sort=desc#star-middle">높은 별점순</a>
-                        <a class="bt date-resc" id="date-resc" href="${pageContext.request.contextPath}/shoppingmall/detail_index?sort=asc#star-middle">낮은 별점순</a>
+                        <a class="bt date-resc" id="date-resc" href="${pageContext.request.contextPath}/shoppingmall/detail_index?id=${id}#star-middle">최신순</a>
+                        <a class="bt date-resc" id="date-resc" href="${pageContext.request.contextPath}/shoppingmall/detail_index?id=${id}&&sort=desc#star-middle">높은 별점순</a>
+                        <a class="bt date-resc" id="date-resc" href="${pageContext.request.contextPath}/shoppingmall/detail_index?id=${id}&&sort=asc#star-middle">낮은 별점순</a>
                     </div>
                     <div class="star-middle2">
                         <table align="center">

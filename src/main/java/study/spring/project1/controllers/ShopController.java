@@ -197,21 +197,32 @@ public class ShopController {
 
     @GetMapping("/shoppingmall/detail_index")
     public ModelAndView detail_index(Model model,
-        @RequestParam(value="sort", required = false) String sort){
+        @RequestParam(value="sort", required = false) String sort,
+        @RequestParam(value="id") int id){
+
         DocumentModel dinput = new DocumentModel();
+        ProductModel input = new ProductModel();
+
+        input.setId(id);
+
         if(sort != null){
             dinput.setSort(sort);
         }
 
         List<DocumentModel> doutput = null;
+        ProductModel output = new ProductModel();
 
         try {
             doutput = documentService.selectReview(dinput);
+            output = productService.selectItem(input);
+
         }catch (Exception e) {
             return webHelper.serverError(e);
         }
 
         model.addAttribute("doutput", doutput);
+        model.addAttribute("output", output);
+        model.addAttribute("id", id);
 
         return new ModelAndView("shoppingmall/detail_index");
     }
@@ -230,6 +241,11 @@ public class ShopController {
         ProductModel input = new ProductModel();
 
         Category2Model cinput = new Category2Model();
+
+        if(cn1 == null){
+            input.setC1(9);
+            input.setC1name(cn1);
+        }
 
         if(cn1 != null){
             if(cn1.equals("우먼즈")){
@@ -312,6 +328,13 @@ public class ShopController {
             ProductModel input = new ProductModel();
 
             Category2Model cinput = new Category2Model();
+
+            if(c1name == null && c2name == null){
+                input.setC1(11);
+                input.setC1name(c1name);
+                input.setC2(16);
+                input.setC2name(c2name);
+            }
 
             if(c1name != null){
                 if(c1name.equals("우먼즈") && c2name != null){

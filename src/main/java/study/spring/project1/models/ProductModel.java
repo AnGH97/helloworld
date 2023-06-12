@@ -29,6 +29,8 @@ public class ProductModel {
 
     List<ImgModel> imgList;   // 상품 이미지 리스트
 
+    private int totalMoney;
+
     private static int offset;
     private static int listCount;
 

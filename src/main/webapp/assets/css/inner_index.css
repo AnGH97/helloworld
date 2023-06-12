@@ -120,6 +120,8 @@
    margin-top: 555px;
    display: flex;
    flex-wrap: wrap;
+   flex-direction: column;
+   text-align: left;
 }
 
 .sort-img ul li a .combine-img-tag span.review{

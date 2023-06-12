@@ -71,5 +71,7 @@ public interface ImgService {
      */
     public List<ImgModel> selectList(ImgModel input) throws NullPointerException, Exception;
 
+    public List<ImgModel> selectDetailList(ImgModel input) throws NullPointerException, Exception;
+
     public int selectCount(ImgModel input) throws NullPointerException, Exception;        
 }

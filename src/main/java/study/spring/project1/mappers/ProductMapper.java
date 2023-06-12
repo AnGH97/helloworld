@@ -40,17 +40,6 @@ public interface ProductMapper {
     //조회 결과와 리턴할 DTO객체를 연결하기 위한 규칙 정의
     // --> property : DTO 객체의 멤버변수 이름
     // --> column : SELECT문에 명시된 필드 이름(AS 옵션을 사용할 경우 별칭으로 명시)
-    @Results(id = "myResultId1", value={
-        @Result(property="id", column="id"),
-        @Result(property="name", column="name"),
-        @Result(property="price", column="price"),
-        @Result(property="sale", column="sale"),
-        @Result(property="color", column="color"),
-        @Result(property="size", column="size"),
-        @Result(property="product_txt", column="product_txt"),
-        @Result(property="best", column="best"),
-        @Result(property="category1_id", column="category1_id"),
-        @Result(property="sort", column="sort")})
     ProductModel selectItem(ProductModel input);
 
     //검색 결과에 맞는 상품의 정보 select

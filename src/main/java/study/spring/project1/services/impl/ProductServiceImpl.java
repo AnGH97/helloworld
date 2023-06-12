@@ -76,12 +76,17 @@ public class ProductServiceImpl implements ProductService{
     @Override
     public ProductModel selectItem(ProductModel input) throws NullPointerException, Exception {
         ProductModel output = productMapper.selectItem(input);
-
-        if(output == null){
+   
+        if (output == null) {
             throw new NullPointerException("조회된 데이터가 없습니다.");
         }
 
-        return output;     
+        ImgModel imgModel = new ImgModel();
+        imgModel.setProduct_id(output.getId());
+        List<ImgModel> imgList = imgMapper.selectDetailList(imgModel);
+        output.setImgList(imgList);
+
+        return output;  
     }
 
     @Override

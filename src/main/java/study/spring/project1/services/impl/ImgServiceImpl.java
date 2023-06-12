@@ -74,5 +74,10 @@ public class ImgServiceImpl implements ImgService{
     public int selectCount(ImgModel input) throws NullPointerException, Exception {
         return imgMapper.selectCount(input);
     }
+
+    @Override
+    public List<ImgModel> selectDetailList(ImgModel input) throws NullPointerException, Exception {
+        return imgMapper.selectDetailList(input);
+    }
     
 }

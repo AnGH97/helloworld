@@ -51,12 +51,26 @@ public interface ImgMapper {
         "SELECT id, img_path, product_id, thumbnail FROM img" + 
         "<where>" + // <-- 검색 조건 동적 구성 시작
         //"<if test='img_path != null'>img_path LIKE concat('%', #{img_path}, '%')</if>" + 
-        "<if test='product_id != null'>product_id=#{product_id}</if>" + 
+        "<if test='product_id != null'>product_id=#{product_id}</if> " +
+        "AND thumbnail IS NOT NULL " +  
         "</where>" + 
         //"<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
         "</script>") // <-- Dynamic SQL이 종료됨을 알림
    @ResultMap("myResultId")
    List<ImgModel> selectList(ImgModel input);
+
+       //SELECT문(다중행 조회)을 수행하는 메서드 정의
+    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
+        "SELECT id, img_path, product_id, thumbnail FROM img" + 
+        "<where>" + // <-- 검색 조건 동적 구성 시작
+        //"<if test='img_path != null'>img_path LIKE concat('%', #{img_path}, '%')</if>" + 
+        "<if test='product_id != null'>product_id=#{product_id}</if> " + 
+        "AND thumbnail IS NULL " +
+        "</where>" + 
+        //"<if test='listCount > 0'>LIMIT #{offset}, #{listCount}</if>" +
+        "</script>") // <-- Dynamic SQL이 종료됨을 알림
+   @ResultMap("myResultId")
+   List<ImgModel> selectDetailList(ImgModel input);
 
    @Select("<script>" + // <-- Dynamic SQL이 시작됨을 알림
         "SELECT COUNT(*) AS cnt FROM img" + 
