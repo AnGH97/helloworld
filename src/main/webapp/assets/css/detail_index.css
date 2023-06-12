@@ -581,6 +581,12 @@
    margin-top: 200px;
 }
 
+.main .detail-middle .detail-middle-text div.dt img{ 
+   width: 800px;
+   height: 1200px;
+   object-fit: cover;
+}
+
 .main .detail-middle .detail-middle-text .dtimg .dminform{ 
    position: absolute;
    bottom: 60px;

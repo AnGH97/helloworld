@@ -26,6 +26,10 @@ public class ProductModel {
     private Integer c2;      // view에서 파라미터로 넘어 왔을 때 c1의 내부 카테고리를 확인 할 수 있도록 하는 변수
     private String c1name;
     private String c2name;
+    private String color1;
+    private String color2;
+    private String size1;
+    private String size2;
 
     List<ImgModel> imgList;   // 상품 이미지 리스트
 

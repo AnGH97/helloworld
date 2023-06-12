@@ -449,300 +449,277 @@
         </div>
         <div class="detail-middle-text"id="detail-middle-text">
             <span class="detail-inform"><h4>상세정보</h4></span>
-            <div class="detail-middle-text-img1">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img11.jpg" />
-                <div class="detail-middle-inform1">
-                    <div class="detail_img11_text1">
-                        <span><p>나의 라이프 스타일<br/>플러스 해 줄 레깅스,</p></span>
+            <div class='dt detail-middle-text-img1'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail11.jpg' />
+                <div class='detail-middle-inform1'>
+                    <div class='detail_img11_text1'>
+                        <span><p>퍼포먼스가 끝나는<br/>순간까지 산뜻하게!</p></span>
                     </div>
-                    <div class="detail_img11_text2">
-                        <span><p>Vup 3D plus<br/>레깅스</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="dtimg detail-middle-text-img2">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img21.jpg" />
-                <div class="dminform detail-middle-inform2">
-                    <div class="ditext1 detail_img21_text1">
-                        <span><p>어반 라이프를<br/>+하다</p></span>
-                    </div>
-                    <div class="ditext2 detail_img21_text2">
-                        <span><p>일상엔 다 움직임이 있으니깐,<br/>온전히 나만을 위해움직일 수 있게 해주는
-                        <br />Vup 3D plus와 완벽한 하루를 만들어 보세요.</p></span>
-                    </div>
-                    <hr />
-                    <div class="ditext3 detail_img21_text3">
-                        <span><p>카본네이비</p></span>
+                    <div class='detail_img11_text2'>
+                        <span><p>아이스페더<br/>숏슬리브</p></span>
                     </div>
                 </div>
             </div>
-            <div class="detail-middle-text-img3">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img31.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img4">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img41.jpg" />
-                <div class="dminform detail-middle-inform3">
-                    <div class="ditext1 detail_img41_text1">
-                        <span><p>업그레이드 된 입체패턴과<br/>20가지 컬러 라인업</p></span>
+            <div class='dt dtimg detail-middle-text-img2'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail21.jpg' />
+                <div class='dminform detail-middle-inform2'>
+                    <div class='ditext1 detail_img21_text1'>
+                        <span><p>바디라인을<br/>완성해주는 슬림 핏</p></span>
                     </div>
-                    <div class="ditext2 detail_img41_text2">
-                        <span><p>Vup 3D plus와<br/>온전히 나만을 위한
-                        <br />맞춤 핏을 찾아보세요!</p></span>
+                    <div class='ditext2 detail_img21_text2'>
+                        <span><p>허리에 밀착되는 라인으로<br/>인도어 퍼포먼스 시 신체의 움직임을
+                        <br />선명하게 관찰할 수 있어요.</p></span>
                     </div>
                     <hr />
-                    <div class="ditext3 detail_img41_text3">
-                        <span><p>크라운블루</p></span>
+                    <div class='dt ditext3 detail_img21_text3'>
+                        <span><p>라피스 블루</p></span>
                     </div>
                 </div>
             </div>
-            <div class="detail-middle-text-img5">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img51.jpg" />
+            <div class='dt detail-middle-text-img3'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail31.jpg' />
             </div>
-            <div class="dtimg detail-middle-text-img6">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img61.jpg" />
-                <div class="dminform detail-middle-inform4">
-                    <div class="ditext1 detail_img61_text1">
-                        <span><p>운동 시, 데일리,<br/>어느 상황에도 쾌적하게</p></span>
+            <div class='dt dtimg detail-middle-text-img4'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail41.jpg' />
+                <div class='dminform detail-middle-inform3'>
+                    <div class='ditext1 detail_img41_text1'>
+                        <span><p>퍼포먼스를 서포트해주는<br/>기능성 원단</p></span>
                     </div>
-                    <div class="ditext2 detail_img61_text2">
-                        <span><p>체형 보정 효과는 물론,<br/>흡한속건 기능도 뛰어나서
-                        <br />쾌적하게 착용 할 수 있어요.</p></span>
+                    <div class='ditext2 detail_img41_text2'>
+                        <span><p>운동 후 발생하는 열과 땀은 방출하고<br/>외부의 냉기는 차단해줘요</p></span>
                     </div>
                     <hr />
-                    <div class="ditext3 detail_img61_text3">
-                        <span><p>인디고블루</p></span>
+                    <div class='ditext3 detail_img41_text3'>
+                        <span><p>미스트 민트</p></span>
                     </div>
                 </div>
             </div>
-            <div class="detail-middle-text-img7">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img71.jpg" />
+            <div class='dt detail-middle-text-img5'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail51.jpg' />
             </div>
-            <div class="dtimg detail-middle-text-img8">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img81.jpg" />
-                <div class="dminform detail-middle-inform5">
-                    <div class="ditext1 detail_img81_text1">
-                        <span><p>완벽하게<br/>커버되는 Y존</p></span>
+            <div class='dt dtimg detail-middle-text-img6'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail61.jpg' />
+                <div class='dminform detail-middle-inform4'>
+                    <div class='ditext1 detail_img61_text1'>
+                        <span><p>산뜻한 착용감</p></span>
                     </div>
-                    <div class="ditext2 detail_img81_text2">
-                        <span><p>앞부분 절개선을 삭제하고<br/>밑으로 당겨지는 듯한 패턴으로
-                        <br />완벽하게 Y존을 커버해 줍니다.</p></span>
+                    <div class='ditext2 detail_img61_text2'>
+                        <span><p>우수한 흡한속건기능으로<br/>쾌적함과 청량감을 유지해줘요.</p></span>
                     </div>
                     <hr />
-                    <div class="ditext3 detail_img81_text3">
-                        <span><p>비쥬블루</p></span>
+                    <div class='ditext3 detail_img61_text3'>
+                        <span><p>베티버 카키</p></span>
                     </div>
                 </div>
             </div>
-            <div class="detail-middle-text-img9">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img91.jpg" />
+            <div class='dt detail-middle-text-img7'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail71.jpg' />
             </div>
-            <div class="dtimg detail-middle-text-img10">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img101.jpg" />
-                <div class="dminform detail-middle-inform6">
-                    <div class="ditext1 detail_img101_text1">
-                        <span><p>면과 흡사한 구조로 직조한<br/>부드러운 촉감</p></span>
-                    </div>
-                    <div class="ditext2 detail_img101_text2">
-                        <span><p>면과 흡사한 구조로 직조하여<br/>피부에 닿는 촉감이 부드럽고
-                        <br />허리와 배, 허벅지를 탄탄하게 잡아줘요.</p></span>
-                    </div>
+            <div class='dt dtimg detail-middle-text-img8'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail81.jpg' />
+                <div class='dminform detail-middle-inform5'>
                     <hr />
-                    <div class="ditext3 detail_img101_text3">
-                        <span><p>실버파인</p></span>
+                    <div class='dt ditext3 detail_img81_text3'>
+                        <span><p>달리아 와인</p></span>
                     </div>
                 </div>
             </div>
-            <div class="detail-middle-text-img11">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img111.jpg" />
+            <div class='dt detail-middle-text-img9'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail91.jpg' />
             </div>
-            <div class="dtimg detail-middle-text-img12">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img121.jpg" />
-                <div class="dminform detail-middle-inform7">
-                    <div class="ditext1 detail_img121_text1">
-                        <span><p>다리가<br/>더 길어보이는 비밀</p></span>
-                    </div>
-                    <div class="ditext2 detail_img121_text2">
-                        <span><p>프런트 허리선 라인을<br/>U자 형태로 디자인하여
-                        <br />다리가 더 길어 보입니다.</p></span>
-                    </div>
+            <div class='dt dtimg detail-middle-text-img10'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail101.jpg' />
+                <div class='dminform detail-middle-inform6'>
                     <hr />
-                    <div class="ditext3 detail_img121_text3">
-                        <span><p>어텀카키</p></span>
+                    <div class='ditext3 detail_img101_text3'>
+                        <span><p>도브 베이지</p></span>
                     </div>
                 </div>
             </div>
-            <div class="detail-middle-text-img13">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img131.jpg" />
+            <div class='dt detail-middle-text-img11'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail111.jpg' />
             </div>
-            <div class="dtimg detail-middle-text-img14">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img141.jpg" />
-                <div class="dminform detail-middle-inform8">
+            <div class='dt dtimg detail-middle-text-img12'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail121.jpg' />
+                <div class='dminform detail-middle-inform7'>
                     <hr />
-                    <div class="ditext3 detail_img141_text3">
-                        <span><p>윈저클래식</p></span>
+                    <div class='ditext3 detail_img121_text3'>
+                        <span><p>시어스킨</p></span>
                     </div>
                 </div>
             </div>
-            <div class="detail-middle-text-img15">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img151.jpg" />
+            <div class='dt detail-middle-text-img13'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail131.jpg' />
             </div>
-            <div class="dtimg detail-middle-text-img16">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img161.jpg" />
-                <div class="dminform detail-middle-inform9">
+            <div class='dt dtimg detail-middle-text-img14'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail141.jpg' />
+                <div class='dminform detail-middle-inform8'>
                     <hr />
-                    <div class="ditext3 detail_img161_text3">
-                        <span><p>체스트브라운</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img17">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img171.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img18">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img181.jpg" />
-                <div class="dminform detail-middle-inform10">
-                    <hr />
-                    <div class="ditext3 detail_img181_text3">
-                        <span><p>루이보스</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img19">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img191.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img20">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img201.jpg" />
-                <div class="dminform detail-middle-inform11">
-                    <hr />
-                    <div class="ditext3 detail_img201_text3">
-                        <span><p>어텀글레이즈</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img21">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img211.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img22">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img221.jpg" />
-                <div class="dminform detail-middle-inform12">
-                    <hr />
-                    <div class="ditext3 detail_img221_text3">
-                        <span><p>미네랄핑크</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img23">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img231.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img24">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img241.jpg" />
-                <div class="dminform detail-middle-inform13">
-                    <hr />
-                    <div class="ditext3 detail_img241_text3">
-                        <span><p>페르시안레드</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img25">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img251.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img26">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img261.jpg" />
-                <div class="dminform detail-middle-inform14">
-                    <hr />
-                    <div class="ditext3 detail_img261_text3">
-                        <span><p>크러쉬베리</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img27">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img271.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img28">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img281.jpg" />
-                <div class="dminform detail-middle-inform14">
-                    <hr />
-                    <div class="ditext3 detail_img281_text3">
-                        <span><p>우드로즈</p></span>
-                    </div>
-                </div>  
-            </div>
-            <div class="detail-middle-text-img29">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img291.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img30">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img301.jpg" />
-                <div class="dminform detail-middle-inform14">
-                    <hr />
-                    <div class="ditext3 detail_img301_text3">
-                        <span><p>푸시아로즈</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img31">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img311.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img32">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img321.jpg" />
-                <div class="dminform detail-middle-inform14">
-                    <hr />
-                    <div class="ditext3 detail_img321_text3">
-                        <span><p>푸딩베이지</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img33">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img331.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img34">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img341.jpg" />
-                <div class="dminform detail-middle-inform14">
-                    <hr />
-                    <div class="ditext3 detail_img341_text3">
-                        <span><p>월넛베이지</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img35">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img351.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img36">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img361.jpg" />
-                <div class="dminform detail-middle-inform14">
-                    <hr />
-                    <div class="ditext3 detail_img361_text3">
-                        <span><p>다크그레이</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img37">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img371.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img38">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img381.jpg" />
-                <div class="dminform detail-middle-inform14">
-                    <hr />
-                    <div class="ditext3 detail_img381_text3">
-                        <span><p>썬더그레이</p></span>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-middle-text-img39">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img391.jpg" />
-            </div>
-            <div class="dtimg detail-middle-text-img40">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img401.jpg" />
-                <div class="dminform detail-middle-inform14">
-                    <hr />
-                    <div class="ditext3 detail_img401_text3">
+                    <div class='ditext3 detail_img141_text3'>
                         <span><p>블랙</p></span>
                     </div>
                 </div>
             </div>
-            <div class="detail-middle-text-img41">
-                <img src="${pageContext.request.contextPath}/assets/img/xexymix_detail_img411.jpg" />
+            <div class='dt detail-middle-text-img15'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail151.jpg' />
             </div>
-            <span class="fabric"><h2>FABRIC INFO</h2>
+            <div class='dt dtimg detail-middle-text-img16'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail161.jpg' />
+                <div class='dminform detail-middle-inform9'>
+                    <hr />
+                    <div class='ditext3 detail_img161_text3'>
+                        <span><p>베이비 블루</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img17'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail171.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img18'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail181.jpg' />
+                <div class='dminform detail-middle-inform10'>
+                    <hr />
+                    <div class='ditext3 detail_img181_text3'>
+                        <span><p>다크 그레이</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img19'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail191.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img20'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail201.jpg' />
+                <div class='dminform detail-middle-inform11'>
+                    <hr />
+                    <div class='ditext3 detail_img201_text3'>
+                        <span><p>아이보리</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img21'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail211.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img22'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail221.jpg' />
+                <div class='dminform detail-middle-inform12'>
+                    <hr />
+                    <div class='ditext3 detail_img221_text3'>
+                        <span><p>크림레몬</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img23'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail231.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img24'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail241.jpg' />
+                <div class='dminform detail-middle-inform13'>
+                    <hr />
+                    <div class='ditext3 detail_img241_text3'>
+                        <span><p>블랑 라벤더</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img25'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail251.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img26'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail261.jpg' />
+                <div class='dminform detail-middle-inform14'>
+                    <hr />
+                    <div class='ditext3 detail_img261_text3'>
+                        <span><p>트로피칼 핑크</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img27'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail271.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img28'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail281.jpg' />
+                <div class='dminform detail-middle-inform14'>
+                    <hr />
+                    <div class='ditext3 detail_img281_text3'>
+                        <span><p>코랄무드</p></span>
+                    </div>
+                </div>  
+            </div>
+            <div class='dt detail-middle-text-img29'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail291.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img30'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail301.jpg' />
+                <div class='dminform detail-middle-inform14'>
+                    <hr />
+                    <div class='ditext3 detail_img301_text3'>
+                        <span><p>멜로우 로즈</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img31'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail311.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img32'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail321.jpg' />
+                <div class='dminform detail-middle-inform14'>
+                    <hr />
+                    <div class='ditext3 detail_img321_text3'>
+                        <span><p>돌체 그레이</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img33'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail331.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img34'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail341.jpg' />
+                <div class='dminform detail-middle-inform14'>
+                    <hr />
+                    <div class='ditext3 detail_img341_text3'>
+                        <span><p>소울핑크</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img35'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail351.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img36'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail361.jpg' />
+                <div class='dminform detail-middle-inform14'>
+                    <hr />
+                    <div class='ditext3 detail_img361_text3'>
+                        <span><p>버드 네이비</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img37'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail371.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img38'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail381.jpg' />
+                <div class='dminform detail-middle-inform14'>
+                    <hr />
+                    <div class='ditext3 detail_img381_text3'>
+                        <span><p>스마일 옐로우</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img39'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail391.jpg' />
+            </div>
+            <div class='dt dtimg detail-middle-text-img40'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail401.jpg' />
+                <div class='dminform detail-middle-inform14'>
+                    <hr />
+                    <div class='ditext3 detail_img401_text3'>
+                        <span><p>메이플 베이지</p></span>
+                    </div>
+                </div>
+            </div>
+            <div class='dt detail-middle-text-img41'>
+                <img src='${pageContext.request.contextPath}/assets/img/womens/top/product3_html/product3_detail411.jpg' />
+            </div>
+            <span class='fabric'><h2>FABRIC INFO</h2>
                 <hr class="fabric-hr" />
             </span>
             <div class="fabric-info">
